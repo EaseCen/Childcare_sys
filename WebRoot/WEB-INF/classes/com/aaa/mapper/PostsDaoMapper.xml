@@ -10,9 +10,9 @@
 		select * from posts where id=#{id}
 	</select>
 
-	<!-- 查询所有数据id降序 -->
+	<!-- 查询所有数据时间降序 -->
 	<select id="findAll" resultType="posts">
-		select * from posts order by id desc
+		select * from posts order by time desc
 	</select>
 
 	<!-- 增加数据 -->
