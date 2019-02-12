@@ -12,19 +12,7 @@
 	<!-- 增加，性别以数字替代1=男 0=女，default默认 -->
 	<insert id="addUser" parameterType="user">
 		insert into user
-		values(default,#{username},#{password},#{address},#{state},1)
+		values(default,#{username},#{password},#{birthday},1,#{address})
 	</insert>
 
-
-	<!-- 更新数据-通过id -->
-	<update id="updUser" parameterType="reposts">
-		update user set
-		username=#{username},password=#{password},address=#{address},state=#{state}
-		where id =#{id}
-	</update>
-
-	<!-- 删除数据-通过id -->
-	<delete id="delUser" parameterType="int">
-		delete from user where id=#{id}
-	</delete>
 </mapper>
