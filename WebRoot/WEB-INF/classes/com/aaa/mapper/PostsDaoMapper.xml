@@ -16,7 +16,7 @@
 	</select>
 
 	<!-- 增加数据 -->
-	<insert id="add" parameterType="posts">
+	<insert id="add"  useGeneratedKeys="true" keyProperty="id"  parameterType="posts">
 		insert into posts
 		values(default,#{name},#{text},#{time},#{author})
 	</insert>

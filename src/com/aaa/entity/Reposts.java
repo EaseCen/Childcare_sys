@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Reposts {
 	private Integer id;// 回复id
-	private String repost_id;// 回复帖子的id
+	private Integer repost_id;// 回复帖子的id
 	private String text;// 回复内容
 	private String repost_user;// 回复者
 	private Date time;// 回复时间
@@ -18,11 +18,11 @@ public class Reposts {
 		this.id = id;
 	}
 
-	public String getRepost_id() {
+	public Integer getRepost_id() {
 		return repost_id;
 	}
 
-	public void setRepost_id(String repost_id) {
+	public void setRepost_id(Integer repost_id) {
 		this.repost_id = repost_id;
 	}
 
@@ -58,7 +58,7 @@ public class Reposts {
 		this.name = name;
 	}
 
-	public Reposts(int id, String repost_id, String text, String repost_user, Date time, String name) {
+	public Reposts(int id, Integer repost_id, String text, String repost_user, Date time, String name) {
 		super();
 		this.id = id;
 		this.repost_id = repost_id;
