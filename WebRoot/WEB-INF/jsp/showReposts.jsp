@@ -41,6 +41,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		});
 	});
 </script>
+
+<style type="text/css">
+th {
+	text-align: center
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    word-wrap:break-word;
+    word-break:break-all;
+    overflow: hidden;
+}
+
+}
+</style>
 </head>
 
  <body>
@@ -73,10 +89,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="col-sm-2">
                     <a href="#" class="list-group-item active"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;菜单
                     </a>
-                    <a href="${pageContext.request.contextPath}/repost/queryReposts.action" class="list-group-item">
+                    <a href="${pageContext.request.contextPath}/posts/queryPosts.action" class="list-group-item">
                         <span class="glyphicon glyphicon-search" aria-hidden="true">
                     </span>&nbsp;帖子管理</a>
-                    <a href="${pageContext.request.contextPath}/user/queryReposts.action" class="list-group-item">
+                    <a href="${pageContext.request.contextPath}/reposts/queryReposts.action" class="list-group-item">
                         <span class="glyphicon glyphicon-user" aria-hidden="true">
                     </span>&nbsp;回复管理</a>
                     <a href="${pageContext.request.contextPath}/user/queryUser.action" class="list-group-item">
@@ -88,7 +104,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <ol class="breadcrumb">
                         <li class="active">菜单
                         </li>
-                        <li class="active">帖子信息
+                        <li class="active">回复管理
                         </li>
                         <li class="active">
                         </li>
@@ -108,14 +124,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                 </div>
                             </form>
                              <!-- 按钮-->
-								<div class="row">
-									<div class="col-md-6 col-md-offset-10">
-										<button type="button" class="btn btn-primary btn-lg"
-											data-toggle="modal" data-target="#myModal">
-											<span class="glyphicon glyphicon-plus"></span>添加帖子
-										</button>
-									</div>
-								</div>
                         </div>
                     </div>
                     <!-- 列表展示 -->
@@ -123,30 +131,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     	<form action="${pageContext.request.contextPath }" method="post">
                         <table class="table table-striped">
                                 <tr align="center">
-                                    <th>帖子标题</th>
-									<th>帖子内容</th>
-									<th>发帖时间</th>
-									<th>发帖人</th>
+                                    <th>回帖标题</th>
+									<th>回帖内容</th>
+									<th>回帖用户</th>
+									<th>回帖时间</th>
 									<th colspan="3">操作</th>
                                 </tr>
-                                	<c:forEach items="${pageInfo.list}" var="post">
+                                	<c:forEach items="${pageInfo.list}" var="reposts">
 								<tr align="center">
-									<td>${post.name }</td>
-									<td>${post.text }</td>
-									<td><fmt:formatDate value="${post.time}"
-											pattern="yyyy-MM-dd" /></td>
-									<td>${post.author }</td>
-									
+									<td>${reposts.name }</td>
+									<td>${reposts.text }</td>
+									<td>${reposts.repost_user }</td>
+									<td><fmt:formatDate value="${reposts.time}" pattern="yyyy-MM-dd" /></td>
 									<!-- 删除操作-带id参数 -->
 									<td><a
-										href="${pageContext.request.contextPath }/repost/del.action?id=${post.id}"><button
+										href="${pageContext.request.contextPath }/reposts/del.action?id=${reposts.id}"><button
 												type="button" class="btn btn-success btn-lg"
-												onclick="return confirm('确定要删除信息吗？') ">
+												onclick="return confirm('确定要删除回复信息吗？') ">
 												<span class="glyphicon glyphicon-trash"></span> 删除
 											</button></a></td>
 									<!-- 修改操作 -->	
 									<td><a
-										href="${pageContext.request.contextPath }/repost/findOne.action?id=${post.id}"><button
+										href="${pageContext.request.contextPath }/reposts/findOne.action?id=${reposts.id}"><button
 												type="button" class="btn btn-success btn-lg">
 												<span class="glyphicon glyphicon-edit"></span> 修改
 											</button></a></td>

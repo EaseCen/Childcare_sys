@@ -41,6 +41,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		});
 	});
 </script>
+
+<style type="text/css">
+th {
+	text-align: center
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    word-wrap:break-word;
+    word-break:break-all;
+    overflow: hidden;
+}
+
+}
+</style>
+
 </head>
 
  <body>
@@ -73,10 +90,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="col-sm-2">
                     <a href="#" class="list-group-item active"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;菜单
                     </a>
-                    <a href="${pageContext.request.contextPath}/user/queryUser.action" class="list-group-item">
+                    <a href="${pageContext.request.contextPath}/posts/queryPosts.action" class="list-group-item">
                         <span class="glyphicon glyphicon-search" aria-hidden="true">
                     </span>&nbsp;帖子管理</a>
-                    <a href="${pageContext.request.contextPath}/user/queryReuser.action" class="list-group-item">
+                    <a href="${pageContext.request.contextPath}/reposts/queryReposts.action" class="list-group-item">
                         <span class="glyphicon glyphicon-user" aria-hidden="true">
                     </span>&nbsp;回复管理</a>
                     <a href="${pageContext.request.contextPath}/user/queryUser.action" class="list-group-item">
@@ -88,7 +105,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <ol class="breadcrumb">
                         <li class="active">菜单
                         </li>
-                        <li class="active">帖子信息
+                        <li class="active">用户管理
                         </li>
                         <li class="active">
                         </li>
@@ -112,7 +129,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<div class="col-md-6 col-md-offset-10">
 										<button type="button" class="btn btn-primary btn-lg"
 											data-toggle="modal" data-target="#myModal">
-											<span class="glyphicon glyphicon-plus"></span>添加帖子
+											<span class="glyphicon glyphicon-plus"></span>添加管理员
 										</button>
 									</div>
 								</div>
@@ -120,26 +137,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </div>
                     <!-- 列表展示 -->
                     <div class="table-responsive">
-                    	<form action="${pageContext.request.contextPath }/user/addCar.action" method="post">
+                    	<form action="${pageContext.request.contextPath }/user/addUser.action" method="post">
                         <table class="table table-striped">
                                 <tr align="center">
-                                    <th>帖子标题</th>
-									<th>帖子内容</th>
-									<th>发帖时间</th>
-									<th>发帖人</th>
+                                    <th>用户名</th>
+									<th>用户密码</th>
+									<th>用户地址</th>
+									<th>用户状态</th>
 									<th colspan="3">操作</th>
                                 </tr>
-                                	<c:forEach items="${pageInfo.list}" var="post">
+                                	<c:forEach items="${pageInfo.list}" var="user">
 								<tr align="center">
-									<td>${user.name }</td>
+									<td>${user.username }</td>
 									<td>${user.password }</td>
 									<td>${user.address}</td>
 									<td>${user.state }</td>
 									<!-- 删除操作-带id参数 -->
 									<td><a
-										href="${pageContext.request.contextPath }/user/del.action?id=${user.id}"><button
+										href="${pageContext.request.contextPath }/user/delUser.action?id=${user.id}"><button
 												type="button" class="btn btn-success btn-lg"
-												onclick="return confirm('确定要删除信息吗？') ">
+												onclick="return confirm('确定要删除用户吗？') ">
 												<span class="glyphicon glyphicon-trash"></span> 删除
 											</button></a></td>
 									<!-- 修改操作 -->	
@@ -204,39 +221,39 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<button type="button" class="close" data-dismiss="modal">
 						<span aria-hidden="true">&times;</span><span class="sr-only">关闭</span>
 					</button>
-					<h4 class="modal-title" id="myModalLabel">添加帖子</h4>
+					<h4 class="modal-title" id="myModalLabel">添加管理员</h4>
 				</div>
 				<!-- 模态框的主体-表单头部 -->
 				<form class="form-horizontal" role="form"
-					action="${pageContext.request.contextPath }/user/addUser.action"
+					action="${pageContext.request.contextPath }/user/addAdmin.action"
 					method="post" id="form" enctype="multipart/form-data">
 					<div class="modal-body">
 						<div class="form-group  form-group-lg">
-							<label for="firstname" class="col-sm-3 control-label">帖子名称:</label>
+							<label for="firstname" class="col-sm-3 control-label">管理员名称:</label>
 							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg" id="name"
-									name="name" placeholder="请输入帖子名字" required autofocus>
+								<input type="text" class="form-control input-lg" id="username"
+									name="username" placeholder="请输入名称" required autofocus>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="lastname" class="col-sm-3 control-label">帖子内容:</label>
+							<label for="lastname" class="col-sm-3 control-label">管理员密码:</label>
 							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg" id="text"
-									name="text" placeholder="请输入帖子内容" required autofocus>
+								<input type="text" class="form-control input-lg" id="password"
+									name="password" placeholder="请输入密码" required autofocus>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="lastname" class="col-sm-3 control-label">发帖时间:</label>
+							<label for="lastname" class="col-sm-3 control-label">管理员地区:</label>
 							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg form_datetime"
-									id="time" name="time">
+								<input type="text" class="form-control input-lg" id="address"
+									name="address" placeholder="请输入地区" required autofocus>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="lastname" class="col-sm-3 control-label">发帖人:</label>
+							<label for="lastname" class="col-sm-3 control-label">管理员状态:</label>
 							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg" id="author"
-									name="author" placeholder="请输入发帖人" required autofocus>
+								<input type="text" class="form-control input-lg" id="state"
+									name="state" placeholder="在职/已离职" required autofocus>
 							</div>
 						</div>
 					</div>

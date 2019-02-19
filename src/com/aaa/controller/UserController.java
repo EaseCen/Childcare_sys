@@ -61,10 +61,18 @@ public class UserController {
 		model.addAttribute("pageInfo",pageInfo);
 		//5.最后设置返回的jsp
 		return "showUser";
-		
 	}
 	
-	@RequestMapping("/del")
+	@RequestMapping("/addAdmin")
+	public String addPosts(User user) {
+		// 添加进去
+		userBiz.addAdmin(user);
+		//System.out.println("=========================="+user.getId()+"================================");//调用这个getId就可以获得
+		// 内部转发
+		return "redirect:queryUser.action";
+	}
+	
+	@RequestMapping("/delUser")
 	public String delUser(int id){
 		userBiz.delUser(id);
 		return "redirect:queryUser.action";
@@ -83,7 +91,6 @@ public class UserController {
 	public String upd(User user){
 		//修改完成以后调用更新方法
 		userBiz.updUser(user);
-		
 		return "redirect:queryUser.action";
 	}
 

@@ -10,6 +10,8 @@ public interface UserMapper {
 	public User CheckLoginAndPwd(@Param("username") String name, @Param("password") String pwd);
 
 	public void addUser(User user);
+	
+	public void addAdmin(User user);
 
 	public void delUser(int id);
 

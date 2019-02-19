@@ -42,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </div>
                     <div class="form-group">
                             <i class="fa fa-lock fa-lg"></i>
-                            <input class="form-control required" type="password" placeholder="请输入密码..." id="password" name="password" maxlength="8" value="123456"/>
+                            <input class="form-control required" type="password" placeholder="请输入密码..." id="password" name="password" maxlength="8" value="admin"/>
                             <span id="checkPasswordResult" style="color: red "></span>
                             <label class="control-label" for="inputSuccess1" style="color: red;"id="message"></label>
                     </div>

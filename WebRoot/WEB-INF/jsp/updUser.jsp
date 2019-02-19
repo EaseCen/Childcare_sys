@@ -53,8 +53,19 @@
 		});
 	});
 </script>
+
+<style>
+.flex {
+	/*flex 布局*/
+	display: flex;
+	/*实现垂直居中*/
+	align-items: center;
+	/*实现水平居中*/
+	justify-content: center;
+}
+</style>
 <body>
-	<!-- 添加修改商品的模态框-->
+	<!-- 添加修改帖子的模态框-->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 		aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
@@ -63,66 +74,55 @@
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
 						aria-hidden="true">×</button>
-					<h4 class="modal-title" id="myModalLabel">修改商品</h4>
+					<h4 class="modal-title" id="myModalLabel">修改帖子</h4>
 				</div>
 
 				<!-- 模态框的主体-表单头部 -->
 				<form class="form-horizontal" role="form"
-					action="${pageContext.request.contextPath }/items/upd.action"
+					action="${pageContext.request.contextPath }/user/updUser.action"
 					method="post" id="form" enctype="multipart/form-data">
 
 					<!-- 将id作为隐藏域提交这样就不会出现找不到修改的数据而报错问题 -->
-					<input type="hidden" name="id" value="${items.id }" />
+					<input type="hidden" name="id" value="${user.id }" />
 
 					<!-- 主体-表单内容 -->
 					<div class="modal-body">
 						<div class="form-group  form-group-lg">
-							<label for="firstname" class="col-sm-3 control-label">商品名称:</label>
+							<label for="firstname" class="col-sm-3 control-label">用户名称:</label>
 							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg" id="name"
-									name="name" value="${items.name }" required autofocus>
+								<input type="text" class="form-control input-lg" id="username"
+									name="username" value="${user.username }" required autofocus>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="lastname" class="col-sm-3 control-label">商品价格:</label>
+							<label for="lastname" class="col-sm-3 control-label">用户密码:</label>
 							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg" id="price"
-									name="price" value="${items.price }" required autofocus>
-							</div>
-						</div>
-						<!-- 重要-日期和图片的获取方式 -->
-						<div class="form-group">
-							<label for="lastname" class="col-sm-3 control-label">生产日期:</label>
-							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg form_datetime"
-									value="<fmt:formatDate value="${items.createtime}" 
-							pattern="yyyy-MM-dd"/>"
-									name="createtime" id="createtime">
+								<input type="text"
+									class="form-control input-lg" id="password" name="password"
+									value="${user.password }" required autofocus>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="lastname" class="col-sm-3 control-label">商品图片:</label>
+							<label for="lastname" class="col-sm-3 control-label">用户地址:</label>
 							<div class="col-sm-5">
-								<c:if test="${items.pic!=null }">
-									<img style="width: 80px; height: 70px"
-										src="${pageContext.request.contextPath }/upload/${items.pic}">
-									<br />
-									<input type="file" name="items_pic1" />
-								</c:if>
+								<input type="text"
+									class="form-control input-lg" id="address" name="address"
+									value="${user.address }" required autofocus>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="lastname" class="col-sm-3 control-label">商品介绍:</label>
+							<label for="lastname" class="col-sm-3 control-label">用户状态:</label>
 							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg" id="detail"
-									name="detail" value="${items.detail}" required autofocus>
+								<input type="text" class="form-control input-lg" id="state"
+									name="state" value="${user.state}" required autofocus>
 							</div>
 						</div>
 					</div>
 					<!-- 模态框的尾部 -->
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default">
-						<a href="${pageContext.request.contextPath }/items/queryItems.action" >返回</a></button> 
+						<a
+							href="${pageContext.request.contextPath}/user/queryUser.action"><button
+								type="button" class="btn btn-default">返回</button> </a>
 						<button type="submit" class="btn btn-primary" id="save">提交</button>
 					</div>
 				</form>

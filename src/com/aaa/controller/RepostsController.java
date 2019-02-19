@@ -44,6 +44,8 @@ public class RepostsController {
 			// 添加进去
 		repostsBiz.add(reposts);
 			// 内部转发
+		//System.out.println("=========================="+reposts.getId()+"================================");//调用这个getId就可以获得
+
 		return "redirect:queryReposts.action";
 	}
 	
@@ -60,10 +62,10 @@ public class RepostsController {
 		Reposts reposts = repostsBiz.findOne(id);
 		model.addAttribute("reposts", reposts);
 		//返给更新的方法
-		return "upd";
+		return "updReposts";
 	}
 	//修改数据
-	@RequestMapping("/upd")
+	@RequestMapping("/updReposts")
 	public String upd(Reposts reposts){
 		//修改完成以后调用更新方法
 		repostsBiz.upd(reposts);
