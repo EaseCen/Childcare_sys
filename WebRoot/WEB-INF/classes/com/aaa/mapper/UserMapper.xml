@@ -19,12 +19,12 @@
 	</select>
 	
 	<!-- 增加，性别以数字替代1=男 0=女，default默认 -->
-	<insert id="addUser" parameterType="user">
+	<insert id="addUser" useGeneratedKeys="true" keyProperty="id" parameterType="user">
 		insert into user
 		values(default,#{username},#{password},#{address},#{state},1)
 	</insert>
 
-	<insert id="addAdmin" parameterType="user">
+	<insert id="addAdmin" useGeneratedKeys="true" keyProperty="id" parameterType="user">
 		insert into user
 		 values(default,#{username},#{password},#{address},#{state},0)
 	</insert>

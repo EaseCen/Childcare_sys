@@ -67,6 +67,7 @@ public class UserController {
 	public String addPosts(User user) {
 		// 添加进去
 		userBiz.addAdmin(user);
+		//System.out.println("=========================="+user.getId()+"================================");//调用这个getId就可以获得
 		// 内部转发
 		return "redirect:queryUser.action";
 	}

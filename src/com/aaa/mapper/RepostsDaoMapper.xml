@@ -41,7 +41,7 @@
 	</select>
 
 	<!-- 增加数据 -->
-	<insert id="add" parameterType="reposts">
+	<insert id="add"  useGeneratedKeys="true" keyProperty="id"  parameterType="reposts">
 		insert into reposts
 		values(default,#{repost_id},#{text},#{repost_user},#{time})
 	</insert>
