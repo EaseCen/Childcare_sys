@@ -60,10 +60,10 @@ public class RepostsController {
 		Reposts reposts = repostsBiz.findOne(id);
 		model.addAttribute("reposts", reposts);
 		//返给更新的方法
-		return "upd";
+		return "updReposts";
 	}
 	//修改数据
-	@RequestMapping("/upd")
+	@RequestMapping("/updReposts")
 	public String upd(Reposts reposts){
 		//修改完成以后调用更新方法
 		repostsBiz.upd(reposts);

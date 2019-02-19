@@ -14,6 +14,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
     <link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+	<link rel="stylesheet" href="<%=basePath%>css/NewFile.css" />
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
@@ -41,6 +42,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		});
 	});
 </script>
+<style type="text/css">
+th {
+	text-align: center
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    word-wrap:break-word;
+    word-break:break-all;
+    overflow: hidden;
+}
+
+}
+</style>
+
 </head>
 
  <body>
@@ -76,7 +93,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <a href="${pageContext.request.contextPath}/posts/queryPosts.action" class="list-group-item">
                         <span class="glyphicon glyphicon-search" aria-hidden="true">
                     </span>&nbsp;帖子管理</a>
-                    <a href="${pageContext.request.contextPath}/user/queryReposts.action" class="list-group-item">
+                    <a href="${pageContext.request.contextPath}/reposts/queryReposts.action" class="list-group-item">
                         <span class="glyphicon glyphicon-user" aria-hidden="true">
                     </span>&nbsp;回复管理</a>
                     <a href="${pageContext.request.contextPath}/user/queryUser.action" class="list-group-item">
@@ -88,7 +105,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <ol class="breadcrumb">
                         <li class="active">菜单
                         </li>
-                        <li class="active">帖子信息
+                        <li class="active">帖子管理
                         </li>
                         <li class="active">
                         </li>
@@ -119,41 +136,39 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         </div>
                     </div>
                     <!-- 列表展示 -->
-                    <div class="table-responsive">
-                    	<form action="${pageContext.request.contextPath }/posts/addCar.action" method="post">
-                        <table class="table table-striped">
-                                <tr align="center">
+                    <div class="table-responsive content">
+                        <table class="table table-striped"> 
+                                <tr>
                                     <th>帖子标题</th>
 									<th>帖子内容</th>
 									<th>发帖时间</th>
 									<th>发帖人</th>
 									<th colspan="3">操作</th>
                                 </tr>
-                                	<c:forEach items="${pageInfo.list}" var="post">
+                                	<c:forEach items="${pageInfo.list}" var="posts">
 								<tr align="center">
-									<td>${post.name }</td>
-									<td>${post.text }</td>
-									<td><fmt:formatDate value="${post.time}"
-											pattern="yyyy-MM-dd" /></td>
-									<td>${post.author }</td>
+									<td>${posts.name }</td>
+									<td>${posts.text }</td>
+									<td><fmt:formatDate value="${posts.time}"
+											pattern="yyyy-MM-dd HH:mm:ss" /></td>
+									<td>${posts.author }</td>
 									
 									<!-- 删除操作-带id参数 -->
 									<td><a
-										href="${pageContext.request.contextPath }/posts/del.action?id=${post.id}"><button
+										href="${pageContext.request.contextPath }/posts/del.action?id=${posts.id}"><button
 												type="button" class="btn btn-success btn-lg"
-												onclick="return confirm('确定要删除信息吗？') ">
+												onclick="return confirm('确定要删除帖子吗？') ">
 												<span class="glyphicon glyphicon-trash"></span> 删除
 											</button></a></td>
 									<!-- 修改操作 -->	
 									<td><a
-										href="${pageContext.request.contextPath }/posts/findOne.action?id=${post.id}"><button
+										href="${pageContext.request.contextPath }/posts/findOne.action?id=${posts.id}"><button
 												type="button" class="btn btn-success btn-lg">
 												<span class="glyphicon glyphicon-edit"></span> 修改
 											</button></a></td>
 								</tr>
 						</c:forEach>
                         </table>
-                        </form>
                     </div>
                 </div>
             </div>

@@ -25,6 +25,12 @@ public class UserBizImpl implements UserBiz {
 		// TODO Auto-generated method stub
 		userMapper.addUser(user);
 	}
+	
+	@Override
+	public void addAdmin(User user) {
+		// TODO Auto-generated method stub
+		userMapper.addAdmin(user);
+	}
 
 	@Override
 	public void delUser(int id) {

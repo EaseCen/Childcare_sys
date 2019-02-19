@@ -11,6 +11,8 @@ public interface UserBiz {
 
 	public void addUser(User user);
 	
+	public void addAdmin(User user);
+
 	public void delUser(int id);
 	
 	public void updUser(User user);

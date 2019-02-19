@@ -28,8 +28,10 @@
 		where id =#{id}
 	</update>
 
-	<!-- 删除数据-通过id -->
+	<!-- 通过id删除数据   缺少一个删除帖子页同时删除回复的语句，后期补上-->
 	<delete id="del" parameterType="int">
 		delete from posts where id=#{id}
 	</delete>
+	
+	
 </mapper>

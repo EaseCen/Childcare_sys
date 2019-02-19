@@ -10,7 +10,7 @@ public interface RepostsBiz {
 	public Reposts findOne(int id);
 	
 	public List<Reposts> findAll();
-	
+		
 	public void add(Reposts reposts);
 	
 	public void upd(Reposts reposts);

@@ -56,11 +56,11 @@ public class PostsController {
 		Posts posts = postsBiz.findOne(id);
 		model.addAttribute("posts", posts);
 		// 返给更新的方法
-		return "upd";
+		return "updPosts";
 	}
 
 	// 修改数据
-	@RequestMapping("/upd")
+	@RequestMapping("/updPosts")
 	public String upd(Posts posts) {
 		// 修改完成以后调用更新方法
 		postsBiz.upd(posts);

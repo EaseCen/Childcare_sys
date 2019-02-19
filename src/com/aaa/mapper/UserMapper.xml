@@ -9,22 +9,39 @@
 	<select id="CheckLoginAndPwd" resultType="user" parameterType="user">
 		select*from user where username=#{username} and password=#{password}
 	</select>
+	
+	<select id="findOne" parameterType="int" resultType="user">
+		select * from user where id=#{id}
+	</select>
+	
+	<select id="findAll" resultType="user">
+		select * from user
+	</select>
+	
 	<!-- 增加，性别以数字替代1=男 0=女，default默认 -->
 	<insert id="addUser" parameterType="user">
 		insert into user
 		values(default,#{username},#{password},#{address},#{state},1)
 	</insert>
 
+	<insert id="addAdmin" parameterType="user">
+		insert into user
+		 values(default,#{username},#{password},#{address},#{state},0)
+	</insert>
 
 	<!-- 更新数据-通过id -->
-	<update id="updUser" parameterType="reposts">
+	<update id="updUser" parameterType="user">
 		update user set
 		username=#{username},password=#{password},address=#{address},state=#{state}
 		where id =#{id}
 	</update>
+	
+	
 
 	<!-- 删除数据-通过id -->
 	<delete id="delUser" parameterType="int">
 		delete from user where id=#{id}
 	</delete>
+	
+	
 </mapper>
