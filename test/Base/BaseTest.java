@@ -5,7 +5,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 
-/*æ•´åˆSpringå’ŒJunitçš„åŸºç±»*/
+/*µ¥Ôª²âÊÔ»ùÀà*/
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
