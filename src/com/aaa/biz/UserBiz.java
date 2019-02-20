@@ -20,4 +20,7 @@ public interface UserBiz {
 	public User findOne(int id);
 	
 	public List<User> findAll();
+	
+	public List<User> getUserByName(User user);
+
 }

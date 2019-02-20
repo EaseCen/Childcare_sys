@@ -16,6 +16,8 @@ public interface PostsBiz {
 	public void upd(Posts posts);
 	
 	public void del(int id);
+	
+	public List<Posts> getPostsByName(Posts posts);
 		
 
 }

@@ -110,8 +110,7 @@ th {
                         </li>
                     </ol>
                     <div class="panel panel-default">
-                        <div class="panel-heading">搜索
-                        </div>
+                        <div class="panel-heading">搜索</div>
                         <div class="panel-body">
                             <form role="form" class="form-inline">
                                 <div class="form-group">

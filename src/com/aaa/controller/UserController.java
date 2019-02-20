@@ -50,7 +50,7 @@ public class UserController {
 	}
 	
 	@RequestMapping("/queryUser")
-	public String queryReposts(@RequestParam(value="pn",defaultValue="1")Integer pn,Model model){
+	public String queryUser(@RequestParam(value="pn",defaultValue="1")Integer pn,Model model){
 		//1.引入分页插件,pn是第几页，5是每页显示多少行
 		PageHelper.startPage(pn,5);
 		//2.紧跟的查询就是一个分页查询
@@ -64,7 +64,7 @@ public class UserController {
 	}
 	
 	@RequestMapping("/addAdmin")
-	public String addPosts(User user) {
+	public String addUser(User user) {
 		// 添加进去
 		userBiz.addAdmin(user);
 		//System.out.println("=========================="+user.getId()+"================================");//调用这个getId就可以获得
@@ -94,4 +94,19 @@ public class UserController {
 		return "redirect:queryUser.action";
 	}
 
+	/**根据用户数据模糊查询*/
+	@RequestMapping("/getUserByName")
+	public String getUserByName(@RequestParam(value = "pn", defaultValue = "1") Integer pn ,User user ,Model model) {
+		// 1.引入分页插件,pn是第几页，5是每页显示多少行
+		PageHelper.startPage(pn, 5);
+		// 2.紧跟的查询就是一个分页查询
+		List<User> list = userBiz.getUserByName(user);
+		// 3.使用PageInfo包装查询后的结果,5是连续显示的条数
+		PageInfo<User> pageInfo = new PageInfo<User>(list, 5);
+		// 4.使用model设置到前端
+		model.addAttribute("pageInfo", pageInfo);
+		// 5.最后设置返回的jsp
+		return "showUser";
+	}
+	
 }

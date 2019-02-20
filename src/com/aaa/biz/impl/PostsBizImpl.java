@@ -45,4 +45,11 @@ public class PostsBizImpl implements PostsBiz {
 		postsDaoMapper.del(id);
 	}
 
+
+	@Override
+	public List<Posts> getPostsByName(Posts posts) {
+		// TODO Auto-generated method stub
+		return postsDaoMapper.getPostsByName(posts);
+	}
+
 }

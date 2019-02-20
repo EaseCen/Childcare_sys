@@ -55,5 +55,11 @@ public class UserBizImpl implements UserBiz {
 		// TODO Auto-generated method stub
 		return userMapper.findAll();
 	}
+	
+	@Override
+	public List<User> getUserByName(User user) {
+		// TODO Auto-generated method stub
+		return userMapper.getUserByName(user);
+	}
 
 }

@@ -114,13 +114,10 @@ th {
                         <div class="panel-heading">搜索
                         </div>
                         <div class="panel-body">
-                            <form role="form" class="form-inline">
+                             <form role="form" class="form-inline" action="${pageContext.request.contextPath }/user/getUserByName.action" method="post">
                                 <div class="form-group">
                                     <label for="name">名称</label>
-                                    <input type="text" class="form-control" id="name" placeholder="请输入名称">
-                                </div>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                <div class="form-group">
+                                    <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名">
                                     <button type="submit" class="btn btn-default">开始搜索</button>
                                 </div>
                             </form>

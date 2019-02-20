@@ -17,5 +17,7 @@ public interface PostsDaoMapper {
 	
 	public void del(int id);
 	
+	public List<Posts> getPostsByName(Posts posts);
+	
 
 }

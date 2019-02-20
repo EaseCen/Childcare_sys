@@ -35,13 +35,14 @@
 		username=#{username},password=#{password},address=#{address},state=#{state}
 		where id =#{id}
 	</update>
-	
-	
 
 	<!-- 删除数据-通过id -->
 	<delete id="delUser" parameterType="int">
 		delete from user where id=#{id}
 	</delete>
 	
+	<select id="getUserByName" parameterType="user" resultType="user">
+		select * from user where username like '%${username}%'
+	</select>
 	
 </mapper>

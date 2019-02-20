@@ -7,16 +7,19 @@
 
 	<!-- 查询单条数据，类型int返回posts类型 -->
 	<select id="findOne" parameterType="int" resultType="posts">
-		select * from posts where id=#{id}
+		select *
+		from posts where id=#{id}
 	</select>
 
 	<!-- 查询所有数据时间降序 -->
 	<select id="findAll" resultType="posts">
-		select * from posts order by time desc
+		select * from posts order by
+		time desc
 	</select>
 
 	<!-- 增加数据 -->
-	<insert id="add"  useGeneratedKeys="true" keyProperty="id"  parameterType="posts">
+	<insert id="add" useGeneratedKeys="true" keyProperty="id"
+		parameterType="posts">
 		insert into posts
 		values(default,#{name},#{text},#{time},#{author})
 	</insert>
@@ -28,10 +31,23 @@
 		where id =#{id}
 	</update>
 
-	<!-- 通过id删除数据   缺少一个删除帖子页同时删除回复的语句，后期补上-->
+	<!-- 通过id删除数据 缺少一个删除帖子页同时删除回复的语句，后期补上 -->
 	<delete id="del" parameterType="int">
 		delete from posts where id=#{id}
 	</delete>
 	
-	
+	<select id="getPostsByName" parameterType="posts" resultType="posts">
+		select * from posts where name like '%${name}%'
+	</select>
+
+	<!-- 动态sql
+	<select id="getPostsByName" parameterType="search" resultType="posts">
+		select * from posts
+		<where>
+			<if test="name!=null and name!=''">
+				and name like '%$#{name}%'
+			</if>
+		</where>
+	</select>
+ -->
 </mapper>
