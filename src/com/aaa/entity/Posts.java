@@ -2,6 +2,8 @@ package com.aaa.entity;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Posts {
 	private Integer id;
 	private String name;// Ìû×Ó±êÌâ
