@@ -2,7 +2,8 @@ package ControllerTest;
 
 import static org.junit.Assert.*;
 
-import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -15,116 +16,46 @@ import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.aaa.entity.User;
-import com.aaa.mapper.UserMapper;
-import com.fasterxml.jackson.core.JsonGenerationException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
+import com.aaa.entity.Posts;
+import com.aaa.mapper.PostsDaoMapper;
 
 import Base.BaseControllerTest;
 
-
-public class UserControllerTest extends BaseControllerTest {
+public class PostsControllerTest extends BaseControllerTest {
 
 	//注入UserMapper,用于添加数据
 	@Autowired
-	private UserMapper userMapper;
+	private PostsDaoMapper postsMapper;
 	
-	String username;
-	String password;
-	String address;
-	int state;
-	User user;
+	String name;// 帖子标题
+	String text;// 帖子正文
+	Date time;// 发帖时间
+	String author;// 帖子作者id
+	Posts posts;
+	SimpleDateFormat sdf;
 	
 	@Before
 	public void setUp() throws Exception {
-		username = "testname";
-		password = "123";
-		address = "12";
-		state = 1;
-		user = new User();
-		user.setUsername(username);
-		user.setPassword(password);
-		user.setAddress(address);
-		user.setState(1);
+		name = "测试标题";
+		text = "我是一条很长的正文";
+		time = new Date();
+		time.getTime();
+		author = "admin";
+		posts = new Posts();
+		posts.setName(name);
+		posts.setText(text);
+		posts.setTime(time);
+		posts.setAuthor(author);
+		sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	}
 
-//	@Test
-//	@Transactional
-//	public void checkLoginTest() throws JsonGenerationException, JsonMappingException, IOException {
-//		userMapper.addUser(user);
-//		ObjectMapper mapper = new ObjectMapper();
-//		ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
-//		String str = ow.writeValueAsString(user);
-////		JSONObject json = JSONObject.fromObject(user);
-////		String str = json.toString();
-////		String str = "{'username':'admin','password':'admin'}";
-//		System.out.println(str);
-//		try {
-//			ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
-//					.post("/user/checkLogin")
-//					.accept(MediaType.parseMediaType("application/json;charset=utf-8"))
-//					.contentType(MediaType.APPLICATION_JSON)
-//					.content(str));
-//			MvcResult mvcResult = resultActions
-//					.andDo(MockMvcResultHandlers.print())
-//					.andExpect(MockMvcResultMatchers.status().isOk())
-//					.andReturn();
-//			String result = mvcResult.getResponse().getContentAsString();
-//			System.out.println("2333"+result);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
-	
-	//注销
+	//分页查询
 	@Test
 	@Transactional
-	public void LogoutTest() {
+	public void queryPostsTest() {
 		try {
 			ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
-					.get("/user/LogOut"));
-			MvcResult mvcResult = resultActions
-					.andDo(MockMvcResultHandlers.print())
-					.andExpect(MockMvcResultMatchers.status().isOk())
-					.andReturn();
-			String result = mvcResult.getResponse().getContentAsString();
-			System.out.println(result);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	//注册
-	@Test
-	@Transactional
-	public void RegisterLoginTest() {
-		try {
-			ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
-					.post("/user/register")
-					.contentType(MediaType.APPLICATION_FORM_URLENCODED)
-					.param("username", username)
-					.param("password", password)
-					.param("address", address));
-			MvcResult mvcResult = resultActions
-					.andDo(MockMvcResultHandlers.print())
-					.andExpect(MockMvcResultMatchers.status().isOk())
-					.andReturn();
-			String result = mvcResult.getResponse().getContentAsString();
-			System.out.println(result);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	//用户分页
-	@Test
-	@Transactional
-	public void queryUserTest() {
-		try {
-			ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
-					.post("/user/queryUser")
+					.post("/posts/queryPosts")
 					.contentType(MediaType.APPLICATION_FORM_URLENCODED)
 					.param("pn", "1"));
 			MvcResult mvcResult = resultActions
@@ -138,18 +69,18 @@ public class UserControllerTest extends BaseControllerTest {
 		}
 	}
 	
-	//添加管理员
+	//新增
 	@Test
 	@Transactional
-	public void addAdminTest() {
+	public void addPostsTest() {
 		try {
 			ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
-					.post("/user/addAdmin")
+					.post("/posts/addPosts")
 					.contentType(MediaType.APPLICATION_FORM_URLENCODED)
-					.param("username", username)
-					.param("password", password)
-					.param("address", address)
-					.param("state", String.valueOf(state)));
+					.param("name", name)
+					.param("text", text)
+					.param("time", sdf.format(time))
+					.param("author", author));
 			MvcResult mvcResult = resultActions
 					.andDo(MockMvcResultHandlers.print())
 					.andExpect(MockMvcResultMatchers.status().is3xxRedirection())
@@ -161,15 +92,15 @@ public class UserControllerTest extends BaseControllerTest {
 		}
 	}
 	
-	//删除用户
+	//删除
 	@Test
 	@Transactional
-	public void delTest() {
-		userMapper.addUser(user);
-		String id = String.valueOf(user.getId());
+	public void delPostsTest() {
+		postsMapper.add(posts);
+		String id = String.valueOf(posts.getId());
 		try {
 			ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
-					.post("/user/delUser")
+					.post("/posts/del")
 					.contentType(MediaType.APPLICATION_FORM_URLENCODED)
 					.param("id", id));
 			MvcResult mvcResult = resultActions
@@ -183,13 +114,13 @@ public class UserControllerTest extends BaseControllerTest {
 		}
 	}
 	
-	//查询单条记录
+	//单个查询
 	@Test
 	@Transactional
 	public void findOneTest() {
 		try {
 			ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
-					.post("/user/findOne")
+					.post("/posts/findOne")
 					.contentType(MediaType.APPLICATION_FORM_URLENCODED)
 					.param("id", "1"));
 			MvcResult mvcResult = resultActions
@@ -202,20 +133,19 @@ public class UserControllerTest extends BaseControllerTest {
 			e.printStackTrace();
 		}
 	}
-	
-	//修改用户
+
+	//修改
 	@Test
 	@Transactional
-	public void updTest() {
+	public void updPostsTest() {
 		try {
 			ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
-					.post("/user/updUser")
+					.post("/posts/updPosts")
 					.contentType(MediaType.APPLICATION_FORM_URLENCODED)
 					.param("id", "1")
-					.param("username", username)
-					.param("password", password)
-					.param("address", address)
-					.param("state", String.valueOf(state)));
+					.param("name", name)
+					.param("text", text)
+					.param("author", author));
 			MvcResult mvcResult = resultActions
 					.andDo(MockMvcResultHandlers.print())
 					.andExpect(MockMvcResultMatchers.status().is3xxRedirection())
@@ -226,17 +156,17 @@ public class UserControllerTest extends BaseControllerTest {
 			e.printStackTrace();
 		}
 	}
-
-	//用户名模糊查询
+	
+	//模糊查询
 	@Test
 	@Transactional
-	public void getUserByNameTest() {
+	public void getPostsByNameTest() {
 		try {
 			ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
-					.post("/user/getUserByName")
+					.post("/posts/getPostsByName")
 					.contentType(MediaType.APPLICATION_FORM_URLENCODED)
 					.param("pn", "1")
-					.param("username", "ad"));
+					.param("name", "1"));
 			MvcResult mvcResult = resultActions
 					.andDo(MockMvcResultHandlers.print())
 					.andExpect(MockMvcResultMatchers.status().isOk())
