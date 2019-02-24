@@ -99,5 +99,14 @@ public class PostsMapperTest extends BaseTest {
 		List<Posts> postss = postsMapper.findAll();
 		System.out.println(postss);
 	}
+	
+	@Test
+	@Transactional
+	public void getPostsByNameTest() {
+		postsMapper.add(posts);
+		System.out.println(posts.toString());
+		List<Posts> postss = postsMapper.getPostsByName(posts);
+		System.out.println(postss);
+	}
 
 }

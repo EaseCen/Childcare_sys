@@ -113,5 +113,14 @@ public class UserMapperTest extends BaseTest {
 		List<User> users = userMapper.findAll();
 		System.out.println(users);
 	}
+	
+	@Test
+	@Transactional
+	public void getUserByNameTest() {
+		userMapper.addUser(user);
+		System.out.println(user.toString());
+		List<User> users = userMapper.getUserByName(user);
+		System.out.println(users);
+	}
 
 }
