@@ -6,27 +6,40 @@
 <mapper namespace="com.aaa.mapper.UserMapper">
 
 	<!-- 查询返回的是实体类对象也可以写实体的绝对路径com.aaa.entity.User -->
-	<select id="CheckLoginAndPwd" resultType="user" parameterType="user">
-		select*from user where username=#{username} and password=#{password}
+	<select id="CheckLoginAndPwd" resultType="user"
+		parameterType="user">
+		select*from user where username=#{username} and
+		password=#{password}
 	</select>
-	
+
 	<select id="findOne" parameterType="int" resultType="user">
-		select * from user where id=#{id}
+		select *
+		from user where id=#{id}
 	</select>
-	
+
 	<select id="findAll" resultType="user">
-		select * from user
+		SELECT
+		user.username,
+		user.password,
+		address.area,
+		address.province,
+		state.state_name
+		FROM (user LEFT JOIN address ON user.address = address.province_id) LEFT
+		JOIN state ON user.state=state.state_number
+		ORDER BY user.id ASC
 	</select>
-	
+
 	<!-- 增加，性别以数字替代1=男 0=女，default默认 -->
-	<insert id="addUser" useGeneratedKeys="true" keyProperty="id" parameterType="user">
+	<insert id="addUser" useGeneratedKeys="true" keyProperty="id"
+		parameterType="user">
 		insert into user
 		values(default,#{username},#{password},#{address},#{state},1)
 	</insert>
 
-	<insert id="addAdmin" useGeneratedKeys="true" keyProperty="id" parameterType="user">
+	<insert id="addAdmin" useGeneratedKeys="true" keyProperty="id"
+		parameterType="user">
 		insert into user
-		 values(default,#{username},#{password},#{address},#{state},0)
+		values(default,#{username},#{password},#{address},#{state},0)
 	</insert>
 
 	<!-- 更新数据-通过id -->
@@ -38,11 +51,13 @@
 
 	<!-- 删除数据-通过id -->
 	<delete id="delUser" parameterType="int">
-		delete from user where id=#{id}
+		delete from user where
+		id=#{id}
 	</delete>
-	
-	<select id="getUserByName" parameterType="user" resultType="user">
+
+	<select id="getUserByName" parameterType="user"
+		resultType="user">
 		select * from user where username like '%${username}%'
 	</select>
-	
+
 </mapper>

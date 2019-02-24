@@ -7,6 +7,10 @@ public class User {
 	private String address; // µÿ÷∑
 	private int state;
 	private int per;
+	
+	private String area;
+	private String province;
+	private String state_name;
 
 	public int getId() {
 		return id;
@@ -55,11 +59,43 @@ public class User {
 	public void setPer(int per) {
 		this.per = per;
 	}
+	
+	
+	
+	
+
+
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
+
+	public String getProvince() {
+		return province;
+	}
+
+	public void setProvince(String province) {
+		this.province = province;
+	}
+
+	public String getState_name() {
+		return state_name;
+	}
+
+	public void setState_name(String state_name) {
+		this.state_name = state_name;
+	}
 
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", password=" + password + ", address=" + address
-				+ ", state=" + state + ", per=" + per + "]";
+				+ ", state=" + state + ", per=" + per + ", area=" + area + ", province=" + province + ", state_name="
+				+ state_name + "]";
 	}
+
+
 
 }

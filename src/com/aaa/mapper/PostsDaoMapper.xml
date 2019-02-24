@@ -13,8 +13,7 @@
 
 	<!-- 查询所有数据时间降序 -->
 	<select id="findAll" resultType="posts">
-		select * from posts order by
-		time desc
+		SELECT * FROM posts ORDER BY time DESC
 	</select>
 
 	<!-- 增加数据 -->

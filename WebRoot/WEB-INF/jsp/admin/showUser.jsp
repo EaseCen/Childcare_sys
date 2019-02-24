@@ -147,8 +147,8 @@ th {
 								<tr align="center">
 									<td>${user.username }</td>
 									<td>${user.password }</td>
-									<td>${user.address}</td>
-									<td>${user.state }</td>
+									<td>${user.area}—${user.province}</td>
+									<td>${user.state_name }</td>
 									<!-- 删除操作-带id参数 -->
 									<td><a
 										href="${pageContext.request.contextPath }/user/delUser.action?id=${user.id}"><button

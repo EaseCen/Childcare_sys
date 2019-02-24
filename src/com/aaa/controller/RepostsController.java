@@ -34,7 +34,7 @@ public class RepostsController {
 		//4.使用model设置到前端
 		model.addAttribute("pageInfo",pageInfo);
 		//5.最后设置返回的jsp
-		return "showReposts";
+		return "admin/showReposts";
 		
 	}
 	
@@ -62,7 +62,7 @@ public class RepostsController {
 		Reposts reposts = repostsBiz.findOne(id);
 		model.addAttribute("reposts", reposts);
 		//返给更新的方法
-		return "updReposts";
+		return "admin/updReposts";
 	}
 	//修改数据
 	@RequestMapping("/updReposts")

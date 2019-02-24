@@ -105,7 +105,7 @@ th {
                     <ol class="breadcrumb">
                         <li class="active">菜单
                         </li>
-                        <li class="active">帖子管理
+                        <li class="active">回复管理
                         </li>
                         <li class="active">
                         </li>
@@ -113,26 +113,17 @@ th {
                     <div class="panel panel-default">
                         <div class="panel-heading">搜索</div>
                         <div class="panel-body">
-                            <form role="form" class="form-inline" action="${pageContext.request.contextPath }/posts/getPostsByName.action" method="post">
+                            <form role="form" class="form-inline">
                                 <div class="form-group">
                                     <label for="name">名称</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="请输入帖子标题">
+                                    <input type="text" class="form-control" id="name" placeholder="请输入名称">
+                                </div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class="form-group">
                                     <button type="submit" class="btn btn-default">开始搜索</button>
                                 </div>
                             </form>
                              <!-- 按钮-->
-                        </div>
-                    </div>
-                   
-                             <!-- 按钮-->
-								<div class="row">
-									<div class="col-md-6 col-md-offset-10">
-										<button type="button" class="btn btn-primary btn-lg"
-											data-toggle="modal" data-target="#myModal">
-											<span class="glyphicon glyphicon-plus"></span>添加帖子
-										</button>
-									</div>
-								</div>
                         </div>
                     </div>
                     <!-- 列表展示 -->

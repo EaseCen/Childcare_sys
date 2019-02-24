@@ -22,7 +22,7 @@
 
 	</select>
 
-	<!-- 查询所有数据时间降序 -->
+	<!-- 查询所有数据id降序 -->
 	<select id="findAll" resultType="reposts">
 		SELECT
 		posts.name,

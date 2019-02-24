@@ -32,7 +32,7 @@ public class PostsController {
 		// 4.使用model设置到前端
 		model.addAttribute("pageInfo", pageInfo);
 		// 5.最后设置返回的jsp
-		return "showPosts";
+		return "admin/showPosts";
 
 	}
 
@@ -58,7 +58,7 @@ public class PostsController {
 		Posts posts = postsBiz.findOne(id);
 		model.addAttribute("posts", posts);
 		// 返给更新的方法
-		return "updPosts";
+		return "admin/updPosts";
 	}
 
 	// 修改数据
@@ -81,7 +81,7 @@ public class PostsController {
 		// 4.使用model设置到前端
 		model.addAttribute("pageInfo", pageInfo);
 		// 5.最后设置返回的jsp
-		return "showPosts";
+		return "admin/showPosts";
 	}
 
 }

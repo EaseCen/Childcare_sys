@@ -45,14 +45,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item"><a class="nav-link" href="http://play9.pcbaby.com.cn/baby131209/index.jsp">发育评估</a></li>
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+				<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> 育儿推荐 </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">饮食推荐</a> <a
-							class="dropdown-item" href="#">书籍推荐</a> <a class="dropdown-item"
-							href="#">互动推荐</a>
+						<a class="dropdown-item" href="#">饮食推荐</a> 
+						<a class="dropdown-item" href="#">书籍推荐</a> 
+						<a class="dropdown-item" href="#">互动推荐</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#">注意事项</a>
 					</div></li>
@@ -84,8 +84,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 			</ul>
 			<form class="form-inline my-2 my-lg-0">
-				<a class="nav-link disabled" href="${pageContext.request.contextPath }/Login.jsp">登录</a>
-				<a class="nav-link disabled" href="regist.html">注册</a>
+				<a class="nav-link disabled" href="${pageContext.request.contextPath }/Login.jsp">登录/注册</a>
 			</form>
 		</div>
 	</nav>

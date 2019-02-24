@@ -46,7 +46,7 @@ public class UserController {
 	public String register(User user, Model model) {
 		userBiz.addUser(user);
 		model.addAttribute("msg", "恭喜您,注册成功");
-		return "success";
+		return "admin/success";
 	}
 	
 	@RequestMapping("/queryUser")
@@ -60,7 +60,7 @@ public class UserController {
 		//4.使用model设置到前端
 		model.addAttribute("pageInfo",pageInfo);
 		//5.最后设置返回的jsp
-		return "showUser";
+		return "admin/showUser";
 	}
 	
 	@RequestMapping("/addAdmin")
@@ -84,7 +84,7 @@ public class UserController {
 		User user = userBiz.findOne(id);
 		model.addAttribute("user", user);
 		//返给更新的方法
-		return "updUser";
+		return "admin/updUser";
 	}
 	//修改数据
 	@RequestMapping("/updUser")
@@ -106,7 +106,7 @@ public class UserController {
 		// 4.使用model设置到前端
 		model.addAttribute("pageInfo", pageInfo);
 		// 5.最后设置返回的jsp
-		return "showUser";
+		return "admin/showUser";
 	}
 	
 }
