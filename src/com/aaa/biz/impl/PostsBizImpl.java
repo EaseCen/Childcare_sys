@@ -52,4 +52,16 @@ public class PostsBizImpl implements PostsBiz {
 		return postsDaoMapper.getPostsByName(posts);
 	}
 
+	@Override
+	public List<Posts> findSameCity(Posts posts) {
+		// TODO Auto-generated method stub
+		return postsDaoMapper.findSameCity(posts);
+	}
+
+	@Override
+	public List<Posts> findSameAge(Posts posts) {
+		// TODO Auto-generated method stub
+		return postsDaoMapper.findSameAge(posts);
+	}
+
 }

@@ -19,5 +19,9 @@ public interface PostsDaoMapper {
 	
 	public List<Posts> getPostsByName(Posts posts);
 	
+	public List<Posts> findSameCity(Posts posts);
+	
+	public List<Posts> findSameAge(Posts posts);
+	
 
 }

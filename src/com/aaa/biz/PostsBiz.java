@@ -18,6 +18,10 @@ public interface PostsBiz {
 	public void del(int id);
 	
 	public List<Posts> getPostsByName(Posts posts);
-		
+	
+	public List<Posts> findSameCity(Posts posts);
+	
+	public List<Posts> findSameAge(Posts posts);
+
 
 }

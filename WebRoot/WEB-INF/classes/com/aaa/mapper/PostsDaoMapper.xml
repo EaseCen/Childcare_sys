@@ -12,8 +12,9 @@
 	</select>
 
 	<!-- 查询所有数据时间降序 -->
-	<select id="findAll" resultType="posts">
-		SELECT * FROM posts ORDER BY time DESC
+	<select id="findAll" parameterType="posts" resultType="posts">
+		SELECT *
+		FROM posts ORDER BY time DESC
 	</select>
 
 	<!-- 增加数据 -->
@@ -34,19 +35,66 @@
 	<delete id="del" parameterType="int">
 		delete from posts where id=#{id}
 	</delete>
-	
-	<select id="getPostsByName" parameterType="posts" resultType="posts">
+
+	<select id="getPostsByName" parameterType="posts"
+		resultType="posts">
 		select * from posts where name like '%${name}%'
 	</select>
 
-	<!-- 动态sql
-	<select id="getPostsByName" parameterType="search" resultType="posts">
-		select * from posts
-		<where>
-			<if test="name!=null and name!=''">
-				and name like '%$#{name}%'
-			</if>
-		</where>
+	<!-- 同城查看 -->
+	<select id="selectCity" parameterType="posts" resultType="posts">
+		SELECT
+		    *
+		FROM
+		    posts
+		WHERE
+		    author IN(
+		    SELECT
+		        username
+		    FROM
+		        USER
+		    WHERE
+		        address IN(
+		        SELECT
+		            USER.address
+		        FROM
+		            USER
+		        INNER JOIN posts ON posts.author = USER.username
+		        WHERE
+		            USER.adderss = #{address}
+		    )
+		)
 	</select>
- -->
+
+	<!-- 同龄分享 -->
+	<select id="selectState" parameterType="posts"
+		resultType="posts">
+		SELECT
+		    *
+		FROM
+		    posts
+		WHERE
+		    author IN(
+		    SELECT
+		        username
+		    FROM
+		        USER
+		    WHERE
+		        address IN(
+		        SELECT
+		            USER.address
+		        FROM
+		            USER
+		        INNER JOIN posts ON posts.author = USER.username
+		        WHERE
+		            USER.state = #{state}
+		    )
+		)
+	</select>
+
+
+
+	<!-- 动态sql <select id="getPostsByName" parameterType="search" resultType="posts"> 
+		select * from posts <where> <if test="name!=null and name!=''"> and name 
+		like '%$#{name}%' </if> </where> </select> -->
 </mapper>
