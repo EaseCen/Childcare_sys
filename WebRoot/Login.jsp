@@ -56,12 +56,12 @@
 							style="color: red"></span>
 					</div>
 					<div class="form-group">
-						<i class="fa fa-lock fa-lg"></i> <input
-							class="form-control required" type="password"
+						<i class="fa fa-lock fa-lg"></i>
+						<input class="form-control required" type="password"
 							placeholder="请输入密码..." id="password" name="password"
-							maxlength="8" value="admin" /> <span id="checkPasswordResult"
-							style="color: red"></span> <label class="control-label"
-							for="inputSuccess1" style="color: red;" id="message"></label>
+							maxlength="8" value="admin" />
+						<span id="checkPasswordResult" style="color: red"></span> 
+						<label class="control-label" for="inputSuccess1" style="color: red;" id="message"></label>
 					</div>
 					<div class="form-group col-md-offset-9">
 						<button type="submit" class="btn btn-success pull-left"
@@ -95,14 +95,14 @@
 						<div class="form-group">
 							<label for="inputUsername" class="col-sm-3 control-label">用户名:</label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control" id="username"
+								<input type="text" class="form-control" id="r_username"
 									name="username" placeholder="请输入用户名" required autofocus>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="inputPassword" class="col-sm-3 control-label">密&nbsp;&nbsp;&nbsp;码:</label>
 							<div class="col-sm-6">
-								<input type="password" class="form-control" id="password"
+								<input type="password" class="form-control" id="r_password"
 									name="password" placeholder="请输入密码" required autofocus>
 							</div>
 						</div>
@@ -118,8 +118,9 @@
 									<option value="xn">西南</option>
 									<option value="hz">华中</option>
 									<option value="db">东北</option>
-								</select> <select id="testTwo" name="address">
-									<option value="">请选择</option> 
+								</select>
+								<select id="testTwo" name="address">
+									<option value="">请选择</option>
 								</select>
 							</div>
 						</div>
@@ -127,12 +128,12 @@
 							<label for="inputState" class="col-sm-3 control-label">状态:</label>
 							<div class="col-sm-6">
 								 <select
-									class="selectpicker" id="state" name = "state"
+									class="selectpicker" id="r_state" name = "state"
 									onchange="gradeChange()">
 									<option value="">请选择</option>
-									<option value="1">备孕</a> 
-									<option value="2">孕期</a>
-									<option value="3">产后</a>
+									<option value="1">备孕</option> 
+									<option value="2">孕期</option>
+									<option value="3">产后</option>
 								</select>
 							</div>
 						</div>
