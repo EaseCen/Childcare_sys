@@ -18,10 +18,10 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v8.0"/>
-	<classpathentry kind="lib" path="E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/lib/fastjson-1.2.2.jar"/>
-	<classpathentry kind="lib" path="E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/lib/fastjson-1.2.2-sources.jar"/>
-	<classpathentry kind="lib" path="E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/lib/jackson-annotations-2.9.7.jar"/>
-	<classpathentry kind="lib" path="E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/lib/jackson-core-2.9.7.jar"/>
-	<classpathentry kind="lib" path="E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/lib/jackson-databind-2.9.7.jar"/>
+	<classpathentry kind="lib" path="D:/Github/Childcare_sys/WebRoot/WEB-INF/lib/fastjson-1.2.2.jar"/>
+	<classpathentry kind="lib" path="D:/Github/Childcare_sys/WebRoot/WEB-INF/lib/fastjson-1.2.2-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Github/Childcare_sys/WebRoot/WEB-INF/lib/jackson-annotations-2.9.7.jar"/>
+	<classpathentry kind="lib" path="D:/Github/Childcare_sys/WebRoot/WEB-INF/lib/jackson-core-2.9.7.jar"/>
+	<classpathentry kind="lib" path="D:/Github/Childcare_sys/WebRoot/WEB-INF/lib/jackson-databind-2.9.7.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

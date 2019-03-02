@@ -79,7 +79,7 @@
 
 				<!-- 模态框的主体-表单头部 -->
 				<form class="form-horizontal" role="form"
-					action="${pageContext.request.contextPath }/posts/upd.action"
+					action="${pageContext.request.contextPath }/posts/updPosts.action"
 					method="post" id="form" enctype="multipart/form-data">
 
 					<!-- 将id作为隐藏域提交这样就不会出现找不到修改的数据而报错问题 -->

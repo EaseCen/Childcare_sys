@@ -134,7 +134,6 @@ th {
                     </div>
                     <!-- 列表展示 -->
                     <div class="table-responsive">
-                    	<form action="${pageContext.request.contextPath }/user/addUser.action" method="post">
                         <table class="table table-striped">
                                 <tr align="center">
                                     <th>用户名</th>
@@ -165,7 +164,7 @@ th {
 								</tr>
 						</c:forEach>
                         </table>
-                        </form>
+
                     </div>
                 </div>
             </div>

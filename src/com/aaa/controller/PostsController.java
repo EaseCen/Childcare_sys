@@ -16,7 +16,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.aaa.biz.PostsBiz;
 import com.aaa.entity.Posts;
-import com.aaa.entity.User;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
@@ -42,14 +41,6 @@ public class PostsController {
 		// 5.最后设置返回的jsp
 		return "admin/showPosts";
 	}
-
-    @RequestMapping(value="index")
-    public ModelAndView index(){
-        List<Posts> posts =postsBiz.findAll();
-        mav.setViewName("index");
-        mav.addObject("posts",posts);
-          return mav;
-    }
 	
 	@RequestMapping("/addPosts")
 	public String addPosts(Posts posts) {
@@ -152,8 +143,17 @@ public class PostsController {
 	
 	@RequestMapping("/showIndex")
 	public String showIndex(Model model) {
-		postsBiz.findAll();
-		return "user/PostPreview";
+		List<Posts> list = postsBiz.findAll();
+		PageInfo<Posts> pageInfo = new PageInfo<Posts>(list, 5);
+		model.addAttribute("pageInfo", pageInfo);
+		return "user/showIndex";
+	}
+	
+	@RequestMapping("/getPostsById")
+	public String getPostsById(Model model, int id) {
+		Posts posts = postsBiz.findOne(id);
+		model.addAttribute("posts", posts);
+		return "user/showPosts";
 	}
 	
 	

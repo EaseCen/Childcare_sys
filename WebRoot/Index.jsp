@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page language="java" import="java.util.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -33,61 +36,62 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 
 <body>
-	<nav
-		class="site-header sticky-top navbar navbar-expand-lg navbar-dark bg-dark ">
-		<a class="navbar-brand" href="#">首页</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false"
-			aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item"><a class="nav-link" href="http://play9.pcbaby.com.cn/baby131209/index.jsp">发育评估</a></li>
-				<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> 育儿推荐 </a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">饮食推荐</a> 
-						<a class="dropdown-item" href="#">书籍推荐</a> 
-						<a class="dropdown-item" href="#">互动推荐</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">注意事项</a>
-					</div></li>
-				<li class="nav-item"><a class="nav-link" href="post.html#">发现专区</a></li>
-
-				<!--
-				<li class="nav-item dropdown">
-				<a
-					class="nav-link dropdown-toggle" href="post.html" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> 发现专区 </a>
-					
-					
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="same_age_post.html">发现圈子--同龄</a> <a
-							class="dropdown-item" href="same_city_post.html">发现圈子--同城</a>
-					</div>
-					</li>
-					-->
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> 实用工具 </a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="#">预产期计算器</a> <a
-							class="dropdown-item" href="#">胎儿体重计算</a> <a
-							class="dropdown-item" href="#">身高体重计算</a>
-					</div></li>
-
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<a class="nav-link disabled" href="${pageContext.request.contextPath }/Login.jsp">登录/注册</a>
-			</form>
-		</div>
-	</nav>
+		<nav
+			class="site-header sticky-top navbar navbar-expand-lg navbar-dark bg-dark ">
+			<a class="navbar-brand" href="#">首页</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="http://play9.pcbaby.com.cn/baby131209/index.jsp">发育评估</a></li>
+					<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+						role="button" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false"> 育儿推荐 </a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">饮食推荐</a> 
+							<a class="dropdown-item" href="#">书籍推荐</a> 
+							<a class="dropdown-item" href="#">互动推荐</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">注意事项</a>
+						</div></li>
+					<li class="nav-item">
+					<a class="nav-link" href="${pageContext.request.contextPath}/posts/showAllPost.action">发现专区</a></li>
+	
+					<!--
+					<li class="nav-item dropdown">
+					<a
+						class="nav-link dropdown-toggle" href="post.html" id="navbarDropdown"
+						role="button" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false"> 发现专区 </a>
+						
+						
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="same_age_post.html">发现圈子--同龄</a> <a
+								class="dropdown-item" href="same_city_post.html">发现圈子--同城</a>
+						</div>
+						</li>
+						-->
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+						role="button" data-toggle="dropdown" aria-haspopup="true"
+						aria-expanded="false"> 实用工具 </a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">预产期计算器</a> <a
+								class="dropdown-item" href="#">胎儿体重计算</a> <a
+								class="dropdown-item" href="#">身高体重计算</a>
+						</div></li>
+	
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<a class="nav-link disabled" href="${pageContext.request.contextPath }/Login.jsp">登录/注册</a>
+				</form>
+			</div>
+		</nav>
 
 
 	<div
@@ -150,7 +154,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 	<br>
 	<br>
-
+	
 	<div class="services">
 		<div class="container text-center">
 			<h3 class="title">每日导读</h3>
@@ -161,35 +165,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="col"></div>
 			<div class="col">
 				<div class="card" style="width: 300px">
-					<img class="card-img-top" src="./images/s1.jpg" alt="Card image"
-						style="width: 100%">
-					<div class="card-body">
-						<h4 class="card-title">标题</h4>
-						<p class="card-text">简介</p>
-						<a href="./singlepage.html" class="btn btn-primary">查看</a>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card" style="width: 300px">
-					<img class="card-img-top" src="./images/s2.jpg" alt="Card image"
-						style="width: 100%">
-					<div class="card-body">
-						<h4 class="card-title">标题</h4>
-						<p class="card-text">简介</p>
-						<a href="#" class="btn btn-primary">查看</a>
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="card" style="width: 300px">
-					<img class="card-img-top" src="./images/s3.jpg" alt="Card image"
-						style="width: 100%">
-					<div class="card-body">
-						<h4 class="card-title">标题</h4>
-						<p class="card-text">简介</p>
-						<a href="#" class="btn btn-primary">查看</a>
-					</div>
+                                <tr>
+                                    <th>帖子标题</th>
+									<th>帖子内容</th>
+									<th>发帖时间</th>
+									<th>发帖人</th>
+									<th colspan="3">操作</th>
+                                </tr>
+                                	<c:forEach items="${pageInfo.list}" var="posts">
+								<tr align="center">
+									<td>${posts.name }</td>
+									<td>${posts.text }</td>
+									<td><fmt:formatDate value="${posts.time}"
+											pattern="yyyy-MM-dd HH:mm:ss" /></td>
+									<td>${posts.author }</td>
+									
+									<!-- 删除操作-带id参数 -->
+									<td><a
+										href="${pageContext.request.contextPath }/posts/del.action?id=${posts.id}"><button
+												type="button" class="btn btn-success btn-lg"
+												onclick="return confirm('确定要删除帖子吗？') ">
+												<span class="glyphicon glyphicon-trash"></span> 删除
+											</button></a></td>
+									<!-- 修改操作 -->	
+									<td><a
+										href="${pageContext.request.contextPath }/posts/findOne.action?id=${posts.id}"><button
+												type="button" class="btn btn-success btn-lg">
+												<span class="glyphicon glyphicon-edit"></span> 修改
+											</button></a></td>
+								</tr>
+						</c:forEach> 	
 				</div>
 			</div>
 			<div class="col"></div>

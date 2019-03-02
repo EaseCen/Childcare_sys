@@ -77,8 +77,8 @@ th {
                     <ul class="nav navbar-nav navbar-right" style="margin:1% 0 1% 0%;">
                         <li><h4 style="color:red;">
 					欢迎您:&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span>
-					<strong>${user1.username }</strong><small>
-					<a href="${pageContext.request.contextPath }/user/LogOut.action">注销</a></small>
+					<strong>${user1.username }</strong>
+					<small> <a href="${pageContext.request.contextPath }/user/LogOut.action">注销</a></small>
 					</h4></li>
                     </ul>
                 </div>
@@ -257,51 +257,5 @@ th {
 			</div>
 		</div>
 	</div>
-	
-<script type="text/javascript">
-
-/* 以json的格式提交登录传参 */
-$("#login").click(function() {
-	var username=document.getElementById("username").value;
-	var password=document.getElementById("password").value;
-	var checkUserNameResult = document.getElementById("checkUserNameResult"); //提示语句
-	var checkPasswordResult = document.getElementById("checkPasswordResult"); //提示语句
-    
-	if(username.trim().length==0){
-          checkUserNameResult.innerHTML = "用户名不能为空";  
-          obj.focus();
-    }else if(password.trim().length==0){
-    	 checkUserNameResult.innerHTML = "";
-    	 checkPasswordResult.innerHTML = "密码不能为空";  
-         obj.focus();
-    }else{
-    	 checkPasswordResult.innerHTML = "";  
-		 $.ajax({
-			type : 'post',
-			//提交路径
-			url : '${pageContext.request.contextPath}/user/checkLogin.action',
-			//声明为json格式
-			contentType : 'application/json;charset=utf-8',
-			//转为json格式
-			data : JSON.stringify({
-					"username" : $("#username").val(),
-					"password" : $("#password").val()
-				}),
-					//点击登录以后拿到数据
-					success : function(data) {
-					//判断
-					if (data == "" || data == null) {
-							$("#message").html("用户名或密码错误！");
-					} else {
-					//正常跳转
-							window.location.href = "${pageContext.request.contextPath}/posts/queryPosts.action";
-							}
-						}
-					});
-   			 }
-		});
-		
-</script>
-	
 </body>
 </html>

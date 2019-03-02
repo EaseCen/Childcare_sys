@@ -38,7 +38,7 @@
 	src="<%=basePath%>js/bootstrap-datetimepicker.zh-CN.js"></script>
 <script type="text/javascript"
 	src="https://cdn.bootcss.com/bootstrap-select/2.0.0-beta1/js/bootstrap-select.min.js"></script>
-<script type="text/javascript" src="<%=basePath%>js/address.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/addre.js"></script>
 
 </head>
 <body style="margin: 8%;">
@@ -190,7 +190,7 @@
 															"用户名或密码错误！");
 												} else {
 													//正常跳转
-													window.location.href = "${pageContext.request.contextPath}/posts/queryPosts.action";
+													window.location.href = "${pageContext.request.contextPath}/posts/showIndex.action";
 												}
 											}
 										});

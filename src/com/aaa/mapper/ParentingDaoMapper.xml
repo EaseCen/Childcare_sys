@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 指定映射到dao层 -->
+<mapper namespace="com.aaa.mapper.ParentingDaoMapper">
+
+	<!-- 查询单条数据，类型int返回posts类型 -->
+	<select id="findOne" parameterType="int" resultType="parenting">
+		select * from parenting where id=#{id}
+	</select>
+
+	<!-- 增加数据 -->
+	<insert id="add" useGeneratedKeys="true" keyProperty="id"
+		parameterType="parenting">
+		insert into parenting
+		values(default,#{text},#{time},#{author})
+	</insert>
+
+	<!-- 更新数据-通过id -->
+	<update id="upd" parameterType="parenting">
+		update parenting set text=#{text} where id =#{id}
+	</update>
+
+	<!-- 通过id删除数据 缺少一个删除帖子页同时删除回复的语句，后期补上 -->
+	<delete id="del" parameterType="int">
+		delete from parenting where id=#{id}
+	</delete>
+
+	<select id="getParentingByAuthor" parameterType="parenting"
+		resultType="parenting">
+		select * from parenting where author = #{author} ORDER BY id DESC
+	</select>
+</mapper>

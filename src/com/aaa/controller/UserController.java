@@ -86,6 +86,7 @@ public class UserController {
 		//返给更新的方法
 		return "admin/updUser";
 	}
+	
 	//修改数据
 	@RequestMapping("/updUser")
 	public String upd(User user){
@@ -107,6 +108,21 @@ public class UserController {
 		model.addAttribute("pageInfo", pageInfo);
 		// 5.最后设置返回的jsp
 		return "admin/showUser";
+	}
+	
+	@RequestMapping("/Fetal_development")
+	public String Fetal_development(){
+		return "user/Fetal_development";
+	}
+	
+	@RequestMapping("/Infant_development")
+	public String Infant_development(){
+		return "user/Infant_development";
+	}
+
+	@RequestMapping("/Baby_diet")
+	public String Baby_diet(){
+		return "user/Baby_diet";
 	}
 	
 }

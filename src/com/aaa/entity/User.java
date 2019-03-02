@@ -59,11 +59,6 @@ public class User {
 	public void setPer(int per) {
 		this.per = per;
 	}
-	
-	
-	
-	
-
 
 	public String getArea() {
 		return area;

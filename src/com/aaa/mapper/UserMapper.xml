@@ -59,5 +59,6 @@
 		resultType="user">
 		select * from user where username like '%${username}%'
 	</select>
+	
 
 </mapper>

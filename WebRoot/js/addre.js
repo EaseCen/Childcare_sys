@@ -6,21 +6,13 @@ function changeTest(obj) {
 			objSelectet.options[i] = null;
 			objSelectet.innerHTML = "<option value = ''>请选择</option>";
 		}
-		// Object实现动态下拉框
-		var texts = {
-			11 : "广东省",
-			12 : "广西壮族自治区",
-			13 : "海南省",
-			14 : "香港特别行政区",
-			15 : "澳门特别行政区",
-		}
-		console.log(texts);
-		var objKeys = Object.keys(texts);
-		var objValues = Object.values(texts);
-		for (var i = 0; i < objKeys.length; i++) {
+		// Array事项动态下拉框
+		var texts = new Array("广东省", "广西壮族自治区", "海南省", "香港特别行政区", "澳门特别行政区");
+		var values = new Array("11", "12", "13", "14", "15");
+		for (var i = 0; i < texts.length; i++) {
 			var objOption = document.createElement("OPTION");
-			objOption.text = objValues[i];
-			objOption.value = objValues[i];
+			objOption.text = texts[i];
+			objOption.value = values[i];
 			objSelectet.options.add(objOption);
 		}
 	} else if (selectVal == "hb") {
