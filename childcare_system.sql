@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： 127.0.0.1
--- 生成日期： 2019-02-24 15:39:33
+-- 生成日期： 2019-03-02 16:23:58
 -- 服务器版本： 10.1.36-MariaDB
 -- PHP 版本： 7.2.10
 
@@ -76,6 +76,30 @@ INSERT INTO `address` (`area`, `province`, `area_id`, `province_id`) VALUES
 ('华中', '辽宁省', 7, 71),
 ('华中', '吉林省', 7, 72),
 ('华中', '黑龙江省', 7, 73);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `parenting`
+--
+
+CREATE TABLE `parenting` (
+  `id` int(11) NOT NULL,
+  `text` text NOT NULL,
+  `time` datetime NOT NULL,
+  `author` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `parenting`
+--
+
+INSERT INTO `parenting` (`id`, `text`, `time`, `author`) VALUES
+(7, '				AASDFASDFASDFASDF				', '2019-03-02 00:00:00', 'test'),
+(13, '				AASDFASDFASDFASDF				', '2019-03-02 00:00:00', 'test'),
+(14, '				AASDFASDFASDFASDF				', '2019-03-02 00:00:00', 'test'),
+(17, '11111111111111111111', '2019-03-02 00:00:00', 'admin'),
+(19, '				AASDFASDFASDFASDF				', '2019-03-02 00:00:00', 'test');
 
 -- --------------------------------------------------------
 
@@ -177,11 +201,19 @@ INSERT INTO `user` (`id`, `username`, `password`, `address`, `state`, `per`) VAL
 (4, '111', '111', 11, 1, 0),
 (5, '123', '123', 12, 2, 0),
 (6, '1111', '1111', 15, 3, 0),
-(7, 'root', 'root', 22, 1, 1);
+(8, 'ease', 'ease', 35, 2, 1),
+(11, 'ease1', 'qqq', 44, 3, 1),
+(12, 'asdfasdfasdf', 'asdfasdf', 12, 3, 1);
 
 --
 -- 转储表的索引
 --
+
+--
+-- 表的索引 `parenting`
+--
+ALTER TABLE `parenting`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- 表的索引 `posts`
@@ -199,11 +231,18 @@ ALTER TABLE `reposts`
 -- 表的索引 `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- 在导出的表使用AUTO_INCREMENT
 --
+
+--
+-- 使用表AUTO_INCREMENT `parenting`
+--
+ALTER TABLE `parenting`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- 使用表AUTO_INCREMENT `posts`
@@ -221,7 +260,7 @@ ALTER TABLE `reposts`
 -- 使用表AUTO_INCREMENT `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
