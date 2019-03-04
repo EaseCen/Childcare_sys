@@ -27,7 +27,11 @@
 
 <script type="application/x-javascript">
 	
+	
+	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
+
 
 </script>
 <link href="<%=basePath%>bootstrap-4.1.3-dist/css/bootstrap.css"
@@ -39,6 +43,7 @@
 	width: 100%;
 	height: 100%;
 }
+
 .testDiv {
 	overflow: hidden;
 	text-overflow: ellipsis; /* 用省略号代替 */
@@ -58,56 +63,65 @@
 	</button>
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
-			<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+			<li class="nav-item dropdown"><a
+				class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 				role="button" data-toggle="dropdown" aria-haspopup="true"
 				aria-expanded="false"> 发育评估</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="${pageContext.request.contextPath }/user/Fetal_development.action">胎儿发育评估</a>
-					<a class="dropdown-item" href="${pageContext.request.contextPath }/user/Infant_development.action">婴儿发育评估</a> 
-				</div>
-			</li>
+					<a class="dropdown-item"
+						href="${pageContext.request.contextPath }/user/Fetal_development.action">胎儿发育评估</a>
+					<a class="dropdown-item"
+						href="${pageContext.request.contextPath }/user/Infant_development.action">婴儿发育评估</a>
+				</div></li>
 			<li class="nav-item dropdown"><a
 				class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 				role="button" data-toggle="dropdown" aria-haspopup="true"
 				aria-expanded="false"> 育儿推荐 </a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="${pageContext.request.contextPath }/user/Baby_diet.action">宝宝饮食</a> 
-					<a class="dropdown-item" href="#">书籍推荐</a> 
-					<a class="dropdown-item" href="#">互动推荐</a>
+					<a class="dropdown-item"
+						href="${pageContext.request.contextPath }/user/Baby_diet.action">宝宝饮食</a>
+					<a class="dropdown-item" href="#">书籍推荐</a> <a class="dropdown-item"
+						href="#">互动推荐</a>
 					<div class="dropdown-divider"></div>
 					<a class="dropdown-item" href="#">注意事项</a>
 				</div></li>
 
-			<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="post.html" id="navbarDropdown" role="button" data-toggle="dropdown"
+			<li class="nav-item dropdown"><a
+				class="nav-link dropdown-toggle" href="post.html"
+				id="navbarDropdown" role="button" data-toggle="dropdown"
 				aria-haspopup="true" aria-expanded="false"> 发现专区 </a>
-
-
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 					<a class="dropdown-item"
 						href="${pageContext.request.contextPath }/posts/findSameCity.action?address=${user1.address}">发现圈子--同龄</a>
 					<a class="dropdown-item"
 						href="${pageContext.request.contextPath }/posts/findSameAge.action?state=${user1.state}">发现圈子--同城</a>
 				</div></li>
-			<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+			<li class="nav-item dropdown"><a
+				class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 				role="button" data-toggle="dropdown" aria-haspopup="true"
 				aria-expanded="false"> 实用工具 </a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">喂养记录</a>
-					<a class="dropdown-item" href="#">预产期计算器</a>
-					<a class="dropdown-item" href="#">胎儿体重计算</a> 
-					<a class="dropdown-item" href="#">身高体重计算</a>
-				</div>
-			</li>
+					<a class="dropdown-item"
+						href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">喂养记录</a>
+					<a class="dropdown-item" href="#">预产期计算器</a> <a
+						class="dropdown-item" href="#">胎儿体重计算</a> <a class="dropdown-item"
+						href="#">身高体重计算</a>
+				</div></li>
 
 		</ul>
-		<form class="form-inline my-2 my-lg-0 text-light">
-			欢迎您:&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> <strong>${user1.username }</strong><small>
-				<a href="${pageContext.request.contextPath }/user/LogOut.action">&nbsp;&nbsp;&nbsp;&nbsp;注销</a>
-			</small>
-		</form>
+		<ul class="nav navbar-nav navbar-right">
+			<li class="nav-item dropdown"><a
+				class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+				role="button" data-toggle="dropdown" aria-haspopup="true"
+				aria-expanded="false"> 欢迎您:&nbsp;&nbsp; <span
+					class="glyphicon glyphicon-user"></span> <strong>${user1.username }</strong>
+			</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item btn btn-primary" data-toggle="modal"
+						data-target="#myModal">申请为会员</a> <a class="dropdown-item"
+						href="${pageContext.request.contextPath }/user/LogOut.action">&nbsp;&nbsp;&nbsp;&nbsp;注销</a>
+				</div></li>
+		</ul>
 	</div>
 	</nav>
 	<div
@@ -179,23 +193,25 @@
 		<div class="row">
 			<div class="col"></div>
 			<c:forEach items="${pageInfo.list}" var="posts" end="2">
-			<div class="col">
-				<div class="card" style="width: 300px">
-					<img class="card-img-top" src="./images/s1.jpg" alt="Card image"
-						style="width: 100%">
-					<div class="card-body">
-						<h4 class="card-title">${posts.name }</h4>
-						<p class="card-text">
+				<div class="col">
+					<div class="card" style="width: 300px">
+						<img class="card-img-top" src="./images/s1.jpg" alt="Card image"
+							style="width: 100%">
+						<div class="card-body">
+							<h4 class="card-title">${posts.name }</h4>
+							<p class="card-text">
 							<table>
 								<tr>
 									<td nowrap="nowrap"><div class="testDiv">${posts.text }</div></td>
 								</tr>
 							</table>
-						  </p>
-						<a href="${pageContext.request.contextPath }/posts/posts.action?id=${posts.id}" class="btn btn-primary">查看</a>
+							</p>
+							<a
+								href="${pageContext.request.contextPath }/posts/posts.action?id=${posts.id}"
+								class="btn btn-primary">查看</a>
+						</div>
 					</div>
 				</div>
-			</div>
 			</c:forEach>
 			<div class="col"></div>
 		</div>
@@ -275,6 +291,43 @@
 					<li><a
 						href="${pageContext.request.contextPath }/user/queryUser.action?pn=${pageInfo.pages}">末页</a></li>
 				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<!-- 模态框头部 -->
+				<div class="modal-header">
+					<h4 class="modal-title">申请会员</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<!-- 模态框主体 -->
+				<form class="form-horizontal" role="form"
+					action="${pageContext.request.contextPath }/member/addMember.action"
+					method="post" id="form" enctype="multipart/form-data">
+					<div class="modal-body">
+						<div class="form-group">
+							<label for="lastname" class="col-sm-3 control-label">申请原因:</label>
+							<div class="col-sm-5">
+								<input type="hidden" id="addusername" name="username" value="${user1.username}" />
+								<textarea class="form-control input-lg" id="addreason"
+									name="reason" style="width: 426px; height: 214px;" required
+									autofocus>
+								</textarea>
+							</div>
+						</div>
+					</div>
+					<!-- 模态框底部 -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary"
+							data-dismiss="modal">关闭</button>
+						<button type="submit" class="btn btn-primary" id="save">提交</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>

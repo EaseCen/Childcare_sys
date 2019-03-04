@@ -95,8 +95,11 @@
 
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a class="nav-link" href="${pageContext.request.contextPath }/UserLogin.jsp"><span
-					class="glyphicon glyphicon-log-in"></span>会员注册/登录</a></li>
+			<li>
+				<a class="nav-link" href="${pageContext.request.contextPath }/UserLogin.jsp">
+					<span class="glyphicon glyphicon-log-in"></span>会员注册/登录
+				</a>
+			</li>
 		</ul>
 	</div>
 	</nav>

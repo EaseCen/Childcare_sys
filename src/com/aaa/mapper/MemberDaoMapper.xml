@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 指定映射到dao层 -->
+<mapper namespace="com.aaa.mapper.MemberDaoMapper">
+
+	<!-- 查询单条数据，类型int返回posts类型 -->
+	<select id="findOne" parameterType="int" resultType="member">
+		select * from member where id=#{id}
+	</select>
+
+	<!-- 查询所有数据时间降序 -->
+	<select id="findAll" parameterType="member" resultType="member">
+		SELECT
+			member.id,
+		    member.username,
+		    member.reason,
+		    state.state_name
+		FROM
+		    member
+		INNER JOIN state WHERE member.state = state.state_number ORDER BY member.state ASC
+	</select>
+
+	<!-- 增加数据 -->
+	<insert id="add" useGeneratedKeys="true" keyProperty="id"
+		parameterType="member">
+		insert into member
+		values(default,#{username},#{reason},6)
+	</insert>
+
+	<!-- 批准-->
+	<update id="updPass" parameterType="member">
+		UPDATE
+		    member,user
+		SET
+		    member.state = "7",user.per="2"
+		WHERE
+		    member.id = #{id} AND user.username= #{username}
+	</update>
+	
+	<!-- 拒绝-->
+	<update id="updReject" parameterType="member">
+		UPDATE
+		    member
+		SET
+		    state = "8"
+		WHERE
+		    id = #{id}
+	</update>
+</mapper>

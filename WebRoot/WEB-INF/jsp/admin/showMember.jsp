@@ -119,7 +119,7 @@ th {
 						<form role="form" class="form-inline">
 							<div class="form-group">
 								<label for="name">名称</label> <input type="text"
-									class="form-control" id="name" placeholder="请输入名称">
+									class="form-control" id="name" placeholder="请输入用户名">
 							</div>
 							&nbsp;&nbsp;&nbsp;&nbsp;
 							<div class="form-group">
@@ -133,32 +133,25 @@ th {
 				<div class="table-responsive content">
 					<table class="table table-striped">
 						<tr>
-							<th>帖子标题</th>
-							<th>帖子内容</th>
-							<th>发帖时间</th>
-							<th>发帖人</th>
+							<th>申请人</th>
+							<th>申请理由</th>
+							<th>状态</th>
 							<th colspan="3">操作</th>
 						</tr>
-						<c:forEach items="${pageInfo.list}" var="posts">
+						<c:forEach items="${pageInfo.list}" var="member">
 							<tr align="center">
-								<td>${posts.name }</td>
-								<td>${posts.text }</td>
-								<td><fmt:formatDate value="${posts.time}"
-										pattern="yyyy-MM-dd HH:mm:ss" /></td>
-								<td>${posts.author }</td>
-
-								<!-- 删除操作-带id参数 -->
-								<td><a
-									href="${pageContext.request.contextPath }/posts/del.action?id=${posts.id}"><button
-											type="button" class="btn btn-success btn-lg"
-											onclick="return confirm('确定要删除帖子吗？') ">
-											<span class="glyphicon glyphicon-trash"></span> 删除
-										</button></a></td>
-								<!-- 修改操作 -->
-								<td><a
-									href="${pageContext.request.contextPath }/posts/findOne.action?id=${posts.id}"><button
+								<td>${member.username}</td>
+								<td>${member.reason}</td>
+								<td>${member.state_name}</td>
+								<td><a 
+									href="${pageContext.request.contextPath }/member/updPass.action?id=${member.id}&username=${member.username}"><button
 											type="button" class="btn btn-success btn-lg">
-											<span class="glyphicon glyphicon-edit"></span> 修改
+											<span class="glyphicon glyphicon-edit"></span> 批准
+										</button></a></td>
+								<td><a
+									href="${pageContext.request.contextPath }/member/updReject.action?id=${member.id}"><button
+											type="button" class="btn btn-success btn-lg">
+											<span class="glyphicon glyphicon-trash"></span> 拒绝
 										</button></a></td>
 							</tr>
 						</c:forEach>
@@ -176,87 +169,32 @@ th {
 			<div class="col-md-6">
 				<ul class="pagination pagination-lg">
 					<li><a
-						href="${pageContext.request.contextPath }/posts/queryPosts.action?pn=1">首页</a></li>
+						href="${pageContext.request.contextPath }/member/queryMember.action?pn=1">首页</a></li>
 					<c:if test="${pageInfo.hasPreviousPage }">
 						<li><a
-							href="${pageContext.request.contextPath }/posts/queryPosts.action?pn=${pageInfo.pageNum-1}"
+							href="${pageContext.request.contextPath }/member/queryMember.action?pn=${pageInfo.pageNum-1}"
 							aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
 						</a></li>
 					</c:if>
 					<c:forEach items="${pageInfo.navigatepageNums }" var="nav">
 						<c:if test="${nav==pageInfo.pageNum }">
 							<li class="active"><a
-								href="${pageContext.request.contextPath }/posts/queryPosts.action?pn=${nav}">${nav }</a></li>
+								href="${pageContext.request.contextPath }/member/queryMember.action?pn=${nav}">${nav }</a></li>
 						</c:if>
 						<c:if test="${nav!=pageInfo.pageNum }">
 							<li><a
-								href="${pageContext.request.contextPath }/posts/queryPosts.action?pn=${nav}">${nav }</a></li>
+								href="${pageContext.request.contextPath }/member/queryMember.action?pn=${nav}">${nav }</a></li>
 						</c:if>
 					</c:forEach>
 					<c:if test="${pageInfo.hasNextPage}">
 						<li><a
-							href="${pageContext.request.contextPath }/posts/queryPosts.action?pn=${pageInfo.pageNum+1}"
+							href="${pageContext.request.contextPath }/member/queryMember.action?pn=${pageInfo.pageNum+1}"
 							aria-label="Previous"> <span aria-hidden="true">&raquo;</span>
 						</a></li>
 					</c:if>
 					<li><a
-						href="${pageContext.request.contextPath }/posts/queryPosts.action?pn=${pageInfo.pages}">末页</a></li>
+						href="${pageContext.request.contextPath }/member/queryMember.action?pn=${pageInfo.pages}">末页</a></li>
 				</ul>
-			</div>
-		</div>
-	</div>
-	<!-- 添加帖子的模态框-->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-		aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-				<!-- 模态框的标题 -->
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true">&times;</span><span class="sr-only">关闭</span>
-					</button>
-					<h4 class="modal-title" id="myModalLabel">添加帖子</h4>
-				</div>
-				<!-- 模态框的主体-表单头部 -->
-				<form class="form-horizontal" role="form"
-					action="${pageContext.request.contextPath }/posts/addPosts.action"
-					method="post" id="form" enctype="multipart/form-data">
-					<div class="modal-body">
-						<div class="form-group  form-group-lg">
-							<label for="firstname" class="col-sm-3 control-label">帖子名称:</label>
-							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg" id="name"
-									name="name" placeholder="请输入帖子名字" required autofocus>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="lastname" class="col-sm-3 control-label">帖子内容:</label>
-							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg" id="text"
-									name="text" placeholder="请输入帖子内容" required autofocus>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="lastname" class="col-sm-3 control-label">发帖时间:</label>
-							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg form_datetime"
-									id="time" name="time">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="lastname" class="col-sm-3 control-label">发帖人:</label>
-							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg" id="author"
-									name="author" placeholder="请输入发帖人" required autofocus>
-							</div>
-						</div>
-					</div>
-					<!-- 模态框的尾部 -->
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-						<button type="submit" class="btn btn-primary" id="save">保存</button>
-					</div>
-				</form>
 			</div>
 		</div>
 	</div>

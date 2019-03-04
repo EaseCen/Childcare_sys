@@ -51,7 +51,7 @@
 					<div class="form-group">
 						<i class="fa fa-user fa-lg"></i> <input
 							class="form-control required" type="text" placeholder="请输入用户名..."
-							id="username" name="username" value="admin" autofocus="autofocus"
+							id="username" name="username" value="test" autofocus="autofocus"
 							maxlength="20" /> <span id="checkUserNameResult"
 							style="color: red"></span>
 					</div>
@@ -59,7 +59,7 @@
 						<i class="fa fa-lock fa-lg"></i> <input
 							class="form-control required" type="password"
 							placeholder="请输入密码..." id="password" name="password"
-							maxlength="8" value="admin" /> <span id="checkPasswordResult"
+							maxlength="8" value="test" /> <span id="checkPasswordResult"
 							style="color: red"></span> <label class="control-label"
 							for="inputSuccess1" style="color: red;" id="message"></label>
 					</div>

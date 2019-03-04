@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： 127.0.0.1
--- 生成日期： 2019-03-02 16:23:58
+-- 生成日期： 2019-03-04 11:39:08
 -- 服务器版本： 10.1.36-MariaDB
 -- PHP 版本： 7.2.10
 
@@ -76,6 +76,28 @@ INSERT INTO `address` (`area`, `province`, `area_id`, `province_id`) VALUES
 ('华中', '辽宁省', 7, 71),
 ('华中', '吉林省', 7, 72),
 ('华中', '黑龙江省', 7, 73);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `member`
+--
+
+CREATE TABLE `member` (
+  `id` int(11) NOT NULL,
+  `username` varchar(11) NOT NULL,
+  `reason` text NOT NULL,
+  `state` int(5) NOT NULL COMMENT '1:待批准 2:已拒绝 3:已批准'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `member`
+--
+
+INSERT INTO `member` (`id`, `username`, `reason`, `state`) VALUES
+(1, 'test', '1111111111111111111', 6),
+(2, 'root', '22222222222222', 8),
+(5, 'ease', '								asdfasdfasdfasdf', 7);
 
 -- --------------------------------------------------------
 
@@ -173,7 +195,10 @@ INSERT INTO `state` (`state_name`, `state_number`) VALUES
 ('孕期', 2),
 ('产后', 3),
 ('在职', 4),
-('离职', 5);
+('离职', 5),
+('待审批', 6),
+('已批准', 7),
+('已拒绝', 8);
 
 -- --------------------------------------------------------
 
@@ -187,7 +212,7 @@ CREATE TABLE `user` (
   `password` varchar(20) NOT NULL,
   `address` int(5) NOT NULL COMMENT '两位数，前一位表示地区，后一位表示省市',
   `state` int(5) NOT NULL COMMENT '1：备孕 2：孕期 3：产后',
-  `per` int(2) NOT NULL DEFAULT '1' COMMENT '0为管理员，1为普通用户'
+  `per` int(2) NOT NULL DEFAULT '1' COMMENT '0为管理员，1为普通用户，2为会员'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -196,18 +221,25 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`, `address`, `state`, `per`) VALUES
 (1, 'admin', 'admin', 11, 2, 0),
-(2, 'test', 'test', 22, 2, 1),
+(2, 'test', 'test', 22, 2, 2),
 (3, 'root', 'root', 11, 3, 1),
-(4, '111', '111', 11, 1, 0),
-(5, '123', '123', 12, 2, 0),
-(6, '1111', '1111', 15, 3, 0),
-(8, 'ease', 'ease', 35, 2, 1),
+(4, '111', '111', 11, 1, 1),
+(5, '123', '123', 12, 2, 1),
+(6, '1111', '1111', 15, 3, 1),
+(8, 'ease', 'ease', 35, 2, 2),
 (11, 'ease1', 'qqq', 44, 3, 1),
 (12, 'asdfasdfasdf', 'asdfasdf', 12, 3, 1);
 
 --
 -- 转储表的索引
 --
+
+--
+-- 表的索引 `member`
+--
+ALTER TABLE `member`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- 表的索引 `parenting`
@@ -237,6 +269,12 @@ ALTER TABLE `user`
 --
 -- 在导出的表使用AUTO_INCREMENT
 --
+
+--
+-- 使用表AUTO_INCREMENT `member`
+--
+ALTER TABLE `member`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- 使用表AUTO_INCREMENT `parenting`

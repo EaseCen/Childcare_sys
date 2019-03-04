@@ -126,7 +126,7 @@ th {
 									<div class="col-md-6 col-md-offset-10">
 										<button type="button" class="btn btn-primary btn-lg"
 											data-toggle="modal" data-target="#myModal">
-											<span class="glyphicon glyphicon-plus"></span>添加管理员
+											<span class="glyphicon glyphicon-plus">添加管理员</span>
 										</button>
 									</div>
 								</div>
