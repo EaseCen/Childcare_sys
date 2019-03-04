@@ -7,7 +7,9 @@ import com.aaa.entity.User;
 
 public interface UserBiz {
 	
-	public User CheckLoginAndPwd(String name, String pwd);
+	public User CheckLoginAndPwd0(String name, String pwd);
+	
+	public User CheckLoginAndPwd1(String name, String pwd);
 
 	public void addUser(User user);
 	

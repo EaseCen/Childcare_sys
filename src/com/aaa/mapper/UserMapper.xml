@@ -6,10 +6,16 @@
 <mapper namespace="com.aaa.mapper.UserMapper">
 
 	<!-- 查询返回的是实体类对象也可以写实体的绝对路径com.aaa.entity.User -->
-	<select id="CheckLoginAndPwd" resultType="user"
+	<select id="CheckLoginAndPwd1" resultType="user"
 		parameterType="user">
 		select*from user where username=#{username} and
-		password=#{password}
+		password=#{password} and per="1"
+	</select>
+	
+		<select id="CheckLoginAndPwd0" resultType="user"
+		parameterType="user">
+		select*from user where username=#{username} and
+		password=#{password} and per="0"
 	</select>
 
 	<select id="findOne" parameterType="int" resultType="user">

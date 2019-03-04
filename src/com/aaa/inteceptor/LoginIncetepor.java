@@ -44,7 +44,11 @@ public class LoginIncetepor implements HandlerInterceptor {
 		// TODO Auto-generated method stub
 		// 获取请求的URL地址
 		String url = request.getRequestURI();
-		if (url.indexOf("/checkLogin.action") >= 0) {
+		if (url.indexOf("/checkLogin0.action") >= 0) {
+			System.out.println("进入登录拦截");
+			return true;
+		}
+		if (url.indexOf("/checkLogin1.action") >= 0) {
 			System.out.println("进入登录拦截");
 			return true;
 		}
@@ -54,7 +58,7 @@ public class LoginIncetepor implements HandlerInterceptor {
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("user1");
 		session.setMaxInactiveInterval(30 * 60);
-		
+
 		if (user != null) {
 			return true;
 		} else 

@@ -15,9 +15,15 @@ public class UserBizImpl implements UserBiz {
 	private UserMapper userMapper;
 
 	@Override
-	public User CheckLoginAndPwd(String name, String pwd) {
+	public User CheckLoginAndPwd0(String name, String pwd) {
 		// TODO Auto-generated method stub
-		return userMapper.CheckLoginAndPwd(name, pwd);
+		return userMapper.CheckLoginAndPwd0(name, pwd);
+	}
+	
+	@Override
+	public User CheckLoginAndPwd1(String name, String pwd) {
+		// TODO Auto-generated method stub
+		return userMapper.CheckLoginAndPwd1(name, pwd);
 	}
 
 	@Override

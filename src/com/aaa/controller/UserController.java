@@ -25,10 +25,19 @@ public class UserController {
 	private UserBiz userBiz;
 
 	// 设置映射路径和以json格式传送参数
-	@RequestMapping(value = "/checkLogin", produces = { "application/json;charset=UTF-8" })
-	public @ResponseBody User checkLogin(@RequestBody User user, Model model, HttpSession session) {
+	@RequestMapping(value = "/checkLogin0", produces = { "application/json;charset=UTF-8" })
+	public @ResponseBody User checkLogin0(@RequestBody User user, Model model, HttpSession session) {
 		System.out.println("=============进入登录控制页面。===============");
-		User user1 = userBiz.CheckLoginAndPwd(user.getUsername(), user.getPassword());
+		User user1 = userBiz.CheckLoginAndPwd0(user.getUsername(), user.getPassword());
+		// 登录以后添加到session中
+		session.setAttribute("user1", user1);
+		return user1;
+	}
+	
+	@RequestMapping(value = "/checkLogin1", produces = { "application/json;charset=UTF-8" })
+	public @ResponseBody User checkLogin1(@RequestBody User user, Model model, HttpSession session) {
+		System.out.println("=============进入登录控制页面。===============");
+		User user1 = userBiz.CheckLoginAndPwd1(user.getUsername(), user.getPassword());
 		// 登录以后添加到session中
 		session.setAttribute("user1", user1);
 		return user1;
@@ -38,7 +47,7 @@ public class UserController {
 	@RequestMapping("/LogOut")
 	public String LogOut(HttpSession session) {
 		session.invalidate();
-		return "redirect:/Login.jsp";
+		return "redirect:/Index.jsp";
 	}
 
 	// 注册

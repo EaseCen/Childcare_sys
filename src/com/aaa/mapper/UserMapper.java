@@ -8,7 +8,9 @@ import com.aaa.entity.User;
 
 public interface UserMapper {
 
-	public User CheckLoginAndPwd(@Param("username") String name, @Param("password") String pwd);
+	public User CheckLoginAndPwd1(@Param("username") String name, @Param("password") String pwd);
+	
+	public User CheckLoginAndPwd0(@Param("username") String name, @Param("password") String pwd);
 	
 	public void addUser(User user);
 	

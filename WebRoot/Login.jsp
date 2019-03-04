@@ -46,7 +46,7 @@
 		<div class="form row">
 			<!-- ajax提交登录示例 -->
 			<div class="form-horizontal col-md-offset-2" id="login_form">
-				<h3 class="form-title">欢迎登录</h3>
+				<h3 class="form-title">管理员登录</h3>
 				<div class="col-md-9">
 					<div class="form-group">
 						<i class="fa fa-user fa-lg"></i> <input
@@ -95,7 +95,7 @@
 								$.ajax({
 											type : 'post',
 											//提交路径
-											url : '${pageContext.request.contextPath}/user/checkLogin.action',
+											url : '${pageContext.request.contextPath}/user/checkLogin0.action',
 											//声明为json格式
 											contentType : 'application/json;charset=utf-8',
 											//转为json格式
