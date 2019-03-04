@@ -11,7 +11,7 @@
 <head>
 <base href="<%=basePath%>">
 <meta charset="UTF-8">
-<title>登录界面</title>
+<title>登录新界面</title>
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
@@ -38,7 +38,7 @@
 	src="<%=basePath%>js/bootstrap-datetimepicker.zh-CN.js"></script>
 <script type="text/javascript"
 	src="https://cdn.bootcss.com/bootstrap-select/2.0.0-beta1/js/bootstrap-select.min.js"></script>
-<script type="text/javascript" src="<%=basePath%>js/address.js"></script>
+<script type="text/javascript" src="<%=basePath%>js/addre.js"></script>
 
 </head>
 <body style="margin: 8%;">
@@ -51,7 +51,7 @@
 					<div class="form-group">
 						<i class="fa fa-user fa-lg"></i> <input
 							class="form-control required" type="text" placeholder="请输入用户名..."
-							id="username" name="username" value="" autofocus="autofocus"
+							id="username" name="username" value="admin" autofocus="autofocus"
 							maxlength="20" /> <span id="checkUserNameResult"
 							style="color: red"></span>
 					</div>
@@ -59,7 +59,7 @@
 						<i class="fa fa-lock fa-lg"></i> <input
 							class="form-control required" type="password"
 							placeholder="请输入密码..." id="password" name="password"
-							maxlength="8" value="" /> <span id="checkPasswordResult"
+							maxlength="8" value="admin" /> <span id="checkPasswordResult"
 							style="color: red"></span> <label class="control-label"
 							for="inputSuccess1" style="color: red;" id="message"></label>
 					</div>
@@ -95,14 +95,14 @@
 						<div class="form-group">
 							<label for="inputUsername" class="col-sm-3 control-label">用户名:</label>
 							<div class="col-sm-6">
-								<input type="text" class="form-control" id="username"
+								<input type="text" class="form-control" id="r_username"
 									name="username" placeholder="请输入用户名" required autofocus>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="inputPassword" class="col-sm-3 control-label">密&nbsp;&nbsp;&nbsp;码:</label>
 							<div class="col-sm-6">
-								<input type="password" class="form-control" id="password"
+								<input type="password" class="form-control" id="r_password"
 									name="password" placeholder="请输入密码" required autofocus>
 							</div>
 						</div>
@@ -119,19 +119,19 @@
 									<option value="hz">华中</option>
 									<option value="db">东北</option>
 								</select> <select id="testTwo" name="address">
-									<option value="">请选择</option> 
+									<option value="">请选择</option>
 								</select>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="inputState" class="col-sm-3 control-label">状态:</label>
 							<div class="col-sm-6">
-								<select class="selectpicker" id="state" name="state"
+								<select class="selectpicker" id="r_state" name="state"
 									onchange="gradeChange()">
 									<option value="">请选择</option>
-									<option value="1">备孕</a>
-									<option value="2">孕期</a>
-									<option value="3">产后</a>
+									<option value="1">备孕</option>
+									<option value="2">孕期</option>
+									<option value="3">产后</option>
 								</select>
 							</div>
 						</div>
@@ -147,16 +147,15 @@
 
 	<script type="text/javascript">
 		/* 以json的格式提交登录传参 */
-		$("#login")
-				.click(
+		$("#login") .click(
 						function() {
 							var username = document.getElementById("username").value;
 							var password = document.getElementById("password").value;
+
 							var checkUserNameResult = document
 									.getElementById("checkUserNameResult"); //提示语句
 							var checkPasswordResult = document
 									.getElementById("checkPasswordResult"); //提示语句
-
 							if (username.trim().length == 0) {
 								checkUserNameResult.innerHTML = "用户名不能为空";
 								obj.focus();
@@ -164,10 +163,9 @@
 								checkUserNameResult.innerHTML = "";
 								checkPasswordResult.innerHTML = "密码不能为空";
 								obj.focus();
-							} else {
+							}else {
 								checkPasswordResult.innerHTML = "";
-								$
-										.ajax({
+								$.ajax({
 											type : 'post',
 											//提交路径
 											url : '${pageContext.request.contextPath}/user/checkLogin.action',
@@ -175,10 +173,8 @@
 											contentType : 'application/json;charset=utf-8',
 											//转为json格式
 											data : JSON.stringify({
-												"username" : $("#username")
-														.val(),
-												"password" : $("#password")
-														.val()
+												"username" : $("#username").val(),
+												"password" : $("#password").val()
 											}),
 											//点击登录以后拿到数据
 											success : function(data) {
@@ -186,10 +182,9 @@
 												if (data == "" || data == null) {
 													$("#message").html(
 															"用户名或密码错误！");
-												} else {
-													//正常跳转
-													window.location.href = "${pageContext.request.contextPath}/user/queryUser.action";
-												}
+												} else
+													window.location.href = "${pageContext.request.contextPath}/posts/showIndex.action";
+												//正常跳转
 											}
 										});
 							}

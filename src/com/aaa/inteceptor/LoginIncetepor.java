@@ -1,8 +1,5 @@
 package com.aaa.inteceptor;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -57,11 +54,11 @@ public class LoginIncetepor implements HandlerInterceptor {
 		HttpSession session = request.getSession();
 		User user = (User) session.getAttribute("user1");
 		session.setMaxInactiveInterval(30 * 60);
-		if (user != null && user.getPer() == 0) {
+		
+		if (user != null) {
 			return true;
-		} else if (user != null && user.getPer() == 1) {
-			request.getRequestDispatcher("/UserLogin.jsp").forward(request, response);
-		}
+		} else 
+			request.getRequestDispatcher("/Login.jsp").forward(request, response);
 		return false;
 
 	}

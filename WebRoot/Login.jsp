@@ -46,7 +46,7 @@
 		<div class="form row">
 			<!-- ajax提交登录示例 -->
 			<div class="form-horizontal col-md-offset-2" id="login_form">
-				<h3 class="form-title">欢迎登录商品管理系统</h3>
+				<h3 class="form-title">欢迎登录</h3>
 				<div class="col-md-9">
 					<div class="form-group">
 						<i class="fa fa-user fa-lg"></i> <input
@@ -56,109 +56,33 @@
 							style="color: red"></span>
 					</div>
 					<div class="form-group">
-						<i class="fa fa-lock fa-lg"></i>
-						<input class="form-control required" type="password"
+						<i class="fa fa-lock fa-lg"></i> <input
+							class="form-control required" type="password"
 							placeholder="请输入密码..." id="password" name="password"
-							maxlength="8" value="admin" />
-						<span id="checkPasswordResult" style="color: red"></span> 
-						<label class="control-label" for="inputSuccess1" style="color: red;" id="message"></label>
+							maxlength="8" value="admin" /> <span id="checkPasswordResult"
+							style="color: red"></span> <label class="control-label"
+							for="inputSuccess1" style="color: red;" id="message"></label>
 					</div>
 					<div class="form-group col-md-offset-9">
 						<button type="submit" class="btn btn-success pull-left"
 							name="login" id="login">登录</button>
-						<button type="button" class="btn btn-danger pull-right"
-							name="register" id="register" data-toggle="modal"
-							data-target="#myModal">注册</button>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- 注册框 -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-		aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-					</button>
-					<h4 class="modal-title" id="myModalLabel">注册新用户</h4>
-				</div>
-				<!-- form表单提交注册示例 -->
-				<form class="form-horizontal" role="form"
-					action="${pageContext.request.contextPath}/user/register.action"
-					method="post" id="form">
-					<div class="modal-body">
-						<!-- 表格 -->
-						<div class="form-group">
-							<label for="inputUsername" class="col-sm-3 control-label">用户名:</label>
-							<div class="col-sm-6">
-								<input type="text" class="form-control" id="r_username"
-									name="username" placeholder="请输入用户名" required autofocus>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputPassword" class="col-sm-3 control-label">密&nbsp;&nbsp;&nbsp;码:</label>
-							<div class="col-sm-6">
-								<input type="password" class="form-control" id="r_password"
-									name="password" placeholder="请输入密码" required autofocus>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputAddress" class="col-sm-3 control-label">地&nbsp;&nbsp;&nbsp;区:</label>
-							<div class="col-sm-6">
-								<select id="testOne" onchange="changeTest(this)">
-									<option value="">请选择</option>
-									<option value="hn">华南</option>
-									<option value="hb">华北</option>
-									<option value="hd">华东</option>
-									<option value="xb">西北</option>
-									<option value="xn">西南</option>
-									<option value="hz">华中</option>
-									<option value="db">东北</option>
-								</select>
-								<select id="testTwo" name="address">
-									<option value="">请选择</option>
-								</select>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputState" class="col-sm-3 control-label">状态:</label>
-							<div class="col-sm-6">
-								 <select
-									class="selectpicker" id="r_state" name = "state"
-									onchange="gradeChange()">
-									<option value="">请选择</option>
-									<option value="1">备孕</option> 
-									<option value="2">孕期</option>
-									<option value="3">产后</option>
-								</select>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="submit" class="btn btn-primary" id="save">注册</button>
-						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-					</div>
-				</form>
 			</div>
 		</div>
 	</div>
 
 	<script type="text/javascript">
 		/* 以json的格式提交登录传参 */
-		$("#login")
-				.click(
+		$("#login") .click(
 						function() {
 							var username = document.getElementById("username").value;
 							var password = document.getElementById("password").value;
+
 							var checkUserNameResult = document
 									.getElementById("checkUserNameResult"); //提示语句
 							var checkPasswordResult = document
 									.getElementById("checkPasswordResult"); //提示语句
-
 							if (username.trim().length == 0) {
 								checkUserNameResult.innerHTML = "用户名不能为空";
 								obj.focus();
@@ -166,10 +90,9 @@
 								checkUserNameResult.innerHTML = "";
 								checkPasswordResult.innerHTML = "密码不能为空";
 								obj.focus();
-							} else {
+							}else {
 								checkPasswordResult.innerHTML = "";
-								$
-										.ajax({
+								$.ajax({
 											type : 'post',
 											//提交路径
 											url : '${pageContext.request.contextPath}/user/checkLogin.action',
@@ -177,10 +100,8 @@
 											contentType : 'application/json;charset=utf-8',
 											//转为json格式
 											data : JSON.stringify({
-												"username" : $("#username")
-														.val(),
-												"password" : $("#password")
-														.val()
+												"username" : $("#username").val(),
+												"password" : $("#password").val()
 											}),
 											//点击登录以后拿到数据
 											success : function(data) {
@@ -188,10 +109,9 @@
 												if (data == "" || data == null) {
 													$("#message").html(
 															"用户名或密码错误！");
-												} else {
-													//正常跳转
-													window.location.href = "${pageContext.request.contextPath}/posts/showIndex.action";
-												}
+												} else
+													window.location.href = "${pageContext.request.contextPath}/posts/queryPosts.action";
+												//正常跳转
 											}
 										});
 							}
