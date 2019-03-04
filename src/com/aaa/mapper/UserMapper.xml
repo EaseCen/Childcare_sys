@@ -9,7 +9,7 @@
 	<select id="CheckLoginAndPwd1" resultType="user"
 		parameterType="user">
 		select*from user where username=#{username} and
-		password=#{password} and per="1"
+		password=#{password} and per="1" or per="2"
 	</select>
 	
 		<select id="CheckLoginAndPwd0" resultType="user"
