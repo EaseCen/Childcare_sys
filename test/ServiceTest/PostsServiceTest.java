@@ -21,7 +21,7 @@ import junit.framework.Assert;
 @Service
 public class PostsServiceTest extends BaseTest {
 
-	//×¢ÈëPostsDaoMapper
+	//×¢ÈëPostsDaoService
 	@Autowired
 	private PostsBiz postsBiz;
 	
