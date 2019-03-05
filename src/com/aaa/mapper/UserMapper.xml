@@ -9,10 +9,10 @@
 	<select id="CheckLoginAndPwd1" resultType="user"
 		parameterType="user">
 		select*from user where username=#{username} and
-		password=#{password} and per="1" or per="2"
+		password=#{password} and per != "0"
 	</select>
-	
-		<select id="CheckLoginAndPwd0" resultType="user"
+
+	<select id="CheckLoginAndPwd0" resultType="user"
 		parameterType="user">
 		select*from user where username=#{username} and
 		password=#{password} and per="0"
@@ -30,8 +30,10 @@
 		address.area,
 		address.province,
 		state.state_name
-		FROM (user LEFT JOIN address ON user.address = address.province_id) LEFT
-		JOIN state ON user.state=state.state_number
+		FROM (user
+		LEFT JOIN address ON user.address = address.province_id) LEFT
+		JOIN
+		state ON user.state=state.state_number
 		ORDER BY user.id ASC
 	</select>
 
@@ -65,6 +67,5 @@
 		resultType="user">
 		select * from user where username like '%${username}%'
 	</select>
-	
 
 </mapper>

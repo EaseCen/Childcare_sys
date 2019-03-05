@@ -24,7 +24,6 @@ public class ParentingController {
 	@Autowired
 	private ParentingBiz parentingBiz;
 
-	/** 根据用户数据模糊查询 */
 	@RequestMapping("/getParentingByAuthor")
 	public String getParentingByName(@RequestParam(value = "pn", defaultValue = "1") Integer pn, String author,
 			Model model) {
@@ -80,7 +79,7 @@ public class ParentingController {
      */
      @InitBinder
      public void initBinder(WebDataBinder binder) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");//格式根据个人需求进行设定
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");//格式根据个人需求进行设定
         dateFormat.setLenient(false);
         binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));   //true:允许输入空值，日期可以为空，false:不能为空值
     }

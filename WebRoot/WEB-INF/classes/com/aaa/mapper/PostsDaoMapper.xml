@@ -42,7 +42,7 @@
 	</select>
 
 	<!-- 同城查看 -->
-	<select id="selectCity" parameterType="posts" resultType="posts">
+	<select id="findSameCity" parameterType="posts" resultType="posts">
 		SELECT
 		    *
 		FROM
@@ -50,25 +50,23 @@
 		WHERE
 		    author IN(
 		    SELECT
-		        username
+		        USER.username
 		    FROM
 		        USER
 		    WHERE
-		        address IN(
+		        USER.address IN(
 		        SELECT
 		            USER.address
 		        FROM
 		            USER
-		        INNER JOIN posts ON posts.author = USER.username
 		        WHERE
-		            USER.adderss = #{address}
+		            USER.username = #{author}
 		    )
 		)
 	</select>
 
 	<!-- 同龄分享 -->
-	<select id="selectState" parameterType="posts"
-		resultType="posts">
+	<select id="findSameAge" parameterType="posts" resultType="posts">
 		SELECT
 		    *
 		FROM
@@ -76,18 +74,17 @@
 		WHERE
 		    author IN(
 		    SELECT
-		        username
+		        USER.username
 		    FROM
 		        USER
 		    WHERE
-		        address IN(
+		        USER.state IN(
 		        SELECT
-		            USER.address
+		            USER.state
 		        FROM
 		            USER
-		        INNER JOIN posts ON posts.author = USER.username
 		        WHERE
-		            USER.state = #{state}
+		            USER.username = #{author}
 		    )
 		)
 	</select>

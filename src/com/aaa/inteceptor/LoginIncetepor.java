@@ -62,7 +62,7 @@ public class LoginIncetepor implements HandlerInterceptor {
 		if (user != null) {
 			return true;
 		} else 
-			request.getRequestDispatcher("/Login.jsp").forward(request, response);
+			request.getRequestDispatcher("/UserLogin.jsp").forward(request, response);
 		return false;
 
 	}

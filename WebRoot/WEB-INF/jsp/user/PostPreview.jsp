@@ -3,12 +3,14 @@
 <%@ page language="java" import="java.util.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -22,18 +24,22 @@
 <link rel="shortcut icon" href="images/favicon.png" />
 
 <!-- Style Sheet-->
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="<%=basePath%>mstp_35_knowledge/style.css" />
 <link rel='stylesheet' id='bootstrap-css-css'
-	href='css/bootstrap5152.css?ver=1.0' type='text/css' media='all' />
+	href='<%=basePath%>mstp_35_knowledge/css/bootstrap5152.css?ver=1.0'
+	type='text/css' media='all' />
 <link rel='stylesheet' id='responsive-css-css'
-	href='css/responsive5152.css?ver=1.0' type='text/css' media='all' />
+	href='<%=basePath%>mstp_35_knowledge/css/responsive5152.css?ver=1.0'
+	type='text/css' media='all' />
 <link rel='stylesheet' id='pretty-photo-css-css'
-	href='js/prettyphoto/prettyPhotoaeb9.css?ver=3.1.4' type='text/css'
-	media='all' />
-<link rel='stylesheet' id='main-css-css' href='css/main5152.css?ver=1.0'
+	href='<%=basePath%>mstp_35_knowledge/js/prettyphoto/prettyPhotoaeb9.css?ver=3.1.4'
+	type='text/css' media='all' />
+<link rel='stylesheet' id='main-css-css'
+	href='<%=basePath%>mstp_35_knowledge/css/main5152.css?ver=1.0'
 	type='text/css' media='all' />
 <link rel='stylesheet' id='custom-css-css'
-	href='css/custom5152.html?ver=1.0' type='text/css' media='all' />
+	href='<%=basePath%>mstp_35_knowledge/css/custom5152.html?ver=1.0'
+	type='text/css' media='all' />
 
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -62,36 +68,25 @@
 			<nav class="main-nav">
 			<div class="menu-top-menu-container">
 				<ul id="menu-top-menu" class="clearfix">
-					<li><a href="index-2.html">首页</a></li>
-					<li><a href="#">发育评估</a>
+					<li><a href="${pageContext.request.contextPath }/posts/showIndex.action">首页</a></li>
+					<li><a>发育评估</a>
 						<ul class="sub-menu">
-							<li><a href="${pageContext.request.contextPath }/user/Fetal_development.action">胎儿发育评估</a></li>
-							<li><a href="${pageContext.request.contextPath }/user/Infant_development.action">婴儿发育评估</a></li>
+							<li><a
+								href="${pageContext.request.contextPath }/user/Fetal_development.action">胎儿发育评估</a></li>
+							<li><a
+								href="${pageContext.request.contextPath }/user/Infant_development.action">婴儿发育评估</a></li>
 						</ul></li>
-					<li><a href="#">育儿推荐</a>
-						<ul class="sub-menu">
-							<li><a href="blue-skin.html">饮食推荐</a></li>
-							<li><a href="green-skin.html">书籍推荐</a></li>
-							<li><a href="red-skin.html">互动推荐</a></li>
-							<li class="divider"></li>
-							<li><a href="index-2.html">注意事项</a></li>
-						</ul></li>
-					<li><a href="faq.html">发现专区</a></li>
-					<li><a href="#">实用工具</a>
-						<ul class="sub-menu">
-							<li><a href="full-width.html">预产期计算器</a></li>
-							<li><a href="elements.html">胎儿体重计算</a></li>
-							<li><a href="page.html">身高体重计算</a></li>
-						</ul></li>
+					<li>
+					<a
+						href="${pageContext.request.contextPath }/user/Baby_diet.action">饮食推荐</a></li>
+					<li><a href="${pageContext.request.contextPath }/posts/findSameCityAndAge.action?author=${user1.username}">发现专区</a></li>
+					<li><a href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">养育记录</a></li>
 				</ul>
-				<form class="form-inline my-2 my-lg-0 text-light">
-					欢迎您:&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> <strong>${user1.username }</strong><small>
-						<a href="${pageContext.request.contextPath }/user/LogOut.action">&nbsp;&nbsp;&nbsp;&nbsp;注销</a>
-					</small>
-				</form>
 			</div>
+
 			</nav>
 			<!-- End of Main Navigation -->
+
 		</div>
 		</header>
 	</div>
@@ -128,128 +123,31 @@
 		<div class="page-container">
 			<div class="container">
 				<div class="row">
-
-					<!-- start of page content -->
-					<div class="span8 main-listing">
-
+						<!-- start of page content -->
+						<div class="span9 main-listing">
 						<article class="format-standard type-post hentry clearfix">
-						<header class="clearfix">
-						<h3 class="post-title">
-							<a href="single.html">标题</a>
-						</h3>
-						<div class="post-meta clearfix">
-							<span class="date">25 Feb, 2013</span> <span class="comments"><a
-								href="#" title="#">评论数量</a></span>
-						</div>
-						<!-- end of post meta --> </header>
-						<p>
-							部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文....<a
-								class="readmore-link"
-								href="http://knowledgebase.inspirythemes.com/integrating-wordpress-with-your-website/">阅读更多</a>
-						</p>
+						<c:forEach items="${pageInfo1.list}" var="posts" end="4">
+							<header class="clearfix">
+							<h3 class="post-title">
+								<a href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">${posts.name }</a>
+							</h3>
+							<div class="post-meta clearfix">
+								<span class="date">${posts.time }</span> 
+								<span>By:${posts.author }</span>
+							</div>
+								<!-- end of post meta -->
+							</header>
+							<c:if test="${fn:length(posts.text) > 150 }">
+							${fn:substring(posts.text,0,150)}...
+							</c:if>
+							<c:if test="${fn:length(posts.text)  <= 150 }">
+							${posts.text}
+							</c:if>
+							<br>
+						</c:forEach> 
 						</article>
-
-						<article class="format-standard type-post hentry clearfix">
-						<header class="clearfix">
-						<h3 class="post-title">
-							<a href="single.html">标题</a>
-						</h3>
-						<div class="post-meta clearfix">
-							<span class="date">25 Feb, 2013</span> <span class="comments"><a
-								href="#" title="#">评论数量</a></span>
 						</div>
-						<!-- end of post meta --> </header>
-						<p>
-							部分正文....<a class="readmore-link"
-								href="http://knowledgebase.inspirythemes.com/integrating-wordpress-with-your-website/">阅读更多</a>
-						</p>
-						</article>
-
-						<article class=" type-post format-image hentry clearfix">
-
-						<header class="clearfix">
-
-						<h3 class="post-title">
-							<a href="single.html">带有图片</a>
-						</h3>
-						<div class="post-meta clearfix">
-							<span class="date">25 Feb, 2013</span> <span class="comments"><a
-								href="#" title="#">评论数量</a></span>
-						</div>
-						<!-- end of post meta --> </header> <a href="#" title="Using Images"><img
-							width="770" height="501"
-							src="images/temp/living-room-770x501.jpg"
-							class="attachment-std-thumbnail wp-post-image" alt="Living room"></a>
-						<p>
-							部分正文....<a class="readmore-link"
-								href="http://knowledgebase.inspirythemes.com/integrating-wordpress-with-your-website/">阅读更多</a>
-						</p>
-						</article>
-
-						<article class="format-standard type-post hentry clearfix">
-						<header class="clearfix">
-						<h3 class="post-title">
-							<a href="single.html">标题</a>
-						</h3>
-						<div class="post-meta clearfix">
-							<span class="date">25 Feb, 2013</span> <span class="comments"><a
-								href="#" title="#">评论数量</a></span>
-						</div>
-						<!-- end of post meta --> </header>
-						<p>
-							部分正文....<a class="readmore-link"
-								href="http://knowledgebase.inspirythemes.com/integrating-wordpress-with-your-website/">阅读更多</a>
-						</p>
-						</article>
-
-
-					</div>
 					<!-- end of page content -->
-
-
-					<!-- start of sidebar -->
-					<aside class="span4 page-sidebar"> <section class="widget">
-					<h3 class="title">精选文章</h3>
-					<ul class="articles">
-						<li class="article-entry standard">
-							<h4>
-								<a href="single.html">标题</a>
-							</h4> <span class="article-meta">25 Feb, 2013 </span>
-						</li>
-						<li class="article-entry standard">
-							<h4>
-								<a href="single.html">标题</a>
-							</h4> <span class="article-meta">24 Feb, 2013 </span>
-						</li>
-						<li class="article-entry video">
-							<h4>
-								<a href="single.html">标题</a>
-							</h4> <span class="article-meta">23 Feb, 2013 </span>
-						</li>
-						<li class="article-entry image">
-							<h4>
-								<a href="single.html">标题</a>
-							</h4> <span class="article-meta">22 Feb, 2013 </span>
-						</li>
-					</ul>
-					</section> <section class="widget">
-					<h3 class="title">最近的评论</h3>
-					<ul id="recentcomments">
-						<li class="recentcomments"><a href="#"
-							rel="external nofollow" class="url">用户</a>在<a href="#">帖子标题</a>
-							一贴中进行了回复</li>
-						<li class="recentcomments"><a href="#"
-							rel="external nofollow" class="url">用户123</a>在<a href="#">如何育儿</a>
-							一贴中进行了回复</li>
-						<li class="recentcomments"><a href="#"
-							rel="external nofollow" class="url">用户</a>在<a href="#">帖子标题</a>
-							一贴中进行了回复</li>
-						<li class="recentcomments"><a href="#"
-							rel="external nofollow" class="url">用户</a>在<a href="#">帖子标题</a>
-							一贴中进行了回复</li>
-					</ul>
-					</section> </aside>
-					<!-- end of sidebar -->
 				</div>
 			</div>
 		</div>
@@ -269,126 +167,30 @@
 				<div class="row">
 
 					<!-- start of page content -->
-					<div class="span8 main-listing">
-
+					<div class="span9 main-listing">
 						<article class="format-standard type-post hentry clearfix">
-						<header class="clearfix">
-						<h3 class="post-title">
-							<a href="single.html">标题</a>
-						</h3>
-						<div class="post-meta clearfix">
-							<span class="date">25 Feb, 2013</span> <span class="comments"><a
-								href="#" title="#">评论数量</a></span>
-						</div>
-						<!-- end of post meta --> </header>
-						<p>
-							部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文部分正文....<a
-								class="readmore-link"
-								href="http://knowledgebase.inspirythemes.com/integrating-wordpress-with-your-website/">阅读更多</a>
-						</p>
+						<c:forEach items="${pageInfo2.list}" var="posts" end="4">
+							<header class="clearfix">
+							<h3 class="post-title">
+								<a href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">${posts.name }</a>
+							</h3>
+							<div class="post-meta clearfix">
+								<span class="date">${posts.time }</span> 
+								<span>By:${posts.author }</span>
+							</div>
+								<!-- end of post meta -->
+							</header>
+							<c:if test="${fn:length(posts.text) > 20 }">
+							${fn:substring(posts.text,0,200)}...
+							</c:if>
+							<c:if test="${fn:length(posts.text)  <= 20 }">
+							<c:out value="${posts.text}"></c:out>
+							</c:if>
+							<br>
+						</c:forEach> 
 						</article>
-
-						<article class="format-standard type-post hentry clearfix">
-						<header class="clearfix">
-						<h3 class="post-title">
-							<a href="single.html">标题</a>
-						</h3>
-						<div class="post-meta clearfix">
-							<span class="date">25 Feb, 2013</span> <span class="comments"><a
-								href="#" title="#">评论数量</a></span>
-						</div>
-						<!-- end of post meta --> </header>
-						<p>
-							部分正文....<a class="readmore-link"
-								href="http://knowledgebase.inspirythemes.com/integrating-wordpress-with-your-website/">阅读更多</a>
-						</p>
-						</article>
-
-						<article class=" type-post format-image hentry clearfix">
-
-						<header class="clearfix">
-
-						<h3 class="post-title">
-							<a href="single.html">带有图片</a>
-						</h3>
-						<div class="post-meta clearfix">
-							<span class="date">25 Feb, 2013</span> <span class="comments"><a
-								href="#" title="#">评论数量</a></span>
-						</div>
-						<!-- end of post meta --> </header> <a href="#" title="Using Images"><img
-							width="770" height="501"
-							src="images/temp/living-room-770x501.jpg"
-							class="attachment-std-thumbnail wp-post-image" alt="Living room"></a>
-						<p>
-							部分正文....<a class="readmore-link"
-								href="http://knowledgebase.inspirythemes.com/integrating-wordpress-with-your-website/">阅读更多</a>
-						</p>
-						</article>
-
-						<article class="format-standard type-post hentry clearfix">
-						<header class="clearfix">
-						<h3 class="post-title">
-							<a href="single.html">标题</a>
-						</h3>
-						<div class="post-meta clearfix">
-							<span class="date">25 Feb, 2013</span> <span class="comments"><a
-								href="#" title="#">评论数量</a></span>
-						</div>
-						<!-- end of post meta --> </header>
-						<p>
-							部分正文....<a class="readmore-link"
-								href="http://knowledgebase.inspirythemes.com/integrating-wordpress-with-your-website/">阅读更多</a>
-						</p>
-						</article>
-
-
 					</div>
 					<!-- end of page content -->
-
-
-					<!-- start of sidebar -->
-					<aside class="span4 page-sidebar"> <section class="widget">
-					<h3 class="title">精选文章</h3>
-					<ul class="articles">
-						<li class="article-entry standard">
-							<h4>
-								<a href="single.html">标题</a>
-							</h4> <span class="article-meta">25 Feb, 2013 </span>
-						</li>
-						<li class="article-entry standard">
-							<h4>
-								<a href="single.html">标题</a>
-							</h4> <span class="article-meta">24 Feb, 2013 </span>
-						</li>
-						<li class="article-entry video">
-							<h4>
-								<a href="single.html">标题</a>
-							</h4> <span class="article-meta">23 Feb, 2013 </span>
-						</li>
-						<li class="article-entry image">
-							<h4>
-								<a href="single.html">标题</a>
-							</h4> <span class="article-meta">22 Feb, 2013 </span>
-						</li>
-					</ul>
-					</section> <section class="widget">
-					<h3 class="title">最近的评论</h3>
-					<ul id="recentcomments">
-						<li class="recentcomments"><a href="#"
-							rel="external nofollow" class="url">用户</a>在<a href="#">帖子标题</a>
-							一贴中进行了回复</li>
-						<li class="recentcomments"><a href="#"
-							rel="external nofollow" class="url">用户123</a>在<a href="#">如何育儿</a>
-							一贴中进行了回复</li>
-						<li class="recentcomments"><a href="#"
-							rel="external nofollow" class="url">用户</a>在<a href="#">帖子标题</a>
-							一贴中进行了回复</li>
-						<li class="recentcomments"><a href="#"
-							rel="external nofollow" class="url">用户</a>在<a href="#">帖子标题</a>
-							一贴中进行了回复</li>
-					</ul>
-					</section> </aside>
-					<!-- end of sidebar -->
 				</div>
 			</div>
 		</div>
@@ -450,14 +252,21 @@
 	<a href="#top" id="scroll-top"></a>
 
 	<!-- script -->
-	<script type='text/javascript' src='js/jquery-1.8.3.min.js'></script>
-	<script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
 	<script type='text/javascript'
-		src='js/prettyphoto/jquery.prettyPhoto.js'></script>
-	<script type='text/javascript' src='js/jflickrfeed.js'></script>
-	<script type='text/javascript' src='js/jquery.liveSearch.js'></script>
-	<script type='text/javascript' src='js/jquery.form.js'></script>
-	<script type='text/javascript' src='js/jquery.validate.min.js'></script>
-	<script type='text/javascript' src='js/custom.js'></script>
+		src='<%=basePath%>mstp_35_knowledge/js/jquery-1.8.3.min.js'></script>
+	<script type='text/javascript'
+		src='<%=basePath%>mstp_35_knowledge/js/jquery.easing.1.3.js'></script>
+	<script type='text/javascript'
+		src='<%=basePath%>mstp_35_knowledge/js/prettyphoto/jquery.prettyPhoto.js'></script>
+	<script type='text/javascript'
+		src='<%=basePath%>mstp_35_knowledge/js/jflickrfeed.js'></script>
+	<script type='text/javascript'
+		src='<%=basePath%>mstp_35_knowledge/js/jquery.liveSearch.js'></script>
+	<script type='text/javascript'
+		src='<%=basePath%>mstp_35_knowledge/js/jquery.form.js'></script>
+	<script type='text/javascript'
+		src='<%=basePath%>mstp_35_knowledge/js/jquery.validate.min.js'></script>
+	<script type='text/javascript'
+		src='<%=basePath%>mstp_35_knowledge/js/custom.js'></script>
 </body>
 </html>

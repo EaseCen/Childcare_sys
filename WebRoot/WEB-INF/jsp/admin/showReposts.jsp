@@ -97,7 +97,11 @@ th {
                     </span>&nbsp;回复管理</a>
                     <a href="${pageContext.request.contextPath}/user/queryUser.action" class="list-group-item">
                         <span class="glyphicon glyphicon-user" aria-hidden="true">
-                    </span>&nbsp;用户管理</a>
+                    </span>&nbsp;用户管理</a><a
+					href="${pageContext.request.contextPath}/member/queryMember.action"
+					class="list-group-item"> <span class="glyphicon glyphicon-user"
+					aria-hidden="true"> </span>&nbsp;会员申请管理
+				</a>
                 </div>
                 <!--左边菜单栏-->
                 <div class="col-sm-10">

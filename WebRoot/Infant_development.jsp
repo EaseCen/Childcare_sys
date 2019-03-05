@@ -71,11 +71,8 @@
 	top: 5px;
 	right: 0;
 }
-
-
 </style>
 <body>
-	<!-- Start of Header -->
 	<div class="header-wrapper">
 		<header>
 		<div class="container">
@@ -83,25 +80,26 @@
 			<nav class="main-nav">
 			<div class="menu-top-menu-container">
 				<ul id="menu-top-menu" class="clearfix">
-					<li><a
-						href="${pageContext.request.contextPath }/posts/showIndex.action">首页</a></li>
+					<li><a href="${pageContext.request.contextPath }/Index.jsp">首页</a></li>
 					<li><a>发育评估</a>
 						<ul class="sub-menu">
 							<li><a
-								href="${pageContext.request.contextPath }/user/Fetal_development.action">胎儿发育评估</a></li>
+								href="${pageContext.request.contextPath }/Fetal_development.jsp">胎儿发育评估</a></li>
 							<li><a
-								href="${pageContext.request.contextPath }/user/Infant_development.action">婴儿发育评估</a></li>
+								href="${pageContext.request.contextPath }/Infant_development.jsp">婴儿发育评估</a></li>
 						</ul></li>
 					<li><a
-						href="${pageContext.request.contextPath }/user/Baby_diet.action">饮食推荐</a></li>
-					<li><a href="${pageContext.request.contextPath }/posts/findSameCityAndAge.action?author=${user1.username}">发现专区</a></li>
-					<li><a href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">养育记录</a></li>
+						href="${pageContext.request.contextPath }/Baby_diet.jsp">饮食推荐</a></li>
+					<li><a data-toggle="modal" data-target="#myModal">发现专区</a></li>
+					<li><a
+						href="${pageContext.request.contextPath }/UserLogin.jsp">登录后更多功能..</a></li>
 				</ul>
 			</div>
 			</nav>
 		</div>
 		</header>
 	</div>
+
 
 
 	<div class="page-container">
@@ -265,5 +263,22 @@
 	<script type='text/javascript'
 		src='mstp_35_knowledge/js/jquery.validate.min.js'></script>
 	<script type='text/javascript' src='mstp_35_knowledge/js/custom.js'></script>
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+					<h4 class="modal-title" id="myModalLabel">进入失败</h4>
+				</div>
+				<div class="modal-body">登录后方可查看，按下 ESC 按钮退出。</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 </body>
 </html>

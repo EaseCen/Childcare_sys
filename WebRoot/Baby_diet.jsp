@@ -1,10 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
 <base href="<%=basePath%>">
 <meta charset="UTF-8">
-<title>胎儿发育评估</title>
+<title>宝宝饮食</title>
 <link rel="shortcut icon" href="images/favicon.png" />
 
 
@@ -45,51 +56,47 @@
 .main-nav div>ul>li a {
 	font-size: 17px;
 }
+
+.main-nav {
+	position: fixed;
+	top: 5px;
+	left: 0;
+}
+
+.main-nav1 {
+	position: fixed;
+	top: 5px;
+	right: 0;
+}
 </style>
 <body>
 	<div class="header-wrapper">
 		<header>
-		<div class="container" style="width: 2000px;">
+		<div class="container">
 			<!-- Start of Main Navigation -->
 			<nav class="main-nav">
 			<div class="menu-top-menu-container">
 				<ul id="menu-top-menu" class="clearfix">
-					<li><a href="index-2.html">首页</a></li>
-					<li><a href="#">发育评估</a>
+					<li><a href="${pageContext.request.contextPath }/Index.jsp">首页</a></li>
+					<li><a>发育评估</a>
 						<ul class="sub-menu">
 							<li><a
-								href="${pageContext.request.contextPath }/user/Fetal_development.action">胎儿发育评估</a></li>
+								href="${pageContext.request.contextPath }/Fetal_development.jsp">胎儿发育评估</a></li>
 							<li><a
-								href="${pageContext.request.contextPath }/user/Infant_development.action">婴儿发育评估</a></li>
+								href="${pageContext.request.contextPath }/Infant_development.jsp">婴儿发育评估</a></li>
 						</ul></li>
-					<li><a href="#">育儿推荐</a>
-						<ul class="sub-menu">
-							<li><a href="blue-skin.html">饮食推荐</a></li>
-							<li><a href="green-skin.html">书籍推荐</a></li>
-							<li><a href="red-skin.html">互动推荐</a></li>
-							<li class="divider"></li>
-							<li><a href="index-2.html">注意事项</a></li>
-						</ul></li>
-					<li><a href="faq.html">发现专区</a></li>
-					<li><a href="#">实用工具</a>
-						<ul class="sub-menu">
-							<li><a href="full-width.html">预产期计算器</a></li>
-							<li><a href="elements.html">胎儿体重计算</a></li>
-							<li><a href="page.html">身高体重计算</a></li>
-						</ul></li>
+					<li><a
+						href="${pageContext.request.contextPath }/Baby_diet.jsp">饮食推荐</a></li>
+					<li><a data-toggle="modal" data-target="#myModal">发现专区</a></li>
+					<li><a
+						href="${pageContext.request.contextPath }/UserLogin.jsp">登录后更多功能..</a></li>
 				</ul>
-				<form class="form-inline my-2 my-lg-0 text-light">
-					欢迎您:&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> <strong>${user1.username
-						}</strong><small> <a
-						href="${pageContext.request.contextPath }/user/LogOut.action">&nbsp;&nbsp;&nbsp;&nbsp;注销</a>
-					</small>
-				</form>
 			</div>
 			</nav>
-			<!-- End of Main Navigation -->
 		</div>
 		</header>
 	</div>
+
 
 
 
@@ -329,5 +336,22 @@
 	<script type='text/javascript'
 		src='mstp_35_knowledge/js/jquery.validate.min.js'></script>
 	<script type='text/javascript' src='mstp_35_knowledge/js/custom.js'></script>
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+					<h4 class="modal-title" id="myModalLabel">进入失败</h4>
+				</div>
+				<div class="modal-body">登录后方可查看，按下 ESC 按钮退出。</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 </body>
 </html>

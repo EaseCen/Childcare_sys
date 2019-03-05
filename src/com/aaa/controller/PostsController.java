@@ -12,7 +12,6 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.aaa.biz.PostsBiz;
 import com.aaa.entity.Posts;
@@ -22,8 +21,6 @@ import com.github.pagehelper.PageInfo;
 @Controller
 @RequestMapping("/posts")
 public class PostsController {
-	ModelAndView mav = new ModelAndView();
-
 	@Autowired
 	private PostsBiz postsBiz;
 
@@ -141,6 +138,20 @@ public class PostsController {
 		return "user/PostPreview";
 	}
 	
+	@RequestMapping("/findSameCityAndAge")
+	public String findSameCityAndAge(Model model,Posts posts) {
+ 		List<Posts> list1 = postsBiz.findSameCity(posts);
+ 		List<Posts> list2 = postsBiz.findSameAge(posts);
+
+		PageInfo<Posts> pageInfo1 = new PageInfo<Posts>(list1, 5);		
+		PageInfo<Posts> pageInfo2 = new PageInfo<Posts>(list2, 5);
+		
+		model.addAttribute("pageInfo1", pageInfo1);
+		model.addAttribute("pageInfo2", pageInfo2);
+		
+		return "user/PostPreview";
+	}
+	
 	@RequestMapping("/showIndex")
 	public String showIndex(Model model) {
 		List<Posts> list = postsBiz.findAll();
@@ -154,6 +165,11 @@ public class PostsController {
 		Posts posts = postsBiz.findOne(id);
 		model.addAttribute("posts", posts);
 		return "user/showPosts";
+	}
+	
+	@RequestMapping("/returnIndex")
+	public String returnIndex(){
+		return "Index";
 	}
 	
 	

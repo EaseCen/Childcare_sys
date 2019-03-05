@@ -2,6 +2,7 @@
 	pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
@@ -101,7 +102,8 @@ th {
 				</a> <a href="${pageContext.request.contextPath}/user/queryUser.action"
 					class="list-group-item"> <span class="glyphicon glyphicon-user"
 					aria-hidden="true"> </span>&nbsp;用户管理
-				</a> <a href="${pageContext.request.contextPath}/member/queryMember.action"
+				</a> <a
+					href="${pageContext.request.contextPath}/member/queryMember.action"
 					class="list-group-item"> <span class="glyphicon glyphicon-user"
 					aria-hidden="true"> </span>&nbsp;会员申请管理
 				</a>
@@ -142,7 +144,13 @@ th {
 						<c:forEach items="${pageInfo.list}" var="posts">
 							<tr align="center">
 								<td>${posts.name }</td>
-								<td>${posts.text }</td>
+								<td>
+								<c:if test="${fn:length(posts.text) > 50 }">
+								${fn:substring(posts.text,0,50)}...
+								</c:if> <c:if test="${fn:length(posts.text)  <= 50 }">
+								${posts.text}
+								</c:if>
+								</td>
 								<td><fmt:formatDate value="${posts.time}"
 										pattern="yyyy-MM-dd HH:mm:ss" /></td>
 								<td>${posts.author }</td>
@@ -202,61 +210,6 @@ th {
 					<li><a
 						href="${pageContext.request.contextPath }/posts/queryPosts.action?pn=${pageInfo.pages}">末页</a></li>
 				</ul>
-			</div>
-		</div>
-	</div>
-	<!-- 添加帖子的模态框-->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-		aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-				<!-- 模态框的标题 -->
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true">&times;</span><span class="sr-only">关闭</span>
-					</button>
-					<h4 class="modal-title" id="myModalLabel">添加帖子</h4>
-				</div>
-				<!-- 模态框的主体-表单头部 -->
-				<form class="form-horizontal" role="form"
-					action="${pageContext.request.contextPath }/posts/addPosts.action"
-					method="post" id="form" enctype="multipart/form-data">
-					<div class="modal-body">
-						<div class="form-group  form-group-lg">
-							<label for="firstname" class="col-sm-3 control-label">帖子名称:</label>
-							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg" id="name"
-									name="name" placeholder="请输入帖子名字" required autofocus>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="lastname" class="col-sm-3 control-label">帖子内容:</label>
-							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg" id="text"
-									name="text" placeholder="请输入帖子内容" required autofocus>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="lastname" class="col-sm-3 control-label">发帖时间:</label>
-							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg form_datetime"
-									id="time" name="time">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="lastname" class="col-sm-3 control-label">发帖人:</label>
-							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg" id="author"
-									name="author" placeholder="请输入发帖人" required autofocus>
-							</div>
-						</div>
-					</div>
-					<!-- 模态框的尾部 -->
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-						<button type="submit" class="btn btn-primary" id="save">保存</button>
-					</div>
-				</form>
 			</div>
 		</div>
 	</div>

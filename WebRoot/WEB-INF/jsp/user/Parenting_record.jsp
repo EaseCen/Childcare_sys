@@ -187,6 +187,7 @@ th {
 						<div class="form-group">
 							<label for="lastname" class="col-sm-3 control-label">记录内容:</label>
 							<div class="col-sm-7 ">
+								<input type="hidden" name="author" value="${user1.username}" />
 								<textarea class="form-control input-lg" id="addtext" name="text"
 									rows="10" cols="10" required autofocus>
 								</textarea>

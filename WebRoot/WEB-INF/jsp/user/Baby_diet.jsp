@@ -56,52 +56,48 @@
 .main-nav div>ul>li a {
 	font-size: 17px;
 }
+
+.main-nav {
+	position: fixed;
+	top: 5px;
+	left: 0;
+}
+
+.main-nav1 {
+	position: fixed;
+	top: 5px;
+	right: 0;
+}
+
 </style>
 <body>
 	<div class="header-wrapper">
 		<header>
-		<div class="container" style="width: 2000px;">
+		<div class="container">
 			<!-- Start of Main Navigation -->
 			<nav class="main-nav">
 			<div class="menu-top-menu-container">
 				<ul id="menu-top-menu" class="clearfix">
-					<li><a href="index-2.html">首页</a></li>
-					<li><a href="#">发育评估</a>
+					<li><a
+						href="${pageContext.request.contextPath }/posts/showIndex.action">首页</a></li>
+					<li><a>发育评估</a>
 						<ul class="sub-menu">
 							<li><a
 								href="${pageContext.request.contextPath }/user/Fetal_development.action">胎儿发育评估</a></li>
 							<li><a
 								href="${pageContext.request.contextPath }/user/Infant_development.action">婴儿发育评估</a></li>
 						</ul></li>
-					<li><a href="#">育儿建议</a>
-						<ul class="sub-menu">
-							<li><a href="${pageContext.request.contextPath }/user/Baby_diet.action">宝宝饮食</a></li>
-							<li><a href="green-skin.html">书籍推荐</a></li>
-							<li><a href="red-skin.html">互动推荐</a></li>
-							<li class="divider"></li>
-							<li><a href="index-2.html">注意事项</a></li>
-						</ul></li>
-					<li><a href="faq.html">发现专区</a></li>
-					<li><a href="#">实用工具</a>
-						<ul class="sub-menu">
-							<li><a href="full-width.html">喂养记录</a></li>
-							<li><a href="full-width.html">预产期计算器</a></li>
-							<li><a href="elements.html">胎儿体重计算</a></li>
-							<li><a href="page.html">身高体重计算</a></li>
-						</ul></li>
+					<li><a
+						href="${pageContext.request.contextPath }/user/Baby_diet.action">饮食推荐</a></li>
+					<li><a href="${pageContext.request.contextPath }/posts/findSameCityAndAge.action?author=${user1.username}">发现专区</a></li>
+					<li><a href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">养育记录</a></li>
 				</ul>
-				<form class="form-inline my-2 my-lg-0 text-light">
-					欢迎您:&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> <strong>${user1.username
-						}</strong><small> <a
-						href="${pageContext.request.contextPath }/user/LogOut.action">&nbsp;&nbsp;&nbsp;&nbsp;注销</a>
-					</small>
-				</form>
 			</div>
 			</nav>
-			<!-- End of Main Navigation -->
 		</div>
 		</header>
 	</div>
+
 
 
 

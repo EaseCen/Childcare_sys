@@ -12,7 +12,7 @@ public class DateConverter implements Converter<String, Date> {
 	@Override
 	public Date convert(String str) {
 		// TODO Auto-generated method stub
-		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
 		Date date=null;
 		try {
 			date=sdf.parse(str);

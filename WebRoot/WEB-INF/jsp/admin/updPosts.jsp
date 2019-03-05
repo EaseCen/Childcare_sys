@@ -97,9 +97,7 @@
 						<div class="form-group">
 							<label for="lastname" class="col-sm-3 control-label">帖子内容:</label>
 							<div class="col-sm-5">
-								<input type="text" style="height: 200px;"
-									class="form-control input-lg" id="text" name="text"
-									value="${posts.text }" required autofocus>
+								<textarea rows="25" cols="50">${posts.text }</textarea>
 							</div>
 						</div>
 						<div class="form-group">

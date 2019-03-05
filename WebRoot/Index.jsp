@@ -9,242 +9,388 @@
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en">
+
+<!DOCTYPE html>
+<html>
 <head>
+<title>Home</title>
 <base href="<%=basePath%>">
-<meta charset="UTF-8">
-<title>index.html</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<link rel="stylesheet"
-	href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
-<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-<script
-	src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
-<script
-	src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
 <script type="application/x-javascript">
 	
-	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+	 addEventListener("load", 
+			function() {
+		 		setTimeout(hideURLbar, 0); 
+		 		}, false); 
+	 		function hideURLbar(){ 
+	 			window.scrollTo(0,1); 
+	 			} 
 
 </script>
-<link href="<%=basePath%>bootstrap-4.1.3-dist/css/bootstrap.css"
+<link href="<%=basePath%>cpts_998_bmx/css/bootstrap.css"
 	rel='stylesheet' type='text/css' />
+<link href="<%=basePath%>cpts_998_bmx/css/style.css" rel='stylesheet'
+	type='text/css' />
+<link href="<%=basePath%>cpts_998_bmx/css/owl.carousel.css"
+	rel="stylesheet">
+<script src="<%=basePath%>cpts_998_bmx/js/jquery.min.js"></script>
 <!--JS for animate-->
-<style>
-/* Make the image fully responsive */
-.carousel-inner img {
-	width: 100%;
-	height: 100%;
+<link href="<%=basePath%>cpts_998_bmx/css/animate.css" rel="stylesheet"
+	type="text/css" media="all">
+<script src="<%=basePath%>cpts_998_bmx/js/wow.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script
+	src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+	new WOW().init();
+</script>
+<!--//end-animate-->
+<style type="text/css">
+.navbar1 {
+	background-color: #0d192f;
+	border-color: #0d192f;
+	font-size: 16px;
+}
+
+.navbar {
+	margin-bottom: 0;
+	line-height: 0;
 }
 </style>
+
+
 </head>
-
 <body>
-	<nav
-		class="site-header sticky-top navbar navbar-expand-lg navbar-dark bg-dark ">
-	<a class="navbar-brand" href="#">首页</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse"
-		data-target="#navbarSupportedContent"
-		aria-controls="navbarSupportedContent" aria-expanded="false"
-		aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="navbar-nav mr-auto">
-			<li class="nav-item"><a class="nav-link"
-				href="http://play9.pcbaby.com.cn/baby131209/index.jsp">发育评估</a></li>
-			<li class="nav-item dropdown"><a
-				class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-				role="button" data-toggle="dropdown" aria-haspopup="true"
-				aria-expanded="false"> 育儿推荐 </a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="#">饮食推荐</a> <a class="dropdown-item"
-						href="#">书籍推荐</a> <a class="dropdown-item" href="#">互动推荐</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="#">注意事项</a>
-				</div></li>
-			<li class="nav-item"><a class="nav-link"
-				href="${pageContext.request.contextPath}/posts/showAllPost.action">发现专区</a></li>
-
-			<!--
-					<li class="nav-item dropdown">
-					<a
-						class="nav-link dropdown-toggle" href="post.html" id="navbarDropdown"
-						role="button" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false"> 发现专区 </a>
-						
-						
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="same_age_post.html">发现圈子--同龄</a> <a
-								class="dropdown-item" href="same_city_post.html">发现圈子--同城</a>
-						</div>
-						</li>
-						-->
-			<li class="nav-item dropdown"><a
-				class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-				role="button" data-toggle="dropdown" aria-haspopup="true"
-				aria-expanded="false"> 实用工具 </a>
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="#">预产期计算器</a> <a
-						class="dropdown-item" href="#">胎儿体重计算</a> <a class="dropdown-item"
-						href="#">身高体重计算</a>
-				</div></li>
-
-		</ul>
-		<ul class="nav navbar-nav navbar-right">
-			<li>
-				<a class="nav-link" href="${pageContext.request.contextPath }/UserLogin.jsp">
-					<span class="glyphicon glyphicon-log-in"></span>会员注册/登录
-				</a>
-			</li>
-		</ul>
-	</div>
-	</nav>
-
-
-	<div
-		class="position-relative overflow-hidden p-2 p-md-4 m-md-2 text-center bg-light">
-		<div class="col-md-5 p-lg-1 mx-auto my-5">
-			<h4 class="display-4 font-weight-normal">育儿网络平台设计与开发</h4>
-			<p class="lead font-weight-normal">在二胎开放的时代，从现代育儿需求出发，主要完成个人基本信息、今日育儿热点、宝宝饮食、发育评估、发现专区、喂养记录、个人中心等等。</p>
+	<!--header-top-->
+	<div class="header-top">
+		<div class="container">
+			<div class="head-main">
+				<div class="col-md-4 head-right wow fadeInLeft animated"></div>
+				<div
+					class="col-md-4 head-middle animated wow fadeInDown animated animated"
+					data-wow-duration="1200ms" data-wow-delay="500ms">
+					<h1>
+						<a href="index.html">Baby Care</a>
+					</h1>
+				</div>
+				<div class="clearfix"></div>
+			</div>
 		</div>
 	</div>
-	<br>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-2"></div>
-			<div class="col-sm-8">
-				<div id="demo" class="carousel slide" data-ride="carousel">
-					<!-- 指示符 -->
-					<ul class="carousel-indicators">
-						<li data-target="#demo" data-slide-to="0" class="active"></li>
-						<li data-target="#demo" data-slide-to="1"></li>
-						<li data-target="#demo" data-slide-to="2"></li>
-					</ul>
-					<!-- 轮播图片 -->
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<img
-								src="https://static.runoob.com/images/mix/img_fjords_wide.jpg">
-							<div class="carousel-caption">
-								<h3>第一张图片描述标题</h3>
-								<p>描述文字!</p>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<img
-								src="https://static.runoob.com/images/mix/img_nature_wide.jpg">
-							<div class="carousel-caption">
-								<h3>第二张图片描述标题</h3>
-								<p>描述文字!</p>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<img
-								src="https://static.runoob.com/images/mix/img_mountains_wide.jpg">
-							<div class="carousel-caption">
-								<h3>第三张图片描述标题</h3>
-								<p>描述文字!</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- 左右切换按钮 -->
-					<a class="carousel-control-prev" href="#demo" data-slide="prev">
-						<span class="carousel-control-prev-icon"></span>
-					</a> <a class="carousel-control-next" href="#demo" data-slide="next">
-						<span class="carousel-control-next-icon"></span>
+	<!--header-top-->
+	<!--navigation-starts-->
+	<nav class="navbar navbar1 navbar-inverse navbar-static-top"
+		role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">首页</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown">发育评估<b class="caret"></b>
 					</a>
+						<ul class="dropdown-menu">
+							<li><a
+								href="${pageContext.request.contextPath }/Fetal_development.jsp">胎儿发育评估</a></li>
+							<li><a
+								href="${pageContext.request.contextPath }/Infant_development.jsp">婴儿发育评估</a></li>
+						</ul></li>
+					<li><a
+						href="${pageContext.request.contextPath }/Baby_diet.jsp">饮食推荐</a></li>
+					<li><a data-toggle="modal" data-target="#myModal">发现专区</a></li>
+					<li><a href="${pageContext.request.contextPath }/UserLogin.jsp">登录后更多功能..</a></li>
+				</ul>
+			</div>
+			<p class=" navbar-right">
+				<a class="nav-link navbar-text"
+					href="${pageContext.request.contextPath }/UserLogin.jsp"> <span
+					class="glyphicon glyphicon-log-in"></span>会员注册/登录
+				</a>
+			</p>
+		</div>
+	</nav>
+	<!--navigation-end-->
+	<!--script-for-menu-->
+	<script>
+		$("span.menu").click(function() {
+			$(" ul.navig").slideToggle("slow", function() {
+			});
+		});
+	</script>
+	<!--script-for-menu-->
+	<!--banner-starts-->
+	<div class="banner">
+		<section class="slider">
+			<div class="flexslider">
+				<ul class="slides">
+					<li>
+						<div class="banner1">
+							<div class="container">
+								<div class="banner-text">
+									<p>Vivamus id dui et augue</p>
+									<h3>Caring Baby Sitters For Your Kids</h3>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="banner2">
+							<div class="container">
+								<div class="banner-text">
+									<p>Vivamus id dui et augue</p>
+									<h3>Caring Baby Sitters For Your Kids</h3>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="banner1">
+							<div class="container">
+								<div class="banner-text">
+									<p>Vivamus id dui et augue</p>
+									<h3>Caring Baby Sitters For Your Kids</h3>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="banner2">
+							<div class="container">
+								<div class="banner-text">
+									<p>Vivamus id dui et augue</p>
+									<h3>Donec eu dolor ac erat sodales rutrum</h3>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+	</div>
+	<!--banner-end-->
+	<!--FlexSlider-->
+	<link rel="stylesheet"
+		href="<%=basePath%>cpts_998_bmx/css/flexslider.css" type="text/css"
+		media="screen" />
+	<script defer src="<%=basePath%>cpts_998_bmx/js/jquery.flexslider.js"></script>
+	<script type="text/javascript">
+		$(window).load(function() {
+			$('.flexslider').flexslider({
+				animation : "slide",
+				start : function(slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+	</script>
+	<!--End-slider-script-->
+	<!--welcome-->
+	<div class="welcome">
+		<div class="container">
+			<h2>育儿网络平台设计与开发</h2>
+			<div class="col-md-9 welcome-left wow fadeInLeft animated"
+				data-wow-delay=".5s">
+				<h5>在二胎开放的时代，从现代育儿需求出发，主要完成个人基本信息、今日育儿热点、宝宝饮食、发育评估、发现专区、喂养记录、个人中心等等。</h5>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!--welcome-->
+
+	<!--projects-->
+	<div class="project animated wow fadeInDown animated animated"
+		data-wow-duration="1200ms" data-wow-delay="500ms">
+		<div class="container"></div>
+		<div class="gallery-cursual">
+			<!--requried jsfiles for owl-->
+			<script src="<%=basePath%>cpts_998_bmx/js/owl.carousel.js"></script>
+			<script>
+				$(document).ready(function() {
+					$("#owl-demo").owlCarousel({
+						items : 4,
+						lazyLoad : true,
+						autoPlay : true,
+						pagination : false,
+					});
+				});
+			</script>
+			<!--//requried-jsfiles-for owl-->
+			<!--start content_slider-->
+			<div id="owl-demo" class="owl-carousel text-center">
+				<div class="item">
+					<img class="lazyOwl"
+						data-src="<%=basePath%>cpts_998_bmx/images/17.jpg"
+						"img-responsive" alt="name">
+				</div>
+				<div class="item">
+					<img class="lazyOwl"
+						data-src="<%=basePath%>cpts_998_bmx/images/15.jpg"
+						class="img-responsive" alt="name">
+				</div>
+				<div class="item">
+					<img class="lazyOwl"
+						data-src="<%=basePath%>cpts_998_bmx/images/14.jpg"
+						class="img-responsive" alt="name">
+				</div>
+				<div class="item">
+					<img class="lazyOwl"
+						data-src="<%=basePath%>cpts_998_bmx/images/13.jpg"
+						class="img-responsive" alt="name">
+				</div>
+				<div class="item">
+					<img class="lazyOwl"
+						data-src="<%=basePath%>cpts_998_bmx/images/12.jpg"
+						class="img-responsive" alt="name">
+				</div>
+				<div class="item">
+					<img class="lazyOwl"
+						data-src="<%=basePath%>cpts_998_bmx/images/11.jpg"
+						class="img-responsive" alt="name">
+				</div>
+				<div class="item">
+					<img class="lazyOwl"
+						data-src="<%=basePath%>cpts_998_bmx/images/10.jpg"
+						class="img-responsive" alt="name">
+				</div>
+				<div class="item">
+					<img class="lazyOwl"
+						data-src="<%=basePath%>cpts_998_bmx/images/9.jpg"
+						class="img-responsive" alt="name">
+				</div>
+				<div class="item">
+					<img class="lazyOwl"
+						data-src="<%=basePath%>cpts_998_bmx/images/8.jpg"
+						class="img-responsive" alt="name">
+				</div>
+				<div class="item">
+					<img class="lazyOwl"
+						data-src="<%=basePath%>cpts_998_bmx/images/7.jpg"
+						class="img-responsive" alt="name">
 				</div>
 			</div>
-			<div class="col-sm-2"></div>
+			<!--sreengallerycursual-->
 		</div>
 	</div>
-	<br>
-	<br>
+	<!--projects-->
 
-	<div class="services">
-		<div class="container text-center">
-			<h3 class="title">每日导读</h3>
-		</div>
-	</div>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col"></div>
-			<div class="col">
-				<div class="card" style="width: 300px">
-					<tr>
-						<th>帖子标题</th>
-						<th>帖子内容</th>
-						<th>发帖时间</th>
-						<th>发帖人</th>
-						<th colspan="3">操作</th>
-					</tr>
-					<c:forEach items="${pageInfo.list}" var="posts">
-						<tr align="center">
-							<td>${posts.name }</td>
-							<td>${posts.text }</td>
-							<td><fmt:formatDate value="${posts.time}"
-									pattern="yyyy-MM-dd HH:mm:ss" /></td>
-							<td>${posts.author }</td>
-
-							<!-- 删除操作-带id参数 -->
-							<td><a
-								href="${pageContext.request.contextPath }/posts/del.action?id=${posts.id}"><button
-										type="button" class="btn btn-success btn-lg"
-										onclick="return confirm('确定要删除帖子吗？') ">
-										<span class="glyphicon glyphicon-trash"></span> 删除
-									</button></a></td>
-							<!-- 修改操作 -->
-							<td><a
-								href="${pageContext.request.contextPath }/posts/findOne.action?id=${posts.id}"><button
-										type="button" class="btn btn-success btn-lg">
-										<span class="glyphicon glyphicon-edit"></span> 修改
-									</button></a></td>
-						</tr>
-					</c:forEach>
-				</div>
+	<div class="events">
+		<div class="container">
+			<h3>今日热点</h3>
+			<div class="events-grid">
+				
+					<div class="col-md-4 events-grid-left wow fadeInLeft animated"
+						data-wow-delay=".5s">
+						<a href="/Childcare_system/singlepage1.jsp">
+							<div class="events-grid-left-top">
+								<p>
+									<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><span>Thu Feb 14 00:00:00 CST 2019</span>
+								</p>
+							</div> <img src="http://localhost:8088/Childcare_system/cpts_998_bmx/images/4.jpg" class="img-responsive">
+							<div class="events-pos">
+								<p>人工喂养是一种成熟的养育方式</p>
+							</div>
+						</a>
+					</div>
+				
+					<div class="col-md-4 events-grid-left wow fadeInLeft animated"
+						data-wow-delay=".5s">
+						<a href="/Childcare_system/singlepage2.jsp">
+							<div class="events-grid-left-top">
+								<p>
+									<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><span>Thu Feb 14 00:00:00 CST 2019</span>
+								</p>
+							</div> <img src="http://localhost:8088/Childcare_system/cpts_998_bmx/images/6.jpg" class="img-responsive">
+							<div class="events-pos">
+								<p>孩子不听话 可能是缺乏安全感</p>
+							</div>
+						</a>
+					</div>
+				
+					<div class="col-md-4 events-grid-left wow fadeInLeft animated"
+						data-wow-delay=".5s">
+						<a href="/Childcare_system/singlepage3.jsp">
+							<div class="events-grid-left-top">
+								<p>
+									<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><span>Tue Feb 05 14:00:02 CST 2019</span>
+								</p>
+							</div> <img src="http://localhost:8088/Childcare_system/cpts_998_bmx/images/3.jpg" class="img-responsive">
+							<div class="events-pos">
+								<p>宝宝换牙期问题多 家长把好关</p>
+							</div>
+						</a>
+					</div>
+				
+				<div class="clearfix"></div>
 			</div>
-			<div class="col"></div>
 		</div>
 	</div>
-	<br>
-	<br>
-
-	<nav class="navbar navbar-default navbar-fixed-top "
-		style="background: #ee723c;">
-	<div class="container text-center	">
-		<h2>母婴知识</h2>
+	<!--footer-starts-->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-top">
+				<div class="col-md-6 footer-right wow fadeInLeft animated"
+					data-wow-delay=".5s">
+					<form action="#" method="post">
+						<input type="text" value="Your Email" name="email"
+							onfocus="this.value = '';"
+							onblur="if (this.value == '') {this.value = 'Your Email';}">
+						<input type="submit" value="Subscribe">
+					</form>
+					<p>
+						<a href="${pageContext.request.contextPath }/Login.jsp">管理员登录</a>
+					</p>
+				</div>
+				<div
+					class="col-md-3 footer-left animated wow fadeInUp animated animated"
+					data-wow-duration="1200ms" data-wow-delay="500ms">
+					<div class="a-1">
+						<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+						<p>The company name, Glasglow Dr 40 Fe 72.</p>
+					</div>
+					<div class="a-2">
+						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+						<p>
+							<a href="mailto:example@email.com">contact@example.com</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 footer-left wow fadeInRight animated"
+					data-wow-delay=".5s">
+					<div class="a-1">
+						<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+						<p>+122 265 8822</p>
+					</div>
+					<div class="a-2">
+						<span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+						<p>+134 326 3695</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
 	</div>
-	</nav>
-	<br>
-	<br>
-	<nav class="navbar navbar-default navbar-fixed-top "
-		style="background: #96b97d;">
-	<div class="container text-center	">
-		<h2>育儿社区</h2>
-	</div>
-	</nav>
-	<br>
-	<br>
-
-	<nav class="navbar navbar-default navbar-fixed-top bg-dark ">
-	<div class="container  text-white">
-		<h2>晒娃栏</h2>
-	</div>
-	</nav>
-
-	<br>
-	<br>
-	<div class="jumbotron text-center" style="margin-bottom: 0">
-		<p>
-			<a class="nav-link" href="${pageContext.request.contextPath }/Login.jsp"><span
-				class="glyphicon glyphicon-log-in"></span>管理员登录</a>
-		</p>
-	</div>
-
+	<!--footer-end-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+					</button>
+					<h4 class="modal-title" id="myModalLabel">
+						进入失败
+					</h4>
+				</div>
+				<div class="modal-body">
+					登录后方可查看，按下 ESC 按钮退出。
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 </body>
 </html>
