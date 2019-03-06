@@ -59,7 +59,7 @@ public class UserControllerTest extends BaseControllerTest {
 					.get("/user/LogOut"));
 			MvcResult mvcResult = resultActions
 					.andDo(MockMvcResultHandlers.print())
-					.andExpect(MockMvcResultMatchers.status().isOk())
+					.andExpect(MockMvcResultMatchers.status().is3xxRedirection())
 					.andReturn();
 			String result = mvcResult.getResponse().getContentAsString();
 			System.out.println(result);
