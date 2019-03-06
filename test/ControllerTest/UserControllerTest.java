@@ -49,34 +49,6 @@ public class UserControllerTest extends BaseControllerTest {
 		user.setAddress(address);
 		user.setState(1);
 	}
-
-//	@Test
-//	@Transactional
-//	public void checkLoginTest() throws JsonGenerationException, JsonMappingException, IOException {
-//		userMapper.addUser(user);
-//		ObjectMapper mapper = new ObjectMapper();
-//		ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
-//		String str = ow.writeValueAsString(user);
-////		JSONObject json = JSONObject.fromObject(user);
-////		String str = json.toString();
-////		String str = "{'username':'admin','password':'admin'}";
-//		System.out.println(str);
-//		try {
-//			ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
-//					.post("/user/checkLogin")
-//					.accept(MediaType.parseMediaType("application/json;charset=utf-8"))
-//					.contentType(MediaType.APPLICATION_JSON)
-//					.content(str));
-//			MvcResult mvcResult = resultActions
-//					.andDo(MockMvcResultHandlers.print())
-//					.andExpect(MockMvcResultMatchers.status().isOk())
-//					.andReturn();
-//			String result = mvcResult.getResponse().getContentAsString();
-//			System.out.println("2333"+result);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
 	
 	//×¢Ïú
 	@Test
@@ -87,7 +59,7 @@ public class UserControllerTest extends BaseControllerTest {
 					.get("/user/LogOut"));
 			MvcResult mvcResult = resultActions
 					.andDo(MockMvcResultHandlers.print())
-					.andExpect(MockMvcResultMatchers.status().isOk())
+					.andExpect(MockMvcResultMatchers.status().is3xxRedirection())
 					.andReturn();
 			String result = mvcResult.getResponse().getContentAsString();
 			System.out.println(result);
@@ -247,4 +219,32 @@ public class UserControllerTest extends BaseControllerTest {
 			e.printStackTrace();
 		}
 	}
+	
+//	@Test
+//	@Transactional
+//	public void checkLoginTest() throws JsonGenerationException, JsonMappingException, IOException {
+//		userMapper.addUser(user);
+//		ObjectMapper mapper = new ObjectMapper();
+//		ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
+//		String str = ow.writeValueAsString(user);
+////		JSONObject json = JSONObject.fromObject(user);
+////		String str = json.toString();
+////		String str = "{'username':'admin','password':'admin'}";
+//		System.out.println(str);
+//		try {
+//			ResultActions resultActions = mockMvc.perform(MockMvcRequestBuilders
+//					.post("/user/checkLogin")
+//					.accept(MediaType.parseMediaType("application/json;charset=utf-8"))
+//					.contentType(MediaType.APPLICATION_JSON)
+//					.content(str));
+//			MvcResult mvcResult = resultActions
+//					.andDo(MockMvcResultHandlers.print())
+//					.andExpect(MockMvcResultMatchers.status().isOk())
+//					.andReturn();
+//			String result = mvcResult.getResponse().getContentAsString();
+//			System.out.println("2333"+result);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
 }

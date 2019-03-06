@@ -66,11 +66,23 @@ public class UserMapperTest extends BaseTest {
 	
 	@Test
 	@Transactional
-	public void CheckLoginAndPwdTest() {
+	public void CheckLoginAndPwd1Test() {
 		userMapper.addUser(user);
 		System.out.println(user.toString());
 		User checkUser = new User();
-		checkUser = userMapper.CheckLoginAndPwd(username, password);
+		checkUser = userMapper.CheckLoginAndPwd1(username, password);
+		Assert.assertEquals(username, checkUser.getUsername());
+		Assert.assertEquals(password, checkUser.getPassword());
+		Assert.assertEquals(address, checkUser.getAddress());
+	}
+	
+	@Test
+	@Transactional
+	public void CheckLoginAndPwd0Test() {
+		userMapper.addAdmin(user);
+		System.out.println(user.toString());
+		User checkUser = new User();
+		checkUser = userMapper.CheckLoginAndPwd0(username, password);
 		Assert.assertEquals(username, checkUser.getUsername());
 		Assert.assertEquals(password, checkUser.getPassword());
 		Assert.assertEquals(address, checkUser.getAddress());

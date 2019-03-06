@@ -109,10 +109,17 @@ public class PostsMapperTest extends BaseTest {
 		System.out.println(postss);
 	}
 
-//	@Test
-//	@Transactional
-//	public void findSameCityTest() {
-//		List<Posts> postss = postsMapper.findSameCity(posts);
-//		System.out.println(postss);
-//	}
+	@Test
+	@Transactional
+	public void findSameCityTest() {
+		List<Posts> postss = postsMapper.findSameCity(posts);
+		System.out.println(postss);
+	}
+	
+	@Test
+	@Transactional
+	public void findSameAgeTest() {
+		List<Posts> postss = postsMapper.findSameAge(posts);
+		System.out.println(postss);
+	}
 }

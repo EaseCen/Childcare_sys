@@ -68,11 +68,23 @@ public class UserServiceTest extends BaseTest {
 	
 	@Test
 	@Transactional
-	public void CheckLoginAndPwdTest() {
+	public void CheckLoginAndPwd1Test() {
 		userBiz.addUser(user);
 		System.out.println(user.toString());
 		User checkUser = new User();
-		checkUser = userBiz.CheckLoginAndPwd(username, password);
+		checkUser = userBiz.CheckLoginAndPwd1(username, password);
+		Assert.assertEquals(username, checkUser.getUsername());
+		Assert.assertEquals(password, checkUser.getPassword());
+		Assert.assertEquals(address, checkUser.getAddress());
+	}
+	
+	@Test
+	@Transactional
+	public void CheckLoginAndPwd0Test() {
+		userBiz.addAdmin(user);
+		System.out.println(user.toString());
+		User checkUser = new User();
+		checkUser = userBiz.CheckLoginAndPwd0(username, password);
 		Assert.assertEquals(username, checkUser.getUsername());
 		Assert.assertEquals(password, checkUser.getPassword());
 		Assert.assertEquals(address, checkUser.getAddress());

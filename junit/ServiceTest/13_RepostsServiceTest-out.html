@@ -1,0 +1,740 @@
+<html xmlns:string="xalan://java.lang.String" xmlns:lxslt="http://xml.apache.org/xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Standard Output from RepostsServiceTest</title>
+</head>
+<body>
+<pre>DEBUG [main] - SpringJUnit4ClassRunner constructor called with [class ServiceTest.RepostsServiceTest].
+DEBUG [main] - Delegating to GenericXmlContextLoader to process context configuration [ContextConfigurationAttributes@3c0ecd4b declaringClass = 'Base.BaseTest', locations = '{file:config/spring/applicationContext.xml}', classes = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
+DEBUG [main] - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [ServiceTest.RepostsServiceTest]
+DEBUG [main] - @TestExecutionListeners is not present for class [class ServiceTest.RepostsServiceTest]: using defaults.
+DEBUG [main] - Retrieved @ProfileValueSourceConfiguration [null] for test class [ServiceTest.RepostsServiceTest]
+DEBUG [main] - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [ServiceTest.RepostsServiceTest]
+DEBUG [main] - Retrieved @ProfileValueSourceConfiguration [null] for test class [ServiceTest.RepostsServiceTest]
+DEBUG [main] - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [ServiceTest.RepostsServiceTest]
+DEBUG [main] - Retrieved @ProfileValueSourceConfiguration [null] for test class [ServiceTest.RepostsServiceTest]
+DEBUG [main] - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [ServiceTest.RepostsServiceTest]
+DEBUG [main] - Retrieved @ProfileValueSourceConfiguration [null] for test class [ServiceTest.RepostsServiceTest]
+DEBUG [main] - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [ServiceTest.RepostsServiceTest]
+DEBUG [main] - Performing dependency injection for test context [[DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@35d176f7, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+DEBUG [main] - Delegating to GenericXmlContextLoader to load context from [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]].
+DEBUG [main] - Loading ApplicationContext for merged context configuration [[MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [main] - Adding [systemProperties] PropertySource with lowest search precedence
+DEBUG [main] - Adding [systemEnvironment] PropertySource with lowest search precedence
+DEBUG [main] - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+ INFO [main] - Loading XML bean definitions from URL [file:config/spring/applicationContext.xml]
+DEBUG [main] - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+DEBUG [main] - Loading schema mappings from [META-INF/spring.schemas]
+DEBUG [main] - Loaded schema mappings: {http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/jms/spring-jms-2.5.xsd=org/springframework/jms/config/spring-jms-2.5.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://mybatis.org/schema/mybatis-spring-1.2.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/context/spring-context-4.0.xsd=org/springframework/context/config/spring-context-4.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd=org/springframework/oxm/config/spring-oxm-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd=org/springframework/jdbc/config/spring-jdbc-3.1.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-4.0.xsd=org/springframework/aop/config/spring-aop-4.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd=org/springframework/jdbc/config/spring-jdbc-4.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd=org/springframework/web/servlet/config/spring-mvc-4.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-4.0.xsd=org/springframework/scripting/config/spring-lang-4.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-4.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd=org/springframework/web/servlet/config/spring-mvc-3.1.xsd, http://www.springframework.org/schema/tool/spring-tool-4.0.xsd=org/springframework/beans/factory/xml/spring-tool-4.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-4.0.xsd=org/springframework/ejb/config/spring-jee-4.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-4.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache-4.0.xsd=org/springframework/cache/config/spring-cache-4.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/jms/spring-jms-3.2.xsd=org/springframework/jms/config/spring-jms-3.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/beans/spring-beans-4.0.xsd=org/springframework/beans/factory/xml/spring-beans-4.0.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-4.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://mybatis.org/schema/mybatis-spring.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/task/spring-task-4.0.xsd=org/springframework/scheduling/config/spring-task-4.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-4.0.xsd=org/springframework/transaction/config/spring-tx-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/websocket/spring-websocket.xsd=org/springframework/web/socket/config/spring-websocket-4.0.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/jms/spring-jms.xsd=org/springframework/jms/config/spring-jms-4.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm.xsd=org/springframework/oxm/config/spring-oxm-4.0.xsd, http://www.springframework.org/schema/jms/spring-jms-3.1.xsd=org/springframework/jms/config/spring-jms-3.1.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-4.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/jms/spring-jms-4.0.xsd=org/springframework/jms/config/spring-jms-4.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.2.xsd=org/springframework/oxm/config/spring-oxm-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/util/spring-util-4.0.xsd=org/springframework/beans/factory/xml/spring-util-4.0.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-4.0.xsd, http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/jms/spring-jms-3.0.xsd=org/springframework/jms/config/spring-jms-3.0.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/oxm/spring-oxm-4.0.xsd=org/springframework/oxm/config/spring-oxm-4.0.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-4.0.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-4.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd, http://www.springframework.org/schema/oxm/spring-oxm-3.1.xsd=org/springframework/oxm/config/spring-oxm-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-4.0.xsd, http://www.springframework.org/schema/websocket/spring-websocket-4.0.xsd=org/springframework/web/socket/config/spring-websocket-4.0.xsd}
+DEBUG [main] - Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.2.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.2.xsd
+DEBUG [main] - Found XML schema [http://www.springframework.org/schema/context/spring-context-3.2.xsd] in classpath: org/springframework/context/config/spring-context-3.2.xsd
+DEBUG [main] - Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.2.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.2.xsd
+DEBUG [main] - Found XML schema [http://www.springframework.org/schema/tx/spring-tx.xsd] in classpath: org/springframework/transaction/config/spring-tx-4.0.xsd
+DEBUG [main] - Found XML schema [http://www.springframework.org/schema/aop/spring-aop-3.2.xsd] in classpath: org/springframework/aop/config/spring-aop-3.2.xsd
+DEBUG [main] - Loading bean definitions
+DEBUG [main] - Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/websocket=org.springframework.web.socket.config.WebSocketNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/oxm=org.springframework.oxm.config.OxmNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler, http://mybatis.org/schema/mybatis-spring=org.mybatis.spring.config.NamespaceHandler, http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/jms=org.springframework.jms.config.JmsNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+DEBUG [main] - JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+DEBUG [main] - Looking for matching resources in directory tree [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa]
+DEBUG [main] - Searching directory [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa] for files matching pattern [E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/**/*.class]
+DEBUG [main] - Searching directory [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz] for files matching pattern [E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/**/*.class]
+DEBUG [main] - Searching directory [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz\impl] for files matching pattern [E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/**/*.class]
+DEBUG [main] - Searching directory [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\controller] for files matching pattern [E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/**/*.class]
+DEBUG [main] - Searching directory [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\converter] for files matching pattern [E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/**/*.class]
+DEBUG [main] - Searching directory [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\entity] for files matching pattern [E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/**/*.class]
+DEBUG [main] - Searching directory [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\inteceptor] for files matching pattern [E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/**/*.class]
+DEBUG [main] - Searching directory [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper] for files matching pattern [E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/**/*.class]
+DEBUG [main] - Resolved location pattern [classpath*:com/aaa/**/*.class] to resources [file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz\impl\MemberBizImpl.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz\impl\ParentingBizImpl.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz\impl\PostsBizImpl.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz\impl\RepostsBizImpl.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz\impl\UserBizImpl.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz\MemberBiz.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz\ParentingBiz.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz\PostsBiz.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz\RepostsBiz.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz\UserBiz.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\controller\MemberController.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\controller\ParentingController.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\controller\PostsController.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\controller\RepostsController.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\controller\UserController.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\converter\DateConverter.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\entity\Member.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\entity\Parenting.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\entity\Posts.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\entity\Reposts.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\entity\User.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\inteceptor\LoginIncetepor.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper\MemberDaoMapper.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper\ParentingDaoMapper.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper\PostsDaoMapper.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper\RepostsDaoMapper.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper\UserMapper.class]]
+DEBUG [main] - Identified candidate component class: file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz\impl\MemberBizImpl.class]
+DEBUG [main] - Identified candidate component class: file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz\impl\ParentingBizImpl.class]
+DEBUG [main] - Identified candidate component class: file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz\impl\PostsBizImpl.class]
+DEBUG [main] - Identified candidate component class: file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz\impl\RepostsBizImpl.class]
+DEBUG [main] - Identified candidate component class: file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\biz\impl\UserBizImpl.class]
+DEBUG [main] - Identified candidate component class: file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\controller\MemberController.class]
+DEBUG [main] - Identified candidate component class: file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\controller\ParentingController.class]
+DEBUG [main] - Identified candidate component class: file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\controller\PostsController.class]
+DEBUG [main] - Identified candidate component class: file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\controller\RepostsController.class]
+DEBUG [main] - Identified candidate component class: file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\controller\UserController.class]
+DEBUG [main] - Neither XML 'id' nor 'name' specified - using generated bean name [org.mybatis.spring.mapper.MapperScannerConfigurer#0]
+DEBUG [main] - Loaded 26 bean definitions from location pattern [file:config/spring/applicationContext.xml]
+ INFO [main] - Refreshing org.springframework.context.support.GenericApplicationContext@1f7030a6: startup date [Wed Mar 06 17:32:36 CST 2019]; root of context hierarchy
+DEBUG [main] - Bean factory for org.springframework.context.support.GenericApplicationContext@1f7030a6: org.springframework.beans.factory.support.DefaultListableBeanFactory@76508ed1: defining beans [memberBizImpl,parentingBizImpl,postsBizImpl,repostsBizImpl,userBizImpl,memberController,parentingController,postsController,repostsController,userController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,txadvice,points,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0]; root of factory hierarchy
+DEBUG [main] - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG [main] - Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG [main] - Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+DEBUG [main] - Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG [main] - Creating shared instance of singleton bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+DEBUG [main] - Creating instance of bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+DEBUG [main] - Eagerly caching bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0' to allow for resolving potential circular references
+DEBUG [main] - Invoking afterPropertiesSet() on bean with name 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+DEBUG [main] - Finished creating instance of bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+DEBUG [main] - Adding [systemProperties] PropertySource with lowest search precedence
+DEBUG [main] - Adding [systemEnvironment] PropertySource with lowest search precedence
+DEBUG [main] - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+DEBUG [main] - Looking for matching resources in directory tree [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper]
+DEBUG [main] - Searching directory [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper] for files matching pattern [E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/mapper/**/*.class]
+DEBUG [main] - Resolved location pattern [classpath*:com/aaa/mapper/**/*.class] to resources [file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper\MemberDaoMapper.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper\ParentingDaoMapper.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper\PostsDaoMapper.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper\RepostsDaoMapper.class], file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper\UserMapper.class]]
+DEBUG [main] - Identified candidate component class: file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper\MemberDaoMapper.class]
+DEBUG [main] - Identified candidate component class: file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper\ParentingDaoMapper.class]
+DEBUG [main] - Identified candidate component class: file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper\PostsDaoMapper.class]
+DEBUG [main] - Identified candidate component class: file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper\RepostsDaoMapper.class]
+DEBUG [main] - Identified candidate component class: file [E:\eclipse-jee-2018-09-win32-x86_64\eclipse\workspace\Childcare_sys\WebRoot\WEB-INF\classes\com\aaa\mapper\UserMapper.class]
+DEBUG [main] - Creating MapperFactoryBean with name 'memberDaoMapper' and 'com.aaa.mapper.MemberDaoMapper' mapperInterface
+DEBUG [main] - Creating MapperFactoryBean with name 'parentingDaoMapper' and 'com.aaa.mapper.ParentingDaoMapper' mapperInterface
+DEBUG [main] - Creating MapperFactoryBean with name 'postsDaoMapper' and 'com.aaa.mapper.PostsDaoMapper' mapperInterface
+DEBUG [main] - Creating MapperFactoryBean with name 'repostsDaoMapper' and 'com.aaa.mapper.RepostsDaoMapper' mapperInterface
+DEBUG [main] - Creating MapperFactoryBean with name 'userMapper' and 'com.aaa.mapper.UserMapper' mapperInterface
+DEBUG [main] - Creating shared instance of singleton bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+DEBUG [main] - Creating instance of bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+DEBUG [main] - Eagerly caching bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0' to allow for resolving potential circular references
+DEBUG [main] - Finished creating instance of bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+DEBUG [main] - Adding [environmentProperties] PropertySource with lowest search precedence
+ INFO [main] - Loading properties file from class path resource [db.properties]
+DEBUG [main] - Adding [localProperties] PropertySource with lowest search precedence
+DEBUG [main] - Searching for key 'jdbc.url' in [environmentProperties]
+DEBUG [main] - Searching for key 'jdbc.url' in [systemProperties]
+DEBUG [main] - Searching for key 'jdbc.url' in [systemEnvironment]
+DEBUG [main] - Could not find key 'jdbc.url' in any property source. Returning [null]
+DEBUG [main] - Searching for key 'jdbc.url' in [localProperties]
+DEBUG [main] - Found key 'jdbc.url' in [localProperties] with type [String] and value 'jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8'
+DEBUG [main] - Searching for key 'jdbc.driver' in [environmentProperties]
+DEBUG [main] - Searching for key 'jdbc.driver' in [systemProperties]
+DEBUG [main] - Searching for key 'jdbc.driver' in [systemEnvironment]
+DEBUG [main] - Could not find key 'jdbc.driver' in any property source. Returning [null]
+DEBUG [main] - Searching for key 'jdbc.driver' in [localProperties]
+DEBUG [main] - Found key 'jdbc.driver' in [localProperties] with type [String] and value 'com.mysql.jdbc.Driver'
+DEBUG [main] - Searching for key 'jdbc.username' in [environmentProperties]
+DEBUG [main] - Searching for key 'jdbc.username' in [systemProperties]
+DEBUG [main] - Searching for key 'jdbc.username' in [systemEnvironment]
+DEBUG [main] - Could not find key 'jdbc.username' in any property source. Returning [null]
+DEBUG [main] - Searching for key 'jdbc.username' in [localProperties]
+DEBUG [main] - Found key 'jdbc.username' in [localProperties] with type [String] and value 'root'
+DEBUG [main] - Searching for key 'jdbc.password' in [environmentProperties]
+DEBUG [main] - Searching for key 'jdbc.password' in [systemProperties]
+DEBUG [main] - Searching for key 'jdbc.password' in [systemEnvironment]
+DEBUG [main] - Could not find key 'jdbc.password' in any property source. Returning [null]
+DEBUG [main] - Searching for key 'jdbc.password' in [localProperties]
+DEBUG [main] - Found key 'jdbc.password' in [localProperties] with type [String] and value 'root'
+DEBUG [main] - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG [main] - Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG [main] - Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+DEBUG [main] - Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG [main] - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG [main] - Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG [main] - Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+DEBUG [main] - Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG [main] - Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG [main] - Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG [main] - Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+DEBUG [main] - Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG [main] - Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+DEBUG [main] - Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+DEBUG [main] - Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+DEBUG [main] - Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+DEBUG [main] - Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+DEBUG [main] - Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+DEBUG [main] - Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor' to allow for resolving potential circular references
+DEBUG [main] - Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+DEBUG [main] - Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+DEBUG [main] - Creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+DEBUG [main] - Eagerly caching bean 'org.springframework.aop.config.internalAutoProxyCreator' to allow for resolving potential circular references
+DEBUG [main] - Finished creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+DEBUG [main] - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@2a266d09]
+DEBUG [main] - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@ba54932]
+DEBUG [main] - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@76508ed1: defining beans [memberBizImpl,parentingBizImpl,postsBizImpl,repostsBizImpl,userBizImpl,memberController,parentingController,postsController,repostsController,userController,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,txadvice,points,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor,memberDaoMapper,parentingDaoMapper,postsDaoMapper,repostsDaoMapper,userMapper]; root of factory hierarchy
+DEBUG [main] - Creating shared instance of singleton bean 'memberBizImpl'
+DEBUG [main] - Creating instance of bean 'memberBizImpl'
+DEBUG [main] - Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Eagerly caching bean 'org.springframework.transaction.config.internalTransactionAdvisor' to allow for resolving potential circular references
+DEBUG [main] - Creating shared instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+DEBUG [main] - Creating instance of bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+DEBUG [main] - Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Creating shared instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Creating instance of bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Eagerly caching bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0' to allow for resolving potential circular references
+DEBUG [main] - Creating instance of bean 'points'
+DEBUG [main] - Finished creating instance of bean 'points'
+DEBUG [main] - Finished creating instance of bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Eagerly caching bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' to allow for resolving potential circular references
+DEBUG [main] - Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Finished creating instance of bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+DEBUG [main] - Finished creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Registered injected element on class [com.aaa.biz.impl.MemberBizImpl]: AutowiredFieldElement for private com.aaa.mapper.MemberDaoMapper com.aaa.biz.impl.MemberBizImpl.memberDaoMapper
+DEBUG [main] - Eagerly caching bean 'memberBizImpl' to allow for resolving potential circular references
+DEBUG [main] - Processing injected method of bean 'memberBizImpl': AutowiredFieldElement for private com.aaa.mapper.MemberDaoMapper com.aaa.biz.impl.MemberBizImpl.memberDaoMapper
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Creating shared instance of singleton bean 'memberDaoMapper'
+DEBUG [main] - Creating instance of bean 'memberDaoMapper'
+DEBUG [main] - Eagerly caching bean 'memberDaoMapper' to allow for resolving potential circular references
+DEBUG [main] - Creating shared instance of singleton bean 'sqlSessionFactory'
+DEBUG [main] - Creating instance of bean 'sqlSessionFactory'
+DEBUG [main] - Eagerly caching bean 'sqlSessionFactory' to allow for resolving potential circular references
+DEBUG [main] - Creating shared instance of singleton bean 'dataSource'
+DEBUG [main] - Creating instance of bean 'dataSource'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Eagerly caching bean 'dataSource' to allow for resolving potential circular references
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Finished creating instance of bean 'dataSource'
+DEBUG [main] - Invoking afterPropertiesSet() on bean with name 'sqlSessionFactory'
+DEBUG [main] - Class not found: org.jboss.vfs.VFS
+DEBUG [main] - JBoss 6 VFS API is not available in this environment.
+DEBUG [main] - Class not found: org.jboss.vfs.VirtualFile
+DEBUG [main] - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+DEBUG [main] - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+DEBUG [main] - Find JAR URL: file:/E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/entity
+DEBUG [main] - Not a JAR: file:/E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/entity
+DEBUG [main] - Reader entry: Member.class
+DEBUG [main] - Reader entry: Parenting.class
+DEBUG [main] - Reader entry: Posts.class
+DEBUG [main] - Reader entry: Reposts.class
+DEBUG [main] - Reader entry: User.class
+DEBUG [main] - Listing file:/E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/entity
+DEBUG [main] - Find JAR URL: file:/E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/entity/Member.class
+DEBUG [main] - Not a JAR: file:/E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/entity/Member.class
+DEBUG [main] - Reader entry: 漱壕4Vcom/aaa/entity/Memberjava/lang/ObjectidLjava/lang/Integer;usernameLjava/lang/String;reasonstateI
+DEBUG [main] - Find JAR URL: file:/E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/entity/Parenting.class
+DEBUG [main] - Not a JAR: file:/E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/entity/Parenting.class
+DEBUG [main] - Reader entry: 漱壕4Mcom/aaa/entity/Parentingjava/lang/ObjectidLjava/lang/Integer;textLjava/lang/String;timeLjava/util/Date;authorgetId()Ljava/lang/Integer;Code	LineNumberTableLocalVariableTablethisLcom/aaa/entity/Parenting;setId(Ljava/lang/Integer;)VgetText()Ljava/lang/String;	setText(Ljava/lang/String;)VgetTime()Ljava/util/Date;	 	
+DEBUG [main] - Find JAR URL: file:/E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/entity/Posts.class
+DEBUG [main] - Not a JAR: file:/E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/entity/Posts.class
+DEBUG [main] - Reader entry: 漱壕4Tcom/aaa/entity/Postsjava/lang/ObjectidLjava/lang/Integer;nameLjava/lang/String;texttimeLjava/util/Date;authorgetId()Ljava/lang/Integer;Code	LineNumberTableLocalVariableTablethisLcom/aaa/entity/Posts;setId(Ljava/lang/Integer;)VgetName()Ljava/lang/String;	setName(Ljava/lang/String;)VgetText	 	setTextgetTime()Ljava/util/Date;	%
+DEBUG [main] - Find JAR URL: file:/E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/entity/Reposts.class
+DEBUG [main] - Not a JAR: file:/E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/entity/Reposts.class
+DEBUG [main] - Reader entry: 漱壕4[com/aaa/entity/Repostsjava/lang/ObjectidLjava/lang/Integer;	repost_idtextLjava/lang/String;repost_usertimeLjava/util/Date;namegetId()Ljava/lang/Integer;Code	LineNumberTableLocalVariableTablethisLcom/aaa/entity/Reposts;setId(Ljava/lang/Integer;)VgetRepost_id	setRepost_idgetRepost_user()Ljava/lang/String;	 
+DEBUG [main] - Find JAR URL: file:/E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/entity/User.class
+DEBUG [main] - Not a JAR: file:/E:/eclipse-jee-2018-09-win32-x86_64/eclipse/workspace/Childcare_sys/WebRoot/WEB-INF/classes/com/aaa/entity/User.class
+DEBUG [main] - Reader entry: 漱壕4ecom/aaa/entity/Userjava/lang/ObjectidIusernameLjava/lang/String;passwordaddressstateperareaprovince
+DEBUG [main] - Checking to see if class com.aaa.entity.Member matches criteria [is assignable to Object]
+DEBUG [main] - Checking to see if class com.aaa.entity.Parenting matches criteria [is assignable to Object]
+DEBUG [main] - Checking to see if class com.aaa.entity.Posts matches criteria [is assignable to Object]
+DEBUG [main] - Checking to see if class com.aaa.entity.Reposts matches criteria [is assignable to Object]
+DEBUG [main] - Checking to see if class com.aaa.entity.User matches criteria [is assignable to Object]
+DEBUG [main] - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG [main] - Parsed configuration file: 'class path resource [mybatis/mybatis-config.xml]'
+DEBUG [main] - Property 'mapperLocations' was not specified or no matching resources found
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Finished creating instance of bean 'sqlSessionFactory'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Invoking afterPropertiesSet() on bean with name 'memberDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Finished creating instance of bean 'memberDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Creating shared instance of singleton bean 'parentingDaoMapper'
+DEBUG [main] - Creating instance of bean 'parentingDaoMapper'
+DEBUG [main] - Eagerly caching bean 'parentingDaoMapper' to allow for resolving potential circular references
+DEBUG [main] - Returning cached instance of singleton bean 'sqlSessionFactory'
+DEBUG [main] - Invoking afterPropertiesSet() on bean with name 'parentingDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Finished creating instance of bean 'parentingDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Creating shared instance of singleton bean 'postsDaoMapper'
+DEBUG [main] - Creating instance of bean 'postsDaoMapper'
+DEBUG [main] - Eagerly caching bean 'postsDaoMapper' to allow for resolving potential circular references
+DEBUG [main] - Returning cached instance of singleton bean 'sqlSessionFactory'
+DEBUG [main] - Invoking afterPropertiesSet() on bean with name 'postsDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Finished creating instance of bean 'postsDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Creating shared instance of singleton bean 'repostsDaoMapper'
+DEBUG [main] - Creating instance of bean 'repostsDaoMapper'
+DEBUG [main] - Eagerly caching bean 'repostsDaoMapper' to allow for resolving potential circular references
+DEBUG [main] - Returning cached instance of singleton bean 'sqlSessionFactory'
+DEBUG [main] - Invoking afterPropertiesSet() on bean with name 'repostsDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Finished creating instance of bean 'repostsDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Creating shared instance of singleton bean 'userMapper'
+DEBUG [main] - Creating instance of bean 'userMapper'
+DEBUG [main] - Eagerly caching bean 'userMapper' to allow for resolving potential circular references
+DEBUG [main] - Returning cached instance of singleton bean 'sqlSessionFactory'
+DEBUG [main] - Invoking afterPropertiesSet() on bean with name 'userMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Finished creating instance of bean 'userMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'memberDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Autowiring by type from bean name 'memberBizImpl' to bean named 'memberDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Creating shared instance of singleton bean 'txadvice'
+DEBUG [main] - Creating instance of bean 'txadvice'
+DEBUG [main] - Eagerly caching bean 'txadvice' to allow for resolving potential circular references
+DEBUG [main] - Creating shared instance of singleton bean 'transactionManager'
+DEBUG [main] - Creating instance of bean 'transactionManager'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Eagerly caching bean 'transactionManager' to allow for resolving potential circular references
+DEBUG [main] - Returning cached instance of singleton bean 'dataSource'
+DEBUG [main] - Invoking afterPropertiesSet() on bean with name 'transactionManager'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Finished creating instance of bean 'transactionManager'
+DEBUG [main] - Creating instance of bean '(inner bean)'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Adding transactional method [*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Finished creating instance of bean '(inner bean)'
+DEBUG [main] - Invoking afterPropertiesSet() on bean with name 'txadvice'
+DEBUG [main] - Finished creating instance of bean 'txadvice'
+DEBUG [main] - Creating implicit proxy for bean 'memberBizImpl' with 0 common interceptors and 2 specific interceptors
+DEBUG [main] - Creating JDK dynamic proxy: target source is SingletonTargetSource for target object [com.aaa.biz.impl.MemberBizImpl@31add175]
+DEBUG [main] - Finished creating instance of bean 'memberBizImpl'
+DEBUG [main] - Creating shared instance of singleton bean 'parentingBizImpl'
+DEBUG [main] - Creating instance of bean 'parentingBizImpl'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Registered injected element on class [com.aaa.biz.impl.ParentingBizImpl]: AutowiredFieldElement for private com.aaa.mapper.ParentingDaoMapper com.aaa.biz.impl.ParentingBizImpl.parentingDaoMapper
+DEBUG [main] - Eagerly caching bean 'parentingBizImpl' to allow for resolving potential circular references
+DEBUG [main] - Processing injected method of bean 'parentingBizImpl': AutowiredFieldElement for private com.aaa.mapper.ParentingDaoMapper com.aaa.biz.impl.ParentingBizImpl.parentingDaoMapper
+DEBUG [main] - Returning cached instance of singleton bean 'parentingDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Autowiring by type from bean name 'parentingBizImpl' to bean named 'parentingDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Creating implicit proxy for bean 'parentingBizImpl' with 0 common interceptors and 2 specific interceptors
+DEBUG [main] - Creating JDK dynamic proxy: target source is SingletonTargetSource for target object [com.aaa.biz.impl.ParentingBizImpl@1b75c2e3]
+DEBUG [main] - Finished creating instance of bean 'parentingBizImpl'
+DEBUG [main] - Creating shared instance of singleton bean 'postsBizImpl'
+DEBUG [main] - Creating instance of bean 'postsBizImpl'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Registered injected element on class [com.aaa.biz.impl.PostsBizImpl]: AutowiredFieldElement for private com.aaa.mapper.PostsDaoMapper com.aaa.biz.impl.PostsBizImpl.postsDaoMapper
+DEBUG [main] - Eagerly caching bean 'postsBizImpl' to allow for resolving potential circular references
+DEBUG [main] - Processing injected method of bean 'postsBizImpl': AutowiredFieldElement for private com.aaa.mapper.PostsDaoMapper com.aaa.biz.impl.PostsBizImpl.postsDaoMapper
+DEBUG [main] - Returning cached instance of singleton bean 'postsDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Autowiring by type from bean name 'postsBizImpl' to bean named 'postsDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Creating implicit proxy for bean 'postsBizImpl' with 0 common interceptors and 2 specific interceptors
+DEBUG [main] - Creating JDK dynamic proxy: target source is SingletonTargetSource for target object [com.aaa.biz.impl.PostsBizImpl@49c66ade]
+DEBUG [main] - Finished creating instance of bean 'postsBizImpl'
+DEBUG [main] - Creating shared instance of singleton bean 'repostsBizImpl'
+DEBUG [main] - Creating instance of bean 'repostsBizImpl'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Registered injected element on class [com.aaa.biz.impl.RepostsBizImpl]: AutowiredFieldElement for private com.aaa.mapper.RepostsDaoMapper com.aaa.biz.impl.RepostsBizImpl.repostsDaoMapper
+DEBUG [main] - Eagerly caching bean 'repostsBizImpl' to allow for resolving potential circular references
+DEBUG [main] - Processing injected method of bean 'repostsBizImpl': AutowiredFieldElement for private com.aaa.mapper.RepostsDaoMapper com.aaa.biz.impl.RepostsBizImpl.repostsDaoMapper
+DEBUG [main] - Returning cached instance of singleton bean 'repostsDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Autowiring by type from bean name 'repostsBizImpl' to bean named 'repostsDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Creating implicit proxy for bean 'repostsBizImpl' with 0 common interceptors and 2 specific interceptors
+DEBUG [main] - Creating JDK dynamic proxy: target source is SingletonTargetSource for target object [com.aaa.biz.impl.RepostsBizImpl@60129b9a]
+DEBUG [main] - Finished creating instance of bean 'repostsBizImpl'
+DEBUG [main] - Creating shared instance of singleton bean 'userBizImpl'
+DEBUG [main] - Creating instance of bean 'userBizImpl'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Registered injected element on class [com.aaa.biz.impl.UserBizImpl]: AutowiredFieldElement for private com.aaa.mapper.UserMapper com.aaa.biz.impl.UserBizImpl.userMapper
+DEBUG [main] - Eagerly caching bean 'userBizImpl' to allow for resolving potential circular references
+DEBUG [main] - Processing injected method of bean 'userBizImpl': AutowiredFieldElement for private com.aaa.mapper.UserMapper com.aaa.biz.impl.UserBizImpl.userMapper
+DEBUG [main] - Returning cached instance of singleton bean 'userMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Autowiring by type from bean name 'userBizImpl' to bean named 'userMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Creating implicit proxy for bean 'userBizImpl' with 0 common interceptors and 2 specific interceptors
+DEBUG [main] - Creating JDK dynamic proxy: target source is SingletonTargetSource for target object [com.aaa.biz.impl.UserBizImpl@6af9fcb2]
+DEBUG [main] - Finished creating instance of bean 'userBizImpl'
+DEBUG [main] - Creating shared instance of singleton bean 'memberController'
+DEBUG [main] - Creating instance of bean 'memberController'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Registered injected element on class [com.aaa.controller.MemberController]: AutowiredFieldElement for private com.aaa.biz.MemberBiz com.aaa.controller.MemberController.memberBiz
+DEBUG [main] - Eagerly caching bean 'memberController' to allow for resolving potential circular references
+DEBUG [main] - Processing injected method of bean 'memberController': AutowiredFieldElement for private com.aaa.biz.MemberBiz com.aaa.controller.MemberController.memberBiz
+DEBUG [main] - Returning cached instance of singleton bean 'memberBizImpl'
+DEBUG [main] - Autowiring by type from bean name 'memberController' to bean named 'memberBizImpl'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Finished creating instance of bean 'memberController'
+DEBUG [main] - Creating shared instance of singleton bean 'parentingController'
+DEBUG [main] - Creating instance of bean 'parentingController'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Registered injected element on class [com.aaa.controller.ParentingController]: AutowiredFieldElement for private com.aaa.biz.ParentingBiz com.aaa.controller.ParentingController.parentingBiz
+DEBUG [main] - Eagerly caching bean 'parentingController' to allow for resolving potential circular references
+DEBUG [main] - Processing injected method of bean 'parentingController': AutowiredFieldElement for private com.aaa.biz.ParentingBiz com.aaa.controller.ParentingController.parentingBiz
+DEBUG [main] - Returning cached instance of singleton bean 'parentingBizImpl'
+DEBUG [main] - Autowiring by type from bean name 'parentingController' to bean named 'parentingBizImpl'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Finished creating instance of bean 'parentingController'
+DEBUG [main] - Creating shared instance of singleton bean 'postsController'
+DEBUG [main] - Creating instance of bean 'postsController'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Registered injected element on class [com.aaa.controller.PostsController]: AutowiredFieldElement for private com.aaa.biz.PostsBiz com.aaa.controller.PostsController.postsBiz
+DEBUG [main] - Eagerly caching bean 'postsController' to allow for resolving potential circular references
+DEBUG [main] - Processing injected method of bean 'postsController': AutowiredFieldElement for private com.aaa.biz.PostsBiz com.aaa.controller.PostsController.postsBiz
+DEBUG [main] - Returning cached instance of singleton bean 'postsBizImpl'
+DEBUG [main] - Autowiring by type from bean name 'postsController' to bean named 'postsBizImpl'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Finished creating instance of bean 'postsController'
+DEBUG [main] - Creating shared instance of singleton bean 'repostsController'
+DEBUG [main] - Creating instance of bean 'repostsController'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Registered injected element on class [com.aaa.controller.RepostsController]: AutowiredFieldElement for private com.aaa.biz.RepostsBiz com.aaa.controller.RepostsController.repostsBiz
+DEBUG [main] - Eagerly caching bean 'repostsController' to allow for resolving potential circular references
+DEBUG [main] - Processing injected method of bean 'repostsController': AutowiredFieldElement for private com.aaa.biz.RepostsBiz com.aaa.controller.RepostsController.repostsBiz
+DEBUG [main] - Returning cached instance of singleton bean 'repostsBizImpl'
+DEBUG [main] - Autowiring by type from bean name 'repostsController' to bean named 'repostsBizImpl'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Finished creating instance of bean 'repostsController'
+DEBUG [main] - Creating shared instance of singleton bean 'userController'
+DEBUG [main] - Creating instance of bean 'userController'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Registered injected element on class [com.aaa.controller.UserController]: AutowiredFieldElement for private com.aaa.biz.UserBiz com.aaa.controller.UserController.userBiz
+DEBUG [main] - Eagerly caching bean 'userController' to allow for resolving potential circular references
+DEBUG [main] - Processing injected method of bean 'userController': AutowiredFieldElement for private com.aaa.biz.UserBiz com.aaa.controller.UserController.userBiz
+DEBUG [main] - Returning cached instance of singleton bean 'userBizImpl'
+DEBUG [main] - Autowiring by type from bean name 'userController' to bean named 'userBizImpl'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Finished creating instance of bean 'userController'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+DEBUG [main] - Returning cached instance of singleton bean 'dataSource'
+DEBUG [main] - Returning cached instance of singleton bean 'sqlSessionFactory'
+DEBUG [main] - Returning cached instance of singleton bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+DEBUG [main] - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+DEBUG [main] - Creating shared instance of singleton bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+DEBUG [main] - Creating instance of bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+DEBUG [main] - Eagerly caching bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0' to allow for resolving potential circular references
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+DEBUG [main] - Invoking afterPropertiesSet() on bean with name 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+DEBUG [main] - Finished creating instance of bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'txadvice'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor'
+DEBUG [main] - Returning cached instance of singleton bean 'memberDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'parentingDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'postsDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'repostsDaoMapper'
+DEBUG [main] - Returning cached instance of singleton bean 'userMapper'
+DEBUG [main] - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@764faa6]
+DEBUG [main] - Returning cached instance of singleton bean 'lifecycleProcessor'
+DEBUG [main] - Returning cached instance of singleton bean 'sqlSessionFactory'
+DEBUG [main] - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemProperties]
+DEBUG [main] - Searching for key 'spring.liveBeansView.mbeanDomain' in [systemEnvironment]
+DEBUG [main] - Could not find key 'spring.liveBeansView.mbeanDomain' in any property source. Returning [null]
+DEBUG [main] - Storing ApplicationContext in cache under key [[MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [main] - Processing injected method of bean 'ServiceTest.RepostsServiceTest': AutowiredFieldElement for private com.aaa.biz.RepostsBiz ServiceTest.RepostsServiceTest.repostsBiz
+DEBUG [main] - Returning cached instance of singleton bean 'repostsBizImpl'
+DEBUG [main] - Autowiring by type from bean name 'ServiceTest.RepostsServiceTest' to bean named 'repostsBizImpl'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Adding transactional method 'RepostsServiceTest.deltest' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+DEBUG [main] - Creating implicit proxy for bean 'ServiceTest.RepostsServiceTest' with 0 common interceptors and 1 specific interceptors
+DEBUG [main] - Creating CGLIB proxy: target source is SingletonTargetSource for target object [ServiceTest.RepostsServiceTest@35d176f7]
+DEBUG [main] - Unable to apply any optimisations to advised method: public void ServiceTest.RepostsServiceTest.deltest()
+DEBUG [main] - Adding transactional method 'RepostsServiceTest.findAllTest' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [main] - Unable to apply any optimisations to advised method: public void ServiceTest.RepostsServiceTest.findAllTest()
+DEBUG [main] - Unable to apply any optimisations to advised method: public void ServiceTest.RepostsServiceTest.setUp() throws java.lang.Exception
+DEBUG [main] - Adding transactional method 'RepostsServiceTest.addtest' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [main] - Unable to apply any optimisations to advised method: public void ServiceTest.RepostsServiceTest.addtest()
+DEBUG [main] - Adding transactional method 'RepostsServiceTest.updtest' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [main] - Unable to apply any optimisations to advised method: public void ServiceTest.RepostsServiceTest.updtest()
+DEBUG [main] - Found finalize() method - using NO_OVERRIDE
+DEBUG [main] - Found 'equals' method: public boolean java.lang.Object.equals(java.lang.Object)
+DEBUG [main] - Unable to apply any optimisations to advised method: public java.lang.String java.lang.Object.toString()
+DEBUG [main] - Found 'hashCode' method: public native int java.lang.Object.hashCode()
+DEBUG [main] - Unable to apply any optimisations to advised method: protected native java.lang.Object java.lang.Object.clone() throws java.lang.CloneNotSupportedException
+DEBUG [main] - Method is declared on Advised interface: public abstract int org.springframework.aop.framework.Advised.indexOf(org.springframework.aop.Advisor)
+DEBUG [main] - Method is declared on Advised interface: public abstract int org.springframework.aop.framework.Advised.indexOf(org.aopalliance.aop.Advice)
+DEBUG [main] - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isFrozen()
+DEBUG [main] - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isInterfaceProxied(java.lang.Class)
+DEBUG [main] - Method is declared on Advised interface: public abstract java.lang.String org.springframework.aop.framework.Advised.toProxyConfigString()
+DEBUG [main] - Method is declared on Advised interface: public abstract java.lang.Class[] org.springframework.aop.framework.Advised.getProxiedInterfaces()
+DEBUG [main] - Method is declared on Advised interface: public abstract org.springframework.aop.TargetSource org.springframework.aop.framework.Advised.getTargetSource()
+DEBUG [main] - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setExposeProxy(boolean)
+DEBUG [main] - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isExposeProxy()
+DEBUG [main] - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvisor(int,org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+DEBUG [main] - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvisor(org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+DEBUG [main] - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setPreFiltered(boolean)
+DEBUG [main] - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.setTargetSource(org.springframework.aop.TargetSource)
+DEBUG [main] - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isPreFiltered()
+DEBUG [main] - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.removeAdvisor(org.springframework.aop.Advisor)
+DEBUG [main] - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.removeAdvisor(int) throws org.springframework.aop.framework.AopConfigException
+DEBUG [main] - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvice(int,org.aopalliance.aop.Advice) throws org.springframework.aop.framework.AopConfigException
+DEBUG [main] - Method is declared on Advised interface: public abstract void org.springframework.aop.framework.Advised.addAdvice(org.aopalliance.aop.Advice) throws org.springframework.aop.framework.AopConfigException
+DEBUG [main] - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.replaceAdvisor(org.springframework.aop.Advisor,org.springframework.aop.Advisor) throws org.springframework.aop.framework.AopConfigException
+DEBUG [main] - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.removeAdvice(org.aopalliance.aop.Advice)
+DEBUG [main] - Method is declared on Advised interface: public abstract org.springframework.aop.Advisor[] org.springframework.aop.framework.Advised.getAdvisors()
+DEBUG [main] - Method is declared on Advised interface: public abstract boolean org.springframework.aop.framework.Advised.isProxyTargetClass()
+DEBUG [main] - Method is declared on Advised interface: public abstract java.lang.Class org.springframework.aop.TargetClassAware.getTargetClass()
+DEBUG [main] - Adding transactional method 'RepostsServiceTest.deltest' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [main] - Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''] found for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@35d176f7, testMethod = deltest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+DEBUG [main] - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [main] - Retrieved @TransactionConfiguration attributes [null] for test class [class ServiceTest.RepostsServiceTest].
+DEBUG [main] - Retrieved TransactionConfigurationAttributes [TransactionConfigurationAttributes@74eb909f transactionManagerName = 'transactionManager', defaultRollback = true] for class [class ServiceTest.RepostsServiceTest].
+DEBUG [main] - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [main] - Creating new transaction with name [deltest]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [main] - Acquired Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver] for JDBC transaction
+DEBUG [main] - Switching JDBC Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver] to manual commit
+DEBUG [main] - No method-level @Rollback override: using default rollback [true] for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@35d176f7, testMethod = deltest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+ INFO [main] - Began transaction (1) for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@35d176f7, testMethod = deltest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@13518f37]; rollback [true]
+DEBUG [main] - Participating in existing transaction
+DEBUG [main] - Creating a new SqlSession
+DEBUG [main] - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bff64c2]
+DEBUG [main] - JDBC Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver] will be managed by Spring
+DEBUG [main] - ==&gt;  Preparing: insert into reposts values(default,?,?,?,?) 
+DEBUG [main] - ==&gt; Parameters: 1(Integer), 这是一条很长的回复内容(String), test(String), 2019-03-06 17:32:38.282(Timestamp)
+DEBUG [main] - &lt;==    Updates: 1
+DEBUG [main] - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bff64c2]
+Reposts [id=123, repost_id=1, text=这是一条很长的回复内容, repost_user=test, time=Wed Mar 06 17:32:38 CST 2019, name=标题1]
+DEBUG [main] - Participating in existing transaction
+DEBUG [main] - Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bff64c2] from current transaction
+DEBUG [main] - ==&gt;  Preparing: delete from reposts where id=? 
+DEBUG [main] - ==&gt; Parameters: 123(Integer)
+DEBUG [main] - &lt;==    Updates: 1
+DEBUG [main] - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bff64c2]
+DEBUG [main] - Participating in existing transaction
+DEBUG [main] - Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bff64c2] from current transaction
+DEBUG [main] - ==&gt;  Preparing: SELECT posts.name, reposts.id, reposts.text, reposts.time, reposts.repost_user FROM reposts INNER JOIN posts ON posts.id = reposts.repost_id WHERE reposts.id = ? 
+DEBUG [main] - ==&gt; Parameters: 123(Integer)
+DEBUG [main] - &lt;==      Total: 0
+DEBUG [main] - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bff64c2]
+DEBUG [main] - No method-level @Rollback override: using default rollback [true] for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@35d176f7, testMethod = deltest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [main] - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bff64c2]
+DEBUG [main] - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4bff64c2]
+DEBUG [main] - Initiating transaction rollback
+DEBUG [main] - Rolling back JDBC transaction on Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver]
+DEBUG [main] - Releasing JDBC Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver] after transaction
+DEBUG [main] - Returning JDBC Connection to DataSource
+ INFO [main] - Rolled back transaction after test execution for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@35d176f7, testMethod = deltest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+DEBUG [main] - After test method: context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@35d176f7, testMethod = deltest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]], class dirties context [false], class mode [null], method dirties context [false].
+DEBUG [main] - Retrieved @ProfileValueSourceConfiguration [null] for test class [ServiceTest.RepostsServiceTest]
+DEBUG [main] - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [ServiceTest.RepostsServiceTest]
+DEBUG [main] - Performing dependency injection for test context [[DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@6c5945a7, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+DEBUG [main] - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [main] - Processing injected method of bean 'ServiceTest.RepostsServiceTest': AutowiredFieldElement for private com.aaa.biz.RepostsBiz ServiceTest.RepostsServiceTest.repostsBiz
+DEBUG [main] - Returning cached instance of singleton bean 'repostsBizImpl'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Creating implicit proxy for bean 'ServiceTest.RepostsServiceTest' with 0 common interceptors and 1 specific interceptors
+DEBUG [main] - Creating CGLIB proxy: target source is SingletonTargetSource for target object [ServiceTest.RepostsServiceTest@6c5945a7]
+DEBUG [main] - Adding transactional method 'RepostsServiceTest.findAllTest' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [main] - Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''] found for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@6c5945a7, testMethod = findAllTest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+DEBUG [main] - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [main] - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [main] - Creating new transaction with name [findAllTest]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [main] - Acquired Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver] for JDBC transaction
+DEBUG [main] - Switching JDBC Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver] to manual commit
+DEBUG [main] - No method-level @Rollback override: using default rollback [true] for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@6c5945a7, testMethod = findAllTest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+ INFO [main] - Began transaction (2) for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@6c5945a7, testMethod = findAllTest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@13518f37]; rollback [true]
+DEBUG [main] - Participating in existing transaction
+DEBUG [main] - Creating a new SqlSession
+DEBUG [main] - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78365cfa]
+DEBUG [main] - JDBC Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver] will be managed by Spring
+DEBUG [main] - ==&gt;  Preparing: SELECT posts.name, reposts.id, reposts.repost_id, reposts.text, reposts.time, reposts.repost_user FROM posts, reposts WHERE posts.id = reposts.repost_id ORDER BY reposts.id 
+DEBUG [main] - ==&gt; Parameters: 
+DEBUG [main] - &lt;==      Total: 4
+DEBUG [main] - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78365cfa]
+[Reposts [id=1, repost_id=1, text=回复111, repost_user=test, time=Fri Feb 01 00:00:00 CST 2019, name=标题1], Reposts [id=2, repost_id=3, text=回复211, repost_user=admin, time=Sun Feb 03 00:00:00 CST 2019, name=标题6], Reposts [id=3, repost_id=4, text=回复3, repost_user=admin, time=Sun Feb 03 00:00:01 CST 2019, name=标题5], Reposts [id=4, repost_id=1, text=回复4, repost_user=admin, time=Sun Feb 03 00:00:01 CST 2019, name=标题1]]
+DEBUG [main] - No method-level @Rollback override: using default rollback [true] for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@6c5945a7, testMethod = findAllTest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [main] - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78365cfa]
+DEBUG [main] - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@78365cfa]
+DEBUG [main] - Initiating transaction rollback
+DEBUG [main] - Rolling back JDBC transaction on Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver]
+DEBUG [main] - Releasing JDBC Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver] after transaction
+DEBUG [main] - Returning JDBC Connection to DataSource
+ INFO [main] - Rolled back transaction after test execution for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@6c5945a7, testMethod = findAllTest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+DEBUG [main] - After test method: context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@6c5945a7, testMethod = findAllTest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]], class dirties context [false], class mode [null], method dirties context [false].
+DEBUG [main] - Retrieved @ProfileValueSourceConfiguration [null] for test class [ServiceTest.RepostsServiceTest]
+DEBUG [main] - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [ServiceTest.RepostsServiceTest]
+DEBUG [main] - Performing dependency injection for test context [[DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@736d6a5c, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+DEBUG [main] - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [main] - Processing injected method of bean 'ServiceTest.RepostsServiceTest': AutowiredFieldElement for private com.aaa.biz.RepostsBiz ServiceTest.RepostsServiceTest.repostsBiz
+DEBUG [main] - Returning cached instance of singleton bean 'repostsBizImpl'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Creating implicit proxy for bean 'ServiceTest.RepostsServiceTest' with 0 common interceptors and 1 specific interceptors
+DEBUG [main] - Creating CGLIB proxy: target source is SingletonTargetSource for target object [ServiceTest.RepostsServiceTest@736d6a5c]
+DEBUG [main] - Adding transactional method 'RepostsServiceTest.addtest' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [main] - Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''] found for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@736d6a5c, testMethod = addtest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+DEBUG [main] - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [main] - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [main] - Creating new transaction with name [addtest]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [main] - Acquired Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver] for JDBC transaction
+DEBUG [main] - Switching JDBC Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver] to manual commit
+DEBUG [main] - No method-level @Rollback override: using default rollback [true] for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@736d6a5c, testMethod = addtest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+ INFO [main] - Began transaction (3) for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@736d6a5c, testMethod = addtest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@13518f37]; rollback [true]
+DEBUG [main] - Participating in existing transaction
+DEBUG [main] - Creating a new SqlSession
+DEBUG [main] - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b5a12ae]
+DEBUG [main] - JDBC Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver] will be managed by Spring
+DEBUG [main] - ==&gt;  Preparing: insert into reposts values(default,?,?,?,?) 
+DEBUG [main] - ==&gt; Parameters: 1(Integer), 这是一条很长的回复内容(String), test(String), 2019-03-06 17:32:38.549(Timestamp)
+DEBUG [main] - &lt;==    Updates: 1
+DEBUG [main] - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b5a12ae]
+Reposts [id=124, repost_id=1, text=这是一条很长的回复内容, repost_user=test, time=Wed Mar 06 17:32:38 CST 2019, name=标题1]
+DEBUG [main] - Participating in existing transaction
+DEBUG [main] - Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b5a12ae] from current transaction
+DEBUG [main] - ==&gt;  Preparing: SELECT posts.name, reposts.id, reposts.text, reposts.time, reposts.repost_user FROM reposts INNER JOIN posts ON posts.id = reposts.repost_id WHERE reposts.id = ? 
+DEBUG [main] - ==&gt; Parameters: 124(Integer)
+DEBUG [main] - &lt;==      Total: 1
+DEBUG [main] - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b5a12ae]
+DEBUG [main] - No method-level @Rollback override: using default rollback [true] for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@736d6a5c, testMethod = addtest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [main] - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b5a12ae]
+DEBUG [main] - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7b5a12ae]
+DEBUG [main] - Initiating transaction rollback
+DEBUG [main] - Rolling back JDBC transaction on Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver]
+DEBUG [main] - Releasing JDBC Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver] after transaction
+DEBUG [main] - Returning JDBC Connection to DataSource
+ INFO [main] - Rolled back transaction after test execution for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@736d6a5c, testMethod = addtest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+DEBUG [main] - After test method: context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@736d6a5c, testMethod = addtest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]], class dirties context [false], class mode [null], method dirties context [false].
+DEBUG [main] - Retrieved @ProfileValueSourceConfiguration [null] for test class [ServiceTest.RepostsServiceTest]
+DEBUG [main] - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [ServiceTest.RepostsServiceTest]
+DEBUG [main] - Performing dependency injection for test context [[DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@1506f20f, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+DEBUG [main] - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [main] - Processing injected method of bean 'ServiceTest.RepostsServiceTest': AutowiredFieldElement for private com.aaa.biz.RepostsBiz ServiceTest.RepostsServiceTest.repostsBiz
+DEBUG [main] - Returning cached instance of singleton bean 'repostsBizImpl'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+DEBUG [main] - Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+DEBUG [main] - Creating implicit proxy for bean 'ServiceTest.RepostsServiceTest' with 0 common interceptors and 1 specific interceptors
+DEBUG [main] - Creating CGLIB proxy: target source is SingletonTargetSource for target object [ServiceTest.RepostsServiceTest@1506f20f]
+DEBUG [main] - Adding transactional method 'RepostsServiceTest.updtest' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [main] - Explicit transaction definition [PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''] found for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@1506f20f, testMethod = updtest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+DEBUG [main] - Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [main] - Returning cached instance of singleton bean 'transactionManager'
+DEBUG [main] - Creating new transaction with name [updtest]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+DEBUG [main] - Acquired Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver] for JDBC transaction
+DEBUG [main] - Switching JDBC Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver] to manual commit
+DEBUG [main] - No method-level @Rollback override: using default rollback [true] for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@1506f20f, testMethod = updtest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+ INFO [main] - Began transaction (4) for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@1506f20f, testMethod = updtest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@13518f37]; rollback [true]
+DEBUG [main] - Participating in existing transaction
+DEBUG [main] - Creating a new SqlSession
+DEBUG [main] - Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38f116f6]
+DEBUG [main] - JDBC Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver] will be managed by Spring
+DEBUG [main] - ==&gt;  Preparing: insert into reposts values(default,?,?,?,?) 
+DEBUG [main] - ==&gt; Parameters: 1(Integer), 这是一条很长的回复内容(String), test(String), 2019-03-06 17:32:38.736(Timestamp)
+DEBUG [main] - &lt;==    Updates: 1
+DEBUG [main] - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38f116f6]
+Reposts [id=125, repost_id=1, text=这是一条很长的回复内容, repost_user=test, time=Wed Mar 06 17:32:38 CST 2019, name=标题1]
+DEBUG [main] - Participating in existing transaction
+DEBUG [main] - Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38f116f6] from current transaction
+DEBUG [main] - ==&gt;  Preparing: update reposts set text=? where id =? 
+DEBUG [main] - ==&gt; Parameters: 这是一条很长的回复内容2(String), 125(Integer)
+DEBUG [main] - &lt;==    Updates: 1
+DEBUG [main] - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38f116f6]
+DEBUG [main] - Participating in existing transaction
+DEBUG [main] - Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38f116f6] from current transaction
+DEBUG [main] - ==&gt;  Preparing: SELECT posts.name, reposts.id, reposts.text, reposts.time, reposts.repost_user FROM reposts INNER JOIN posts ON posts.id = reposts.repost_id WHERE reposts.id = ? 
+DEBUG [main] - ==&gt; Parameters: 125(Integer)
+DEBUG [main] - &lt;==      Total: 1
+DEBUG [main] - Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38f116f6]
+Reposts [id=125, repost_id=null, text=这是一条很长的回复内容2, repost_user=test, time=Wed Mar 06 17:32:38 CST 2019, name=标题1]
+DEBUG [main] - No method-level @Rollback override: using default rollback [true] for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@1506f20f, testMethod = updtest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+DEBUG [main] - Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38f116f6]
+DEBUG [main] - Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@38f116f6]
+DEBUG [main] - Initiating transaction rollback
+DEBUG [main] - Rolling back JDBC transaction on Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver]
+DEBUG [main] - Releasing JDBC Connection [jdbc:mysql://127.0.0.1:3306/childcare_system?useUnicode=true&amp;amp;characterEncoding=utf8?useUnicode=true&amp;characterEncoding=utf8, UserName=root@localhost, MySQL-AB JDBC Driver] after transaction
+DEBUG [main] - Returning JDBC Connection to DataSource
+ INFO [main] - Rolled back transaction after test execution for test context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@1506f20f, testMethod = updtest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]
+DEBUG [main] - After test method: context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = ServiceTest.RepostsServiceTest@1506f20f, testMethod = updtest@RepostsServiceTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]], class dirties context [false], class mode [null], method dirties context [false].
+DEBUG [main] - After test class: context [DefaultTestContext@551aa95a testClass = RepostsServiceTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1dfe2924 testClass = RepostsServiceTest, locations = '{file:config/spring/applicationContext.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]], dirtiesContext [false].
+</pre>
+</body>
+</html>
