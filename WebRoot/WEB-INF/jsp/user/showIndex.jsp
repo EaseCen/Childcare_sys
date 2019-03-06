@@ -104,7 +104,8 @@
 								href="${pageContext.request.contextPath }/user/Fetal_development.action">胎儿发育评估</a></li>
 							<li><a
 								href="${pageContext.request.contextPath }/user/Infant_development.action">婴儿发育评估</a></li>
-						</ul></li>
+						</ul>
+					</li>
 					<li><a
 						href="${pageContext.request.contextPath }/user/Baby_diet.action">饮食推荐</a></li>
 					<li><a href="${pageContext.request.contextPath }/posts/findSameCityAndAge.action?author=${user1.username}">发现专区</a></li>

@@ -84,8 +84,10 @@ public class PostsController {
 		// 4.使用model设置到前端
 		model.addAttribute("pageInfo", pageInfo);
 		// 5.最后设置返回的jsp
-		return "admin/showPosts";
+		return "user/selectPosts";
 	}
+	
+	
 
 	/**
      * 数据初始化绑定：SpringMVC中，数据从前台过来会将字符串转换为日期对象

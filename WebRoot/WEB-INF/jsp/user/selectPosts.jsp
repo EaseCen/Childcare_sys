@@ -114,7 +114,7 @@
 	<div class="row home-listing-area">
 		<div class="span2"></div>
 		<div class="span10">
-			<h1>同城交流</h1>
+			<h1>搜索结果</h1>
 		</div>
 	</div>
 
@@ -126,7 +126,7 @@
 						<!-- start of page content -->
 						<div class="span9 main-listing">
 						<article class="format-standard type-post hentry clearfix">
-						<c:forEach items="${pageInfo1.list}" var="posts" end="4">
+						<c:forEach items="${pageInfo.list}" var="posts" end="4">
 							<header class="clearfix">
 							<h3 class="post-title">
 								<a href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">${posts.name }</a>
@@ -153,49 +153,6 @@
 		</div>
 	</div>
 	<!-- End of Page Container -->
-
-	<div class="row home-listing-area">
-		<div class="span2"></div>
-		<div class="span10">
-			<h1>同龄分享</h1>
-		</div>
-	</div>
-	<div class="row separator">
-		<!-- Start of Page Container -->
-		<div class="page-container">
-			<div class="container">
-				<div class="row">
-
-					<!-- start of page content -->
-					<div class="span9 main-listing">
-						<article class="format-standard type-post hentry clearfix">
-						<c:forEach items="${pageInfo2.list}" var="posts" end="4">
-							<header class="clearfix">
-							<h3 class="post-title">
-								<a href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">${posts.name }</a>
-							</h3>
-							<div class="post-meta clearfix">
-								<span class="date">${posts.time }</span> 
-								<span>By:${posts.author }</span>
-							</div>
-								<!-- end of post meta -->
-							</header>
-							<c:if test="${fn:length(posts.text) > 20 }">
-							${fn:substring(posts.text,0,200)}...
-							</c:if>
-							<c:if test="${fn:length(posts.text)  <= 20 }">
-							<c:out value="${posts.text}"></c:out>
-							</c:if>
-							<br>
-						</c:forEach> 
-						</article>
-					</div>
-					<!-- end of page content -->
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End of Page Container -->
 	<!-- Start of Footer -->
 	<footer id="footer-wrapper">
 	<div id="footer" class="container"></div>
@@ -214,6 +171,7 @@
 							var text = document.getElementById("text").value;
 							var checkSelectResult = document
 									.getElementById("checkSelectResult"); //提示语句
+
 							if (text.trim().length == 0) {
 								checkSelectResult.innerHTML = "搜索內容不能为空";
 								obj.focus();

@@ -103,7 +103,6 @@
 					<li><a
 						href="${pageContext.request.contextPath }/Baby_diet.jsp">饮食推荐</a></li>
 					<li><a data-toggle="modal" data-target="#myModal">发现专区</a></li>
-					<li><a href="${pageContext.request.contextPath }/UserLogin.jsp">登录后更多功能..</a></li>
 				</ul>
 			</div>
 			<p class=" navbar-right">
