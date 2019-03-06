@@ -102,4 +102,17 @@ public class PostsServiceTest extends BaseTest {
 		System.out.println(postss);
 	}
 
+	@Test
+	@Transactional
+	public void findSameCityTest() {
+		List<Posts> postss = postsBiz.findSameCity(posts);
+		System.out.println(postss);
+	}
+	
+	@Test
+	@Transactional
+	public void findSameAgeTest() {
+		List<Posts> postss = postsBiz.findSameAge(posts);
+		System.out.println(postss);
+	}
 }
