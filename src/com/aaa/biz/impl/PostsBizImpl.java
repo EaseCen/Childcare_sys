@@ -20,7 +20,7 @@ public class PostsBizImpl implements PostsBiz {
 		// TODO Auto-generated method stub
 		return postsDaoMapper.findOne(id);
 	}
-
+	
 	@Override
 	public List<Posts> findAll() {
 		// TODO Auto-generated method stub
@@ -63,5 +63,13 @@ public class PostsBizImpl implements PostsBiz {
 		// TODO Auto-generated method stub
 		return postsDaoMapper.findSameAge(posts);
 	}
+
+	@Override
+	public List<Posts> selectReposts(int id) {
+		// TODO Auto-generated method stub
+		return postsDaoMapper.selectReposts(id);
+	}
+
+
 
 }

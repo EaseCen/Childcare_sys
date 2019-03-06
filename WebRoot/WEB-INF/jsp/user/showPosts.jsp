@@ -24,6 +24,7 @@
 	
 	
 	
+	
 	 addEventListener("load", 
 			function() {
 		 		setTimeout(hideURLbar, 0); 
@@ -31,6 +32,7 @@
 	 		function hideURLbar(){ 
 	 			window.scrollTo(0,1); 
 	 			} 
+
 
 
 
@@ -175,7 +177,36 @@
 										value="${posts.author}"></c:out></span></a></li>
 					</ul>
 				</div>
-
+				<div class="comment-grid-top">
+					<h3>回复</h3>
+					<div class="comments-top-top">
+						<div class="top-comment-left">
+						</div>
+						<c:forEach items="${posts1}" var="posts1">
+						<div class="top-comment-right">
+							<ul>
+								<li><span class="left-at"><c:out value="${posts1.repost_user}"></c:out></span></li>
+								<li><span class="right-at"><c:out value="${posts1.time}"></c:out></span></li>
+								<li><a class="reply">回复</a></li>
+							</ul>
+							<p><c:out value="${posts1.text}"></c:out></p>
+						</div>
+						</c:forEach>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="artical-commentbox">
+					<h3>leave a comment</h3>
+					<div class="table-form">
+						<form action="#" method="post">
+							<input placeholder="Name" name="name" type="text" required="">
+							<input placeholder="Email" name="email" type="email" required="">
+							<input placeholder="Phone" name="phone" type="text" required="">
+							<textarea placeholder="Message" name="message"></textarea>
+							<input type="submit" value="Send">
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

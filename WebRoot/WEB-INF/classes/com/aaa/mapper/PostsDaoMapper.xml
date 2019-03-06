@@ -10,6 +10,10 @@
 		select *
 		from posts where id=#{id}
 	</select>
+	
+	<select id="selectReposts" parameterType="int" resultType="posts">
+		select * from reposts where repost_id = #{id}
+	</select>
 
 	<!-- 查询所有数据时间降序 -->
 	<select id="findAll" parameterType="posts" resultType="posts">
@@ -88,6 +92,7 @@
 		    )
 		)
 	</select>
+	
 
 
 

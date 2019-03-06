@@ -8,8 +8,8 @@ import com.aaa.entity.Posts;
 public interface PostsDaoMapper {
 	
 	public Posts findOne(int id);
-		
-	public List<Posts> findAll();
+	
+	public List<Posts> selectReposts(int id);
 	
 	public void add (Posts posts);
 	
@@ -22,6 +22,8 @@ public interface PostsDaoMapper {
 	public List<Posts> findSameCity(Posts posts);
 	
 	public List<Posts> findSameAge(Posts posts);
+
+	public List<Posts> findAll();
 	
 
 }

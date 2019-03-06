@@ -9,6 +9,8 @@ public interface PostsBiz {
 	
 	public Posts findOne(int id);
 	
+	public List<Posts> selectReposts(int id);
+		
 	public List<Posts> findAll();
 	
 	public void add(Posts posts);

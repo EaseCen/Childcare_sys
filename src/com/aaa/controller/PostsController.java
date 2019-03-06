@@ -58,7 +58,7 @@ public class PostsController {
 	// 查询单条记录
 	@RequestMapping("/findOne")
 	public String findOne(Model model, int id) {
-		Posts posts = postsBiz.findOne(id);
+		Posts posts = postsBiz.findOne(id);		
 		model.addAttribute("posts", posts);
 		// 返给更新的方法
 		return "admin/updPosts";
@@ -164,8 +164,15 @@ public class PostsController {
 	
 	@RequestMapping("/getPostsById")
 	public String getPostsById(Model model, int id) {
-		Posts posts = postsBiz.findOne(id);
+		Posts posts = postsBiz.findOne(id);	
+		List<Posts> posts1 = postsBiz.selectReposts(id);
+		
 		model.addAttribute("posts", posts);
+		model.addAttribute("posts1", posts1);
+		
+		System.out.println("=========================="+posts+"================================");//调用这个getId就可以获得
+		System.out.println("=========================="+posts1+"================================");//调用这个getId就可以获得
+
 		return "user/showPosts";
 	}
 	

@@ -20,13 +20,7 @@ public class RepostsBizImpl implements RepostsBiz {
 		// TODO Auto-generated method stub
 		return repostsDaoMapper.findOne(id);
 	}
-
-	@Override
-	public List<Reposts> findAll() {
-		// TODO Auto-generated method stub
-		return repostsDaoMapper.findAll();
-	}
-
+	
 	@Override
 	public void add(Reposts reposts) {
 		// TODO Auto-generated method stub
@@ -44,6 +38,13 @@ public class RepostsBizImpl implements RepostsBiz {
 		// TODO Auto-generated method stub
 		repostsDaoMapper.del(id);
 	}
+
+	@Override
+	public List<Reposts> findAll() {
+		// TODO Auto-generated method stub
+		return repostsDaoMapper.findAll();
+	}
+
 
 
 }

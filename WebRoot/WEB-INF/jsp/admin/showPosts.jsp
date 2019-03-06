@@ -20,8 +20,7 @@
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
-<script type="text/javascript"
-	src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js"></script>
 
 <script type="text/javascript">
 <!-- 添加模态框（Modal）插件 -->
