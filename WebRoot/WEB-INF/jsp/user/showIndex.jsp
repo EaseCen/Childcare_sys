@@ -109,6 +109,7 @@
 					<li><a
 						href="${pageContext.request.contextPath }/user/Baby_diet.action">饮食推荐</a></li>
 					<li><a href="${pageContext.request.contextPath }/posts/findSameCityAndAge.action?author=${user1.username}">发现专区</a></li>
+					<li><a href="${pageContext.request.contextPath }/posts/toAddPosts.action">发表帖子</a></li>					
 					<li><a href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">养育记录</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -188,9 +189,7 @@
 	</div>
 	<!--banner-end-->
 	<!--FlexSlider-->
-	<link rel="stylesheet"
-		href="<%=basePath%>cpts_998_bmx/css/flexslider.css" type="text/css"
-		media="screen" />
+	<link rel="stylesheet" href="<%=basePath%>cpts_998_bmx/css/flexslider.css" type="text/css" media="screen" />
 	<script defer src="<%=basePath%>cpts_998_bmx/js/jquery.flexslider.js"></script>
 	<script type="text/javascript">
 		$(window).load(function() {

@@ -30,7 +30,11 @@
 		keyboard : false,
 		backdrop : true
 	});
+	
+	
 </script>
+
+
 <style type="text/css">
 th {
 	text-align: center

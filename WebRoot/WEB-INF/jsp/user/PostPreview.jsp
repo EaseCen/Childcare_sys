@@ -68,7 +68,8 @@
 			<nav class="main-nav">
 			<div class="menu-top-menu-container">
 				<ul id="menu-top-menu" class="clearfix">
-					<li><a href="${pageContext.request.contextPath }/posts/showIndex.action">首页</a></li>
+					<li><a
+						href="${pageContext.request.contextPath }/posts/showIndex.action">首页</a></li>
 					<li><a>发育评估</a>
 						<ul class="sub-menu">
 							<li><a
@@ -76,11 +77,12 @@
 							<li><a
 								href="${pageContext.request.contextPath }/user/Infant_development.action">婴儿发育评估</a></li>
 						</ul></li>
-					<li>
-					<a
+					<li><a
 						href="${pageContext.request.contextPath }/user/Baby_diet.action">饮食推荐</a></li>
-					<li><a href="${pageContext.request.contextPath }/posts/findSameCityAndAge.action?author=${user1.username}">发现专区</a></li>
-					<li><a href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">养育记录</a></li>
+					<li><a
+						href="${pageContext.request.contextPath }/posts/findSameCityAndAge.action?author=${user1.username}">发现专区</a></li>
+					<li><a
+						href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">养育记录</a></li>
 				</ul>
 			</div>
 
@@ -99,7 +101,8 @@
 			<p class="search-tag-line">如果您有任何疑问，可以在下面询问或输入您要找的内容！</p>
 
 			<form id="search-form" class="search-form clearfix" method="post"
-				action="${pageContext.request.contextPath }/posts/getPostsByName.action" autocomplete="off">
+				action="${pageContext.request.contextPath }/posts/getPostsByName.action"
+				autocomplete="off">
 				<input class="search-term required" type="text" id="s_name"
 					name="name" placeholder="输入内容进行搜索"
 					title="* Please enter a search term!" /> <input class="search-btn"
@@ -109,6 +112,7 @@
 		</div>
 	</div>
 	<!-- End of Search Wrapper -->
+
 
 
 	<div class="row home-listing-area">
@@ -123,8 +127,8 @@
 		<div class="page-container">
 			<div class="container">
 				<div class="row">
-						<!-- start of page content -->
-						<div class="span9 main-listing">
+					<!-- start of page content -->
+					<div class="span9 main-listing">
 						<article class="format-standard type-post hentry clearfix">
 						<c:forEach items="${pageInfo1.list}" var="posts" end="4">
 							<header class="clearfix">
@@ -132,11 +136,9 @@
 								<a href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">${posts.name }</a>
 							</h3>
 							<div class="post-meta clearfix">
-								<span class="date">${posts.time }</span> 
-								<span>By:${posts.author }</span>
+								<span class="date">${posts.time }</span> <span>By:${posts.author }</span>
 							</div>
-								<!-- end of post meta -->
-							</header>
+							<!-- end of post meta --> </header>
 							<c:if test="${fn:length(posts.text) > 150 }">
 							${fn:substring(posts.text,0,150)}...
 							</c:if>
@@ -144,9 +146,8 @@
 							${posts.text}
 							</c:if>
 							<br>
-						</c:forEach> 
-						</article>
-						</div>
+						</c:forEach> </article>
+					</div>
 					<!-- end of page content -->
 				</div>
 			</div>
@@ -172,23 +173,21 @@
 						<c:forEach items="${pageInfo2.list}" var="posts" end="4">
 							<header class="clearfix">
 							<h3 class="post-title">
-								<a href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">${posts.name }</a>
+								<a
+									href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">${posts.name }</a>
 							</h3>
 							<div class="post-meta clearfix">
-								<span class="date">${posts.time }</span> 
-								<span>By:${posts.author }</span>
+								<span class="date">${posts.time }</span> <span>By:${posts.author }</span>
 							</div>
-								<!-- end of post meta -->
-							</header>
+							<!-- end of post meta --> </header>
 							<c:if test="${fn:length(posts.text) > 20 }">
 							${fn:substring(posts.text,0,200)}...
 							</c:if>
 							<c:if test="${fn:length(posts.text)  <= 20 }">
-							<c:out value="${posts.text}"></c:out>
+								<c:out value="${posts.text}"></c:out>
 							</c:if>
 							<br>
-						</c:forEach> 
-						</article>
+						</c:forEach> </article>
 					</div>
 					<!-- end of page content -->
 				</div>
@@ -203,22 +202,73 @@
 	<div id="footer-bottom-wrapper"></div>
 	<!-- End of Footer Bottom --> </footer>
 	<!-- End of Footer -->
+	<!-- 添加帖子的模态框-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<!-- 模态框的标题 -->
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span><span class="sr-only">关闭</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">发表帖子</h4>
+				</div>
+				<!-- 模态框的主体-表单头部 -->
+				<form class="form-horizontal" role="form"
+					action="${pageContext.request.contextPath }/posts/addPosts.action"
+					method="post" id="form" enctype="multipart/form-data">
+					<div class="modal-body">
+						<div class="form-group  form-group-lg">
+							<label for="firstname" class="col-sm-3 control-label">帖子标题:</label>
+							<div class="col-sm-5">
+								<input type="text" class="form-control input-lg" id="addname"
+									name="name" placeholder="请输入标题" required autofocus>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="lastname" class="col-sm-3 control-label">帖子内容:</label>
+							<div class="col-sm-5">
+								<textarea rows="25" cols="50" id="addtext" name="text">${posts.text }</textarea>
+							</div>
+						</div>
+						<div class="form-group  form-group-lg">
+							<label for="lastname" class="col-sm-3 control-label">发帖时间:</label>
+							<div class="col-sm-5">
+								<c:set var="now" value="<%=new java.util.Date()%>" />
+								<input type="text" class="form-control input-lg" id="addtime"
+									name="time"
+									value="<fmt:formatDate pattern="yyyy-MM-dd" type="date" value="${now}" />"
+									required autofocus readonly="readonly">
+							</div>
+						</div>
+						<input type="hidden" name="author" value="${user1.username}" />
 
+
+					</div>
+					<!-- 模态框的尾部 -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="submit" class="btn btn-primary" id="save">保存</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 
 
 	<script type="text/javascript">
 		/* 以json的格式提交登录传参 */
-		$("#select")
-				.click(
-						function() {
-							var text = document.getElementById("text").value;
-							var checkSelectResult = document
-									.getElementById("checkSelectResult"); //提示语句
-							if (text.trim().length == 0) {
-								checkSelectResult.innerHTML = "搜索內容不能为空";
-								obj.focus();
-							}
-						});
+		$("#select").click(
+				function() {
+					var text = document.getElementById("text").value;
+					var checkSelectResult = document
+							.getElementById("checkSelectResult"); //提示语句
+					if (text.trim().length == 0) {
+						checkSelectResult.innerHTML = "搜索內容不能为空";
+						obj.focus();
+					}
+				});
 	</script>
 
 

@@ -78,8 +78,7 @@
 				</div>
 
 				<!-- 模态框的主体-表单头部 -->
-				<form class="form-horizontal" role="form"
-					action="${pageContext.request.contextPath }/posts/updPosts.action"
+				<form class="form-horizontal" role="form" action="${pageContext.request.contextPath }/posts/updPosts.action"
 					method="post" id="form" enctype="multipart/form-data">
 
 					<!-- 将id作为隐藏域提交这样就不会出现找不到修改的数据而报错问题 -->
@@ -97,7 +96,7 @@
 						<div class="form-group">
 							<label for="lastname" class="col-sm-3 control-label">帖子内容:</label>
 							<div class="col-sm-5">
-								<textarea rows="25" cols="50">${posts.text }</textarea>
+								<textarea rows="25" cols="50" name="text">${posts.text }</textarea>
 							</div>
 						</div>
 						<div class="form-group">

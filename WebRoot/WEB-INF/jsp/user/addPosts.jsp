@@ -19,11 +19,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
 <script type="application/x-javascript">
-	
-	
-	
-	
-	
 	 addEventListener("load", 
 			function() {
 		 		setTimeout(hideURLbar, 0); 
@@ -31,10 +26,6 @@
 	 		function hideURLbar(){ 
 	 			window.scrollTo(0,1); 
 	 			} 
-
-
-
-
 
 </script>
 <link href="<%=basePath%>cpts_998_bmx/css/bootstrap.css"
@@ -55,20 +46,6 @@
 	src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script>
 	new WOW().init();
-</script>
-
-<script type="text/javascript">
-	$(function() {
-		init();
-	});
-
-	function init() {
-		var text = $("posts.text").text(); //先取出未转换格式前端数据
-		var des = text.replace(/\r\n/g, '<br/>').replace(/\n/g, '<br/>')
-				.replace(/\s/g, ' '); //转换格式
-		$("posts.text").empty();
-		$("posts.text").append(des);
-	}
 </script>
 <!--//end-animate-->
 <style type="text/css">
@@ -160,24 +137,43 @@
 	<!--banner-end-->
 	<!--single-page-->
 	<div class="single">
+	<form role="form" action="${pageContext.request.contextPath }/posts/addPosts.action"
+					method="post"> 
 		<div class="container">
 			<h2>
-				<c:out value="${posts.name}"></c:out>
+				<input type="text" class="form-control input-lg" id="name"
+					name="name" maxlength="16" minlength="6" placeholder="输入帖子标题" required autofocus>
 			</h2>
 			<div class="single-page-artical">
-				<div class="artical-content">${posts.text}</div>
+				<div class="artical-content">
+				
+					<textarea rows="25" style="min-width: 90%" name="text" wrap="hard">${posts.text }</textarea>
+				</div>
 				<div class="artical-links">
 					<ul>
-						<li><i class="glyphicon glyphicon-calendar"
-							aria-hidden="true"></i><span><c:out value="${posts.time}"></c:out></span></li>
-						<li><a href="#"><i class="glyphicon glyphicon-user"
-								aria-hidden="true"></i><span><c:out
-										value="${posts.author}"></c:out></span></a></li>
+						<li>
+						<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i>
+						<span> <c:set var="now" value="<%=new java.util.Date()%>" /> 
+						<input type="text" class="form-control input-lg" id="addtime" name="time"
+								value="<fmt:formatDate pattern="yyyy-MM-dd" type="date" value="${now}" />"
+								required autofocus readonly="readonly">
+						</span>
+						</li>
+						<li>
+						<i class="glyphicon glyphicon-user" aria-hidden="true"></i>
+						<span><input type="text" class="form-control input-lg" id="addauthor" name="author"
+								value="${user1.username}"
+								required autofocus readonly="readonly"></span>
+						</li>
 					</ul>
 				</div>
-
+			</div>
+			
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-primary" id="save">提交</button>
 			</div>
 		</div>
+			</form>
 	</div>
 	<!--single-page-->
 	<!--footer-starts-->

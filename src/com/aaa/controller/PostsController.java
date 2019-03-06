@@ -95,7 +95,7 @@ public class PostsController {
      */
      @InitBinder
      public void initBinder(WebDataBinder binder) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");//格式根据个人需求进行设定
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");//格式根据个人需求进行设定
         dateFormat.setLenient(false);
         binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));   //true:允许输入空值，日期可以为空，false:不能为空值
     }
@@ -167,6 +167,11 @@ public class PostsController {
 		Posts posts = postsBiz.findOne(id);
 		model.addAttribute("posts", posts);
 		return "user/showPosts";
+	}
+	
+	@RequestMapping("/toAddPosts")
+	public String addPosts(){
+		return "user/addPosts";
 	}
 	
 	@RequestMapping("/returnIndex")
