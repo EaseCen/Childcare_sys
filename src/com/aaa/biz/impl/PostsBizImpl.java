@@ -32,6 +32,12 @@ public class PostsBizImpl implements PostsBiz {
 		// TODO Auto-generated method stub
 		postsDaoMapper.add(posts);
 	}
+	
+	@Override
+	public void addReposts(Posts posts) {
+		// TODO Auto-generated method stub
+		postsDaoMapper.addReposts(posts);
+	}
 
 	@Override
 	public void upd(Posts posts) {

@@ -49,7 +49,7 @@ public class ParentingController {
 	}
 
 	@RequestMapping("/addParenting")
-	public String addPosts(Parenting parenting) {
+	public String addParenting(Parenting parenting) {
 		// 添加进去
 		parentingBiz.add(parenting);
 		// 内部转发

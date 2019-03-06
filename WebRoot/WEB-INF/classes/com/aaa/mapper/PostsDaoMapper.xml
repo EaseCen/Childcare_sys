@@ -27,6 +27,11 @@
 		insert into posts
 		values(default,#{name},#{text},#{time},#{author})
 	</insert>
+	
+	<insert id="addReposts"  useGeneratedKeys="true" keyProperty="id"  parameterType="posts">
+		insert into reposts
+		values(default,#{repost_id},#{text},#{repost_user},#{time})
+	</insert>
 
 	<!-- 更新数据-通过id -->
 	<update id="upd" parameterType="posts">

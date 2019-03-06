@@ -15,6 +15,8 @@ public interface PostsBiz {
 	
 	public void add(Posts posts);
 	
+	public void addReposts(Posts posts);
+	
 	public void upd(Posts posts);
 	
 	public void del(int id);

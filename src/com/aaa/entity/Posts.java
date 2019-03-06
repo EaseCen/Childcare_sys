@@ -9,6 +9,8 @@ public class Posts {
 	private Date time;// 发帖时间
 	private String author;// 帖子作者id
 	private String repost_user;
+	private Integer repost_id;// 回复帖子的id
+
 
 	public Integer getId() {
 		return id;
@@ -57,8 +59,18 @@ public class Posts {
 	public void setRepost_user(String repost_user) {
 		this.repost_user = repost_user;
 	}
+	
+	
 
-	public Posts(int id, String name, String text,Date time, String author, String repost_user) {
+	public Integer getRepost_id() {
+		return repost_id;
+	}
+
+	public void setRepost_id(Integer repost_id) {
+		this.repost_id = repost_id;
+	}
+
+	public Posts(int id, String name, String text,Date time, String author, String repost_user,int repost_id) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -66,6 +78,7 @@ public class Posts {
 		this.time = time;
 		this.author = author;
 		this.repost_user = repost_user;
+		this.repost_id = repost_id;
 	}
 
 	public Posts() {
@@ -76,8 +89,10 @@ public class Posts {
 	@Override
 	public String toString() {
 		return "Posts [id=" + id + ", name=" + name + ", text=" + text + ", time=" + time + ", author=" + author
-				+ ", repost_user=" + repost_user + "]";
+				+ ", repost_user=" + repost_user + ", repost_id=" + repost_id + "]";
 	}
+
+	
 
 
 }

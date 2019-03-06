@@ -45,7 +45,6 @@ public class RepostsController {
 		repostsBiz.add(reposts);
 			// 内部转发
 		//System.out.println("=========================="+reposts.getId()+"================================");//调用这个getId就可以获得
-
 		return "redirect:queryReposts.action";
 	}
 	
@@ -72,5 +71,6 @@ public class RepostsController {
 		
 		return "redirect:queryReposts.action";
 	}
+	
 	
 }

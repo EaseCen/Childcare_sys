@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.aaa.biz.PostsBiz;
+import com.aaa.entity.Parenting;
 import com.aaa.entity.Posts;
+import com.aaa.entity.Reposts;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 
@@ -174,6 +176,13 @@ public class PostsController {
 		System.out.println("=========================="+posts1+"================================");//调用这个getId就可以获得
 
 		return "user/showPosts";
+	}
+	
+	@RequestMapping("/addReposts")
+	public String addReposts(Posts posts){
+		postsBiz.addReposts(posts);
+		System.out.println("=========================="+posts+"================================");//调用这个getId就可以获得
+		return "redirect:getPostsById.action?id="+posts.getRepost_id();
 	}
 	
 	@RequestMapping("/toAddPosts")
