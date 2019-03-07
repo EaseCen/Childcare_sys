@@ -4,6 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
+
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
@@ -109,7 +110,9 @@
 					<li><a
 						href="${pageContext.request.contextPath }/user/Baby_diet.action">饮食推荐</a></li>
 					<li><a href="${pageContext.request.contextPath }/posts/findSameCityAndAge.action?author=${user1.username}">发现专区</a></li>
+					<c:if test="${user1.per==2}">
 					<li><a href="${pageContext.request.contextPath }/posts/toAddPosts.action">发表帖子</a></li>					
+					</c:if>
 					<li><a href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">养育记录</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -118,10 +121,10 @@
 							class="glyphicon glyphicon-user"><strong>${user1.username }</strong></span>
 					</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" data-toggle="modal"
-								data-target="#myModal">申请为会员</a></li>
-							<li><a class="dropdown-item"
-								href="${pageContext.request.contextPath }/user/LogOut.action">&nbsp;&nbsp;&nbsp;&nbsp;注销</a></li>
+						<c:if test="${user1.per==1}">
+							<li><a class="dropdown-item" data-toggle="modal" data-target="#myModal">申请为会员</a></li>
+						</c:if>
+							<li><a class="dropdown-item" href="${pageContext.request.contextPath }/user/LogOut.action">&nbsp;&nbsp;&nbsp;&nbsp;注销</a></li>
 						</ul></li>
 				</ul>
 			</div>
@@ -142,46 +145,18 @@
 		<section class="slider">
 			<div class="flexslider">
 				<ul class="slides">
+					<c:forEach items="${pageInfo.list}" var="posts" end="2">
 					<li>
 						<div class="banner1">
 							<div class="container">
 								<div class="banner-text">
-									<p>Vivamus id dui et augue</p>
-									<h3>Caring Baby Sitters For Your Kids</h3>
+									<a href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">
+									<h3>${posts.name}</h3>
 								</div>
 							</div>
 						</div>
 					</li>
-					<li>
-						<div class="banner2">
-							<div class="container">
-								<div class="banner-text">
-									<p>Vivamus id dui et augue</p>
-									<h3>Caring Baby Sitters For Your Kids</h3>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="banner1">
-							<div class="container">
-								<div class="banner-text">
-									<p>Vivamus id dui et augue</p>
-									<h3>Caring Baby Sitters For Your Kids</h3>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="banner2">
-							<div class="container">
-								<div class="banner-text">
-									<p>Vivamus id dui et augue</p>
-									<h3>Donec eu dolor ac erat sodales rutrum</h3>
-								</div>
-							</div>
-						</div>
-					</li>
+					</c:forEach>
 				</ul>
 			</div>
 		</section>
