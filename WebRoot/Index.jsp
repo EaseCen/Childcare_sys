@@ -3,13 +3,11 @@
 <%@ page language="java" import="java.util.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +18,7 @@
 <meta name="keywords" content="" />
 <script type="application/x-javascript">
 	
+	
 	 addEventListener("load", 
 			function() {
 		 		setTimeout(hideURLbar, 0); 
@@ -28,7 +27,43 @@
 	 			window.scrollTo(0,1); 
 	 			} 
 
+
 </script>
+
+<style type="text/css">
+#content-sec3 {
+	position: relative;
+	max-width: 100%;
+	height: auto;
+	background-size: 100% auto;
+	text-align: center;
+}
+
+#content-sec3 .title {
+	margin-top: 5px;
+	font-family: 微软雅黑;
+	font-size: 20px;
+	color: #333333;
+}
+
+#content-sec3 .title-sub-line {
+	margin-top: 15px;
+	margin-bottom: 18px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+	color: #CCCCCC;
+	text-align: center;
+}
+
+#content-sec3 .title-more {
+	margin-bottom: 10px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+	color: #2E84E9;
+	text-align: center;
+	cursor: pointer;
+}
+</style>
 <link href="<%=basePath%>cpts_998_bmx/css/bootstrap.css"
 	rel='stylesheet' type='text/css' />
 <link href="<%=basePath%>cpts_998_bmx/css/style.css" rel='stylesheet'
@@ -87,7 +122,8 @@
 		role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">首页</a>
+				<a class="navbar-brand"
+					href="#">首页</a>
 			</div>
 			<div>
 				<ul class="nav navbar-nav">
@@ -96,21 +132,24 @@
 					</a>
 						<ul class="dropdown-menu">
 							<li><a
-								href="${pageContext.request.contextPath }/Fetal_development.jsp">胎儿发育评估</a></li>
+								href="${pageContext.request.contextPath }/user/Fetal_development.action">胎儿发育评估</a></li>
 							<li><a
-								href="${pageContext.request.contextPath }/Infant_development.jsp">婴儿发育评估</a></li>
+								href="${pageContext.request.contextPath }/user/Infant_development.action">婴儿发育评估</a></li>
 						</ul></li>
 					<li><a
-						href="${pageContext.request.contextPath }/Baby_diet.jsp">饮食推荐</a></li>
+						href="${pageContext.request.contextPath }/user/Baby_diet.action">饮食推荐</a></li>
 					<li><a data-toggle="modal" data-target="#myModal">发现专区</a></li>
 				</ul>
-			</div>
-			<p class=" navbar-right">
+				<ul class="nav navbar-nav navbar-right">
+								<p class=" navbar-right">
 				<a class="nav-link navbar-text"
 					href="${pageContext.request.contextPath }/UserLogin.jsp"> <span
 					class="glyphicon glyphicon-log-in"></span>会员注册/登录
 				</a>
 			</p>
+				</ul>
+			</div>
+
 		</div>
 	</nav>
 	<!--navigation-end-->
@@ -127,50 +166,25 @@
 		<section class="slider">
 			<div class="flexslider">
 				<ul class="slides">
-					<li>
-						<div class="banner1">
-							<div class="container">
-								<div class="banner-text">
-									<p>Vivamus id dui et augue</p>
-									<h3>Caring Baby Sitters For Your Kids</h3>
+					<c:forEach items="${pageInfo.list}" var="posts" end="2">
+						<li>
+							<div class="banner2">
+								<div class="container">
+									<div class="banner-text">
+										<h3>
+											<a href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">
+												${posts.name}
+											</a>
+										</h3>
+
+									</div>
 								</div>
 							</div>
-						</div>
-					</li>
-					<li>
-						<div class="banner2">
-							<div class="container">
-								<div class="banner-text">
-									<p>Vivamus id dui et augue</p>
-									<h3>Caring Baby Sitters For Your Kids</h3>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="banner1">
-							<div class="container">
-								<div class="banner-text">
-									<p>Vivamus id dui et augue</p>
-									<h3>Caring Baby Sitters For Your Kids</h3>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="banner2">
-							<div class="container">
-								<div class="banner-text">
-									<p>Vivamus id dui et augue</p>
-									<h3>Donec eu dolor ac erat sodales rutrum</h3>
-								</div>
-							</div>
-						</div>
-					</li>
+						</li>
+					</c:forEach>
 				</ul>
 			</div>
 		</section>
-
 	</div>
 	<!--banner-end-->
 	<!--FlexSlider-->
@@ -277,54 +291,27 @@
 		</div>
 	</div>
 	<!--projects-->
-
 	<div class="events">
 		<div class="container">
 			<h3>今日热点</h3>
 			<div class="events-grid">
-				
+				<c:forEach items="${pageInfo.list}" var="posts" end="2">
 					<div class="col-md-4 events-grid-left wow fadeInLeft animated"
 						data-wow-delay=".5s">
-						<a href="/Childcare_system/singlepage1.jsp">
+						<a
+							href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">
 							<div class="events-grid-left-top">
 								<p>
-									<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><span>Thu Feb 14 00:00:00 CST 2019</span>
+									<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><span>${posts.time }</span>
 								</p>
-							</div> <img src="http://localhost:8088/Childcare_system/cpts_998_bmx/images/4.jpg" class="img-responsive">
+							</div> <img src="<%=basePath%>cpts_998_bmx/images/${posts.id}.jpg"
+							class="img-responsive">
 							<div class="events-pos">
-								<p>人工喂养是一种成熟的养育方式</p>
+								<p>${posts.name }</p>
 							</div>
 						</a>
 					</div>
-				
-					<div class="col-md-4 events-grid-left wow fadeInLeft animated"
-						data-wow-delay=".5s">
-						<a href="/Childcare_system/singlepage2.jsp">
-							<div class="events-grid-left-top">
-								<p>
-									<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><span>Thu Feb 14 00:00:00 CST 2019</span>
-								</p>
-							</div> <img src="http://localhost:8088/Childcare_system/cpts_998_bmx/images/6.jpg" class="img-responsive">
-							<div class="events-pos">
-								<p>孩子不听话 可能是缺乏安全感</p>
-							</div>
-						</a>
-					</div>
-				
-					<div class="col-md-4 events-grid-left wow fadeInLeft animated"
-						data-wow-delay=".5s">
-						<a href="/Childcare_system/singlepage3.jsp">
-							<div class="events-grid-left-top">
-								<p>
-									<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><span>Tue Feb 05 14:00:02 CST 2019</span>
-								</p>
-							</div> <img src="http://localhost:8088/Childcare_system/cpts_998_bmx/images/3.jpg" class="img-responsive">
-							<div class="events-pos">
-								<p>宝宝换牙期问题多 家长把好关</p>
-							</div>
-						</a>
-					</div>
-				
+				</c:forEach>
 				<div class="clearfix"></div>
 			</div>
 		</div>
@@ -374,7 +361,6 @@
 			</div>
 		</div>
 	</div>
-	<!--footer-end-->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">

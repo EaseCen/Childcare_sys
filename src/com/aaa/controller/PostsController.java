@@ -48,7 +48,7 @@ public class PostsController {
 		// 内部转发
 		//System.out.println("=========================="+posts.getId()+"================================");//调用这个getId就可以获得
 
-		return "redirect:queryPosts.action";
+		return "user/showPosts";
 	}
 
 	@RequestMapping("/del")
@@ -171,9 +171,6 @@ public class PostsController {
 		
 		model.addAttribute("posts", posts);
 		model.addAttribute("posts1", posts1);
-		
-		System.out.println("=========================="+posts+"================================");//调用这个getId就可以获得
-		System.out.println("=========================="+posts1+"================================");//调用这个getId就可以获得
 
 		return "user/showPosts";
 	}

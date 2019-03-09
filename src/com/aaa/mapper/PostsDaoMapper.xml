@@ -8,7 +8,7 @@
 	<!-- 查询单条数据，类型int返回posts类型 -->
 	<select id="findOne" parameterType="int" resultType="posts">
 		select *
-		from posts where id=#{id}
+		from posts where id=#{id} order by id ASC
 	</select>
 	
 	<select id="selectReposts" parameterType="int" resultType="posts">
@@ -17,8 +17,7 @@
 
 	<!-- 查询所有数据时间降序 -->
 	<select id="findAll" parameterType="posts" resultType="posts">
-		SELECT *
-		FROM posts ORDER BY time DESC
+		SELECT * FROM posts ORDER BY time DESC
 	</select>
 
 	<!-- 增加数据 -->

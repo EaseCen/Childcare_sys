@@ -9,6 +9,7 @@
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -37,7 +38,73 @@
 <link rel='stylesheet' id='custom-css-css'
 	href='mstp_35_knowledge/css/custom5152.html?ver=1.0' type='text/css'
 	media='all' />
+<script type="application/x-javascript">
+	
+	
+	 addEventListener("load", 
+			function() {
+		 		setTimeout(hideURLbar, 0); 
+		 		}, false); 
+	 		function hideURLbar(){ 
+	 			window.scrollTo(0,1); 
+	 			} 
 
+
+</script>
+
+<style type="text/css">
+#content-sec3 {
+	position: relative;
+	max-width: 100%;
+	height: auto;
+	background-size: 100% auto;
+	text-align: center;
+}
+
+#content-sec3 .title {
+	margin-top: 5px;
+	font-family: 微软雅黑;
+	font-size: 20px;
+	color: #333333;
+}
+
+#content-sec3 .title-sub-line {
+	margin-top: 15px;
+	margin-bottom: 18px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+	color: #CCCCCC;
+	text-align: center;
+}
+
+#content-sec3 .title-more {
+	margin-bottom: 10px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+	color: #2E84E9;
+	text-align: center;
+	cursor: pointer;
+}
+</style>
+<link href="<%=basePath%>cpts_998_bmx/css/bootstrap.css"
+	rel='stylesheet' type='text/css' />
+<link href="<%=basePath%>cpts_998_bmx/css/style.css" rel='stylesheet'
+	type='text/css' />
+<link href="<%=basePath%>cpts_998_bmx/css/owl.carousel.css"
+	rel="stylesheet">
+<script src="<%=basePath%>cpts_998_bmx/js/jquery.min.js"></script>
+<!--JS for animate-->
+<link href="<%=basePath%>cpts_998_bmx/css/animate.css" rel="stylesheet"
+	type="text/css" media="all">
+<script src="<%=basePath%>cpts_998_bmx/js/wow.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script
+	src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+	new WOW().init();
+</script>
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -68,21 +135,53 @@
 	right: 0;
 }
 
+.navbar1 {
+	background-color: #0d192f;
+	border-color: #0d192f;
+	font-size: 16px;
+}
 
+.navbar {
+	margin-bottom: 0;
+	line-height: 0;
+}
+
+.navbar .nav {
+    margin: 6px 10px 0 0;
+}
 </style>
 <body>
-	<!-- Start of Header -->
-	<div class="header-wrapper">
-		<header>
+	<!--header-top-->
+	<div class="header-top">
 		<div class="container">
-			<!-- Start of Main Navigation -->
-			<nav class="main-nav">
-			<div class="menu-top-menu-container">
-				<ul id="menu-top-menu" class="clearfix">
-					<li><a
-						href="${pageContext.request.contextPath }/posts/showIndex.action">首页</a></li>
-					<li><a>发育评估</a>
-						<ul class="sub-menu">
+			<div class="head-main">
+				<div class="col-md-4 head-right wow fadeInLeft animated"></div>
+				<div
+					class="col-md-4 head-middle animated wow fadeInDown animated animated"
+					data-wow-duration="1200ms" data-wow-delay="500ms">
+					<h1>
+						<a href="index.html">Baby Care</a>
+					</h1>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!--header-top-->
+	<!--navigation-starts-->
+	<nav class="navbar navbar1 navbar-inverse navbar-static-top"
+		role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand"
+					href="${pageContext.request.contextPath }/posts/showIndex.action">首页</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown">发育评估<b class="caret"></b>
+					</a>
+						<ul class="dropdown-menu">
 							<li><a
 								href="${pageContext.request.contextPath }/user/Fetal_development.action">胎儿发育评估</a></li>
 							<li><a
@@ -90,16 +189,36 @@
 						</ul></li>
 					<li><a
 						href="${pageContext.request.contextPath }/user/Baby_diet.action">饮食推荐</a></li>
-					<li><a href="${pageContext.request.contextPath }/posts/findSameCityAndAge.action?author=${user1.username}">发现专区</a></li>
-					<li><a href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">养育记录</a></li>
-					
+					<li><a
+						href="${pageContext.request.contextPath }/posts/findSameCityAndAge.action?author=${user1.username}">发现专区</a></li>
+					<c:if test="${user1.per==2}">
+						<li><a
+							href="${pageContext.request.contextPath }/posts/toAddPosts.action">发表帖子</a></li>
+					</c:if>
+					<li><a
+						href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">养育记录</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown">欢迎您:&nbsp;&nbsp;<span
+							class="glyphicon glyphicon-user"><strong>${user1.username }</strong></span>
+					</a>
+						<ul class="dropdown-menu">
+							<c:if test="${user1.per==1}">
+								<li><a class="dropdown-item" data-toggle="modal"
+									data-target="#myModal">申请为会员</a></li>
+							</c:if>
+							<li><a class="dropdown-item"
+								href="${pageContext.request.contextPath }/user/LogOut.action">&nbsp;&nbsp;&nbsp;&nbsp;注销</a></li>
+						</ul></li>
 				</ul>
 			</div>
-			</nav>
+
 		</div>
-		</header>
-	</div>
-	<!-- End of Header -->
+	</nav>
+	<!--navigation-end-->
+
+
 
 
 	<div class="page-container">

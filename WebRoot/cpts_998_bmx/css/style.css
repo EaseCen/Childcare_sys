@@ -214,6 +214,15 @@ ul.navig {
 	-ms-background-size: cover;
 	min-height: 600px;
 }
+.banner1 {
+	background: url(../images/18.jpg) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	min-height: 600px;
+}
 .banner-text p{
 	font-size:25px;
 	color:#182B45;

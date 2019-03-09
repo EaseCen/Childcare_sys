@@ -103,7 +103,6 @@
 					<li><a
 						href="${pageContext.request.contextPath }/Baby_diet.jsp">饮食推荐</a></li>
 					<li><a data-toggle="modal" data-target="#myModal">发现专区</a></li>
-					<li><a href="${pageContext.request.contextPath }/UserLogin.jsp">登录后更多功能..</a></li>
 				</ul>
 			</div>
 			<p class=" navbar-right">
@@ -129,37 +128,46 @@
 	<!--single-page-->
 	<div class="single">
 		<div class="container">
-			<h2>人工喂养是一种成熟的养育方式</h2>
+			<h2>
+				春天到！宝贝适合春季入园吗？
+			</h2>
 			<div class="single-page-artical">
-				<div class="artical-content">
-					<p>
-						欢迎来到快乐呱呱【<strong>妈妈学园</strong>】，在这里，你将学习到育儿领域内顶级专家团共同打造的新手妈妈必修课程，掌握破解宝宝营养、睡眠、常见病、早教启蒙等育儿难题的方法，进阶为合格妈妈。
-					</p>
-					<p>
-						母乳一直被认为是婴儿喂养的金标准，世界卫生组织、美国儿科学会等权威组织都建议，在婴儿最初6个月内给予纯母乳喂养。因为大量的研究表明，母乳喂养对宝宝和妈妈的健康都有利，能够增进母婴之间的感情，而且安全经济又方便，对整个社会而言，可以帮助节约医疗资源，减轻医务人员的负担，还能促进环境的可持续发展。</p>
-					<p>
-						近年来，我们国家不断加大对母乳喂养的宣传和推广力度，越来越多的新手妈妈知道母乳喂养的好处，纷纷加入到母乳喂养的大军中来，这是好事。</p>
-					<p>
-						但有的妈妈过分执着于母乳喂养，一会担心母乳不够宝宝吃，一会又怕营养不能满足宝宝的需求，其实这些担心都是多余的。正常情况下，妈妈分泌的乳汁量超过宝宝所需，而且宝宝吃得越多，吸吮乳头越频繁，乳房产生的乳汁会越多。就好比海绵里的水，吸一吸，总会有的。至于母乳的营养，妈妈也不用担心。母乳是种聪明的食物，会随着宝宝月龄的改变自动调整，以满足宝宝前6个月的营养需求。等宝宝满6个月以后，需要的营养量增多，仅靠母乳无法满足，需要添加辅食来补充一部分营养。</p>
-					<p>
-						还有的妈妈把母乳喂养当成了一种&ldquo;政治正确&rdquo;，好像宝宝不吃母乳就比别人家的孩子差一大截一样。最典型的例子是觉得母乳喂养的宝宝更聪明。这个结论的依据是母乳中含有DHA等长链多不饱和脂肪酸，有利于宝宝神经发育，而且在一些关于喂养方式对婴儿智力影响的研究中，研究者们发现母乳喂养的宝宝获得了更高的分数。但仅凭这些不足以说明母乳对智力发育真有什么帮助。有人发现，这些研究选择的样本大多是家庭条件比较好、社会经济地位比较高的家庭，而这些家庭本身就有基因和教育上的优势。所以宝宝更聪明到底是因为母乳喂养，还是因为基因和教育呢？伦敦大学的冯&bull;斯塔姆博士带领团队做了一项研究，他们发现喝母乳长大的孩子并不会更聪明。</p>
-					<p>
-						所以在母乳喂养这件事上，妈妈们要客观看待，能坚持最好，但在多次尝试后，依然没办法实现或继续母乳喂养时，也不用焦虑，更不要有心理负担，毕竟母乳喂养是一件自然而然的事，强求不得。比如患有乙肝、肺结核等严重传染病的妈妈，我们是不建议母乳喂养的，以免哺乳时传染给宝宝。还有一些妈妈身体比较虚弱，没有足够的体力和精力哺乳宝宝、或者没有能力产出足量的母乳，我们也不建议硬要母乳喂养宝宝。另外，宝宝如果有氨基酸代谢异常等情况，也是不适合吃母乳的。妈妈可以选择相应的配方奶，进行人工喂养。</p>
-					<p>
-						虽然配方奶的营养没母乳好，也远不如喂母乳来的方便，但目前普遍认为配方奶是母乳最好的替代品。而且宝宝不会因为吃配方奶而跟妈妈不亲，也不会因为这个，身体和各方面的能力就比吃母乳的孩子差，所以我们也没必要排斥人工喂养。</p>
-					<p>
-						事实上，人工喂养跟母乳喂养一样，都是一种喂养方式，不管妈妈是出于客观条件还是主观选择，最终采取了人工喂养，都不应该因此而招致道德谴责。要知道，自主选择喂养方式是每个妈妈的权利。对于那些强忍疼痛、孤独追奶、坚持上班背奶的母乳妈妈，我们报以掌声和敬意；对于那些因为种种原因选择人工喂养的妈妈，我们同样理解和支持。因此，到底选择母乳喂养还是人工喂养，真没那么纠结，只要适合自己和宝宝的就是最好的。</p>
-					">
-				</div>
+				<div class="artical-content"><p>　　这几天，春季正悄然来临，伴随着一阵春意盎然的微风，一部名为《幼儿园新生入园》的灾难片正在热映。</p><p>　　有些家长们会选择将自己的宝宝春季就送入幼儿园，从来没接触过集体生活的宝宝，可能就会发出下列动作：</p><p><span style="color:#696969;">　　有的宝宝惊天地泣鬼神地蹦出一句：妈妈，你不爱我了吗?</span></p><p><span style="color:#696969;">　　有的宝宝求生欲爆棚，死死抱住妈妈，哭着说：妈妈不要丢下我!</span></p><p>　　总之，宝宝的每个毛孔都在拒绝上幼儿园!宝宝这种&ldquo;第一天上幼儿园&rdquo;的伤感离别，分分钟和家长演出琼瑶苦情戏。</p><p>　　幼儿园新生，都要经历一次与家庭精神上的&ldquo;断奶&rdquo;。</p><p>　　每每想到宝贝不可避免的撕心裂肺的哭声，有些家长们觉得，相比每年9月新学期开学时孩子们集体痛哭的场面，不如让宝宝在春季插班。</p><p>　　对于春季插班入园，很多妈妈也表示很支持~</p><p><strong>　　宝妈六六：避免不良情绪的传染</strong></p><p style="margin:0 22px 0 15px;border-left:5px solid #e2e2e2;padding:10px 15px;background:#f2f2f2;">　　我女儿就是插班生。我当时觉得几十个宝宝一起哭，那场面不哭都要被&ldquo;吓哭&rdquo;。这种悲伤的情绪，我女儿听到后肯定会放大悲声。所以我选择为女儿插班，让她和那些情绪稳定的&ldquo;老生&rdquo;沉浸在一片欢乐之中。</p><p>&nbsp;</p><p><strong>　　宝妈琪琪：得到更多的关注</strong></p><p style="margin:0 22px 0 15px;border-left:5px solid #e2e2e2;padding:10px 15px;background:#f2f2f2;">　　我儿子刚好3周岁，但是他的自理能力不强，所以我想春季插班生少的多，老师可能会有更多的时间去关心，照顾一下自己的孩子。这样可以缩短一下&ldquo;家园过渡&rdquo;的过程，帮助孩子排忧解虑。</p><p>&nbsp;</p><p><strong>　　宝妈燕燕：多了一份选择</strong></p><p style="margin:0 22px 0 15px;border-left:5px solid #e2e2e2;padding:10px 15px;background:#f2f2f2;">　　如果是春季的话，我觉得我可以多去选择班级。在入园前就多多跟孩子家长了解到哪个班老师的口碑比较好。这样的话我会更放心把孩子送进去。反而9月份的入园季是统一分班，没有了主动性。</p><p>&nbsp;</p><p><strong>　　宝妈红红：减少生病几率</strong></p><p style="margin:0 22px 0 15px;border-left:5px solid #e2e2e2;padding:10px 15px;background:#f2f2f2;">　　俗话说，多事之秋!如果秋天入园的话，岂不是活生生把宝宝送入了&ldquo;生病的季节&rdquo;?秋冬可是呼吸道感染的高发季节，再加上班里同学可能还会带来传染，我还是觉得春季入园更棒。</p><p>&nbsp;</p><p>　　但随之而来的，也会带来一些<span style="color:#008000;"><strong>不利的因素</strong></span>。</p><p>　　如比较内向宝宝在说自己是&ldquo;新来的同学&rdquo;的时候，加深了孩子的陌生感，会产生一种被孤立、被排斥的感觉;</p><p>　　有些宝宝也可能会跟不上大家的节奏，在集体活动中感到无所适从，从而产生挫败感，不自觉地就会发脾气。</p><p>　　所以是否选择春季入园，各位粑粑麻麻们也要摸清宝宝的脾性，提前为宝宝把关哦~</p><p>　　为了让宝宝很快融入美好的入园生活，<span style="color:#008000;"><strong>以下准备你也一定要做足</strong></span>!</p><p><span style="color:#008000;"><strong>　　一、宝宝入园的能力训练</strong></span></p><p><strong>　　1、自己解决大小便问题</strong></p><p>　　一般来说，宝宝<strong>过了18个月就可以开始如厕训练</strong>了，而上幼儿园通常是在宝宝3岁的时候。因此有足够的时间训练宝宝自己如厕。</p><p>　　要知道，幼儿园的老师照看不少孩子，如果宝宝在幼儿园尿湿了裤子，这会引起其他小伙伴的吐槽，不利于孩子身心发育。</p><p><strong>　　2、自己解决吃饭喝水问题</strong></p><p>　　父母总是特别操心吃饭问题，毕竟有的宝宝在家里依旧是妈妈、奶奶或者其他长辈追着宝宝喂饭，但是在幼儿园吃饭的时间就只能自食其力。</p><p>　　所以在入园前一定要做好这个训练。另外，喝水也是大问题，一定要教会宝宝自己掌控喝水的时间，不要一直不喝水。</p><p><strong>　　3、自己独立入睡的问题</strong></p><p>　　宝宝一整天在幼儿园里，基本上是玩、吃、睡，吃完午饭后一般会睡2个小时。</p><p>　　许多小朋友在家里的是通常是一直疯玩不睡，要么就要哄着才能睡觉，这到了幼儿园之后肯定会不适应。因此，在入园准备中，一定要培养宝宝独立入睡的习惯。</p><p><strong>　　4、学会表达自己的想法</strong></p><p>　　在家里，父母、长辈一家子人看着一个宝宝，稍微有一点不高兴，全家人都开始揣测宝宝的心思。</p><p>　　但是在幼儿园里，老师并不能时时刻刻关注到每个孩子的情绪以及想法，因此要教会孩子主动表达自己的想法。比如，想喝水了要直接说，想尿尿了要直接说。</p><p><span style="color:#008000;"><strong>　　二、宝宝入园需要做好4项准备</strong></span></p><p><strong>　　1、个人用品准备</strong></p><p>　　个人物品包括开学用品、学习用品以及生活用品。比如，简单安全的学习用具，并告诉他这些东西的用途。</p><p>　　另外，准备一个他喜欢的小书包(大部分幼儿园有专用的书包)，书包里可以装下宝宝喜欢的小手巾、水壶等。</p><p><strong>　　2、环境准备</strong></p><p>　　提前带孩子去幼儿园周边感受上学的氛围，参观并且了解幼儿园，看看大型户外运动玩具，有利于提前适应。</p><p><strong>　　3、宝宝的心理准备</strong></p><p>　　大部分宝宝第一次上幼儿园会有分离焦虑症，上学第一天甚至第一个星期都哭得稀里哗啦的。</p><p>　　这就需要父母提前做好宝宝的入园心理准备，增加宝宝对幼儿园、老师与小朋友的熟悉感与认同感，给宝宝讲一讲上幼儿园的趣事，培养他们对幼儿园的向往。</p><p><strong>　　4、个人习惯准备</strong></p><p>　　集体生活都是有制度的，父母需要帮助准备上幼儿园的宝宝了解作息制度，熟悉幼儿园的一日生活，比如，大概什么时间段要做什么，不能任由自己的性子。</p>
+</div>
 				<div class="artical-links">
 					<ul>
 						<li><i class="glyphicon glyphicon-calendar"
-							aria-hidden="true"></i><span>Thu Feb 14 00:00:00 CST 2019</span></li>
+							aria-hidden="true"></i><span>Tue Mar 05 09:17:00 CST 2019</span></li>
 						<li><a href="#"><i class="glyphicon glyphicon-user"
-								aria-hidden="true"></i><span>test</span></a></li>
+								aria-hidden="true"></i><span>ease</span></a></li>
 					</ul>
 				</div>
-
+				<div class="comment-grid-top">
+					<h3>回复</h3>
+					<div class="comments-top-top">
+						<div class="top-comment-left"></div>
+						
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="artical-commentbox">
+					<h3>leave a comment</h3>
+					<div class="table-form">
+						<form
+							action="/Childcare_system/posts/addReposts.action"
+							method="post">
+							<input type="hidden" id="adduser" name="repost_user" value="test" />
+							
+							<input type="hidden" class="form-control input-lg" id="addtime" name="time"
+								value="2019-03-09"
+								required autofocus readonly="readonly">
+							<input type="hidden" id="addrepost_id" name="repost_id" value="11" />
+							
+							<textarea placeholder="Message" name="text"></textarea>
+							<input type="submit" value=发送">
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -203,6 +211,7 @@
 		</div>
 	</div>
 	<!--footer-end-->
+
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 		aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">

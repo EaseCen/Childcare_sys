@@ -104,7 +104,10 @@
 						href="${pageContext.request.contextPath }/user/Baby_diet.action">饮食推荐</a></li>
 					<li><a
 						href="${pageContext.request.contextPath }/posts/findSameCityAndAge.action?author=${user1.username}">发现专区</a></li>
-					<li><a
+					<c:if test="${user1.per==2}">
+						<li><a
+							href="${pageContext.request.contextPath }/posts/toAddPosts.action">发表帖子</a></li>
+					</c:if>					<li><a
 						href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">养育记录</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -147,7 +150,7 @@
 			<div class="single-page-artical">
 				<div class="artical-content">
 				
-					<textarea rows="25" style="min-width: 90%" name="text" wrap="hard">${posts.text }</textarea>
+					<textarea rows="25" style="min-width: 90%" name="text" wrap="virtual">${posts.text }</textarea>
 				</div>
 				<div class="artical-links">
 					<ul>

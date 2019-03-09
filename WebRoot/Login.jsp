@@ -78,7 +78,7 @@
 						function() {
 							var username = document.getElementById("username").value;
 							var password = document.getElementById("password").value;
-
+							var reg = /['";{}()+\-*\/!%#]/;
 							var checkUserNameResult = document
 									.getElementById("checkUserNameResult"); //提示语句
 							var checkPasswordResult = document
@@ -86,9 +86,12 @@
 							if (username.trim().length == 0) {
 								checkUserNameResult.innerHTML = "用户名不能为空";
 								obj.focus();
-							} else if (password.trim().length == 0) {
+							}else if (password.trim().length == 0) {
 								checkUserNameResult.innerHTML = "";
 								checkPasswordResult.innerHTML = "密码不能为空";
+								obj.focus();
+							}else if(reg.test(username)){
+								checkUserNameResult.innerHTML = "用户名包含非法字符";
 								obj.focus();
 							}else {
 								checkPasswordResult.innerHTML = "";

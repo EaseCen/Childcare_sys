@@ -19,17 +19,30 @@
 	</select>
 
 	<select id="findOne" parameterType="int" resultType="user">
-		select *
-		from user where id=#{id}
+		SELECT
+		    USER.*,
+		    address.area,
+		    address.province,
+		    state.state_name
+		FROM
+		    (
+		        USER
+		    LEFT JOIN address ON USER.address = address.province_id
+		    ) LEFT
+		JOIN state ON USER.state = state.state_number
+		WHERE
+		    id =#{id}
 	</select>
 
 	<select id="findAll" resultType="user">
 		SELECT
+		user.id,
 		user.username,
 		user.password,
 		address.area,
 		address.province,
-		state.state_name
+		state.state_name,
+		state.state_number
 		FROM (user
 		LEFT JOIN address ON user.address = address.province_id) LEFT
 		JOIN

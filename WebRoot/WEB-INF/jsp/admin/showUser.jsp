@@ -115,16 +115,8 @@ th {
                         </li>
                     </ol>
                     <div class="panel panel-default">
-                        <div class="panel-heading">搜索
-                        </div>
+
                         <div class="panel-body">
-                             <form role="form" class="form-inline" action="${pageContext.request.contextPath }/user/getUserByName.action" method="post">
-                                <div class="form-group">
-                                    <label for="name">名称</label>
-                                    <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名">
-                                    <button type="submit" class="btn btn-default">开始搜索</button>
-                                </div>
-                            </form>
                              <!-- 按钮-->
 								<div class="row">
 									<div class="col-md-6 col-md-offset-10">
@@ -243,17 +235,13 @@ th {
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="lastname" class="col-sm-3 control-label">管理员地区:</label>
-							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg" id="address"
-									name="address" placeholder="请输入地区" required autofocus>
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="lastname" class="col-sm-3 control-label">管理员状态:</label>
-							<div class="col-sm-5">
-								<input type="text" class="form-control input-lg" id="state"
-									name="state" placeholder="在职/已离职" required autofocus>
+							<label for="inputState" class="col-sm-3 control-label">状态:</label>
+							<div class="col-sm-6">
+								<select class="selectpicker" id="state" name="state" onchange="gradeChange()">
+									<option value="">请选择</option>
+									<option value="4">就职</option>
+									<option value="5">离职</option>
+								</select>
 							</div>
 						</div>
 					</div>

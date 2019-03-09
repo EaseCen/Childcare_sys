@@ -81,6 +81,11 @@
 						href="${pageContext.request.contextPath }/user/Baby_diet.action">饮食推荐</a></li>
 					<li><a
 						href="${pageContext.request.contextPath }/posts/findSameCityAndAge.action?author=${user1.username}">发现专区</a></li>
+
+					<c:if test="${user1.per==2}">
+						<li><a
+							href="${pageContext.request.contextPath }/posts/toAddPosts.action">发表帖子</a></li>
+					</c:if>
 					<li><a
 						href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">养育记录</a></li>
 				</ul>
@@ -116,8 +121,8 @@
 
 
 	<div class="row home-listing-area">
-		<div class="span2"></div>
-		<div class="span10">
+		<div class="span1"></div>
+		<div class="span11">
 			<h1>同城交流</h1>
 		</div>
 	</div>
@@ -126,14 +131,17 @@
 		<!-- Start of Page Container -->
 		<div class="page-container">
 			<div class="container">
-				<div class="row">
+				<div class="span2"></div>
+
+				<div class="row span10">
 					<!-- start of page content -->
 					<div class="span9 main-listing">
 						<article class="format-standard type-post hentry clearfix">
 						<c:forEach items="${pageInfo1.list}" var="posts" end="4">
 							<header class="clearfix">
 							<h3 class="post-title">
-								<a href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">${posts.name }</a>
+								<a
+									href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">${posts.name }</a>
 							</h3>
 							<div class="post-meta clearfix">
 								<span class="date">${posts.time }</span> <span>By:${posts.author }</span>
@@ -156,8 +164,8 @@
 	<!-- End of Page Container -->
 
 	<div class="row home-listing-area">
-		<div class="span2"></div>
-		<div class="span10">
+		<div class="span1"></div>
+		<div class="span11">
 			<h1>同龄分享</h1>
 		</div>
 	</div>
@@ -165,7 +173,9 @@
 		<!-- Start of Page Container -->
 		<div class="page-container">
 			<div class="container">
-				<div class="row">
+				<div class="span1"></div>
+
+				<div class="row span11">
 
 					<!-- start of page content -->
 					<div class="span9 main-listing">

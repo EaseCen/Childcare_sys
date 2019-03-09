@@ -107,7 +107,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="inputAddress" class="col-sm-3 control-label">地&nbsp;&nbsp;&nbsp;区:</label>
+							<label for="inputAddress" class="col-sm-3 control-label ">地&nbsp;&nbsp;&nbsp;区:</label>
 							<div class="col-sm-6">
 								<select id="testOne" onchange="changeTest(this)">
 									<option value="">请选择</option>
@@ -118,7 +118,8 @@
 									<option value="xn">西南</option>
 									<option value="hz">华中</option>
 									<option value="db">东北</option>
-								</select> <select id="testTwo" name="address">
+								</select> 
+								<select id="testTwo" name="address">
 									<option value="">请选择</option>
 								</select>
 							</div>
@@ -137,7 +138,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-primary" id="save">注册</button>
+						<button type="submit" class="btn btn-primary" name="sava" id="save">注册</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
 					</div>
 				</form>
@@ -151,6 +152,7 @@
 						function() {
 							var username = document.getElementById("username").value;
 							var password = document.getElementById("password").value;
+							var reg = /['";{}()+\-*\/!%#]/;
 
 							var checkUserNameResult = document
 									.getElementById("checkUserNameResult"); //提示语句
@@ -159,7 +161,11 @@
 							if (username.trim().length == 0) {
 								checkUserNameResult.innerHTML = "用户名不能为空";
 								obj.focus();
-							} else if (password.trim().length == 0) {
+							}else if(reg.test(username)){
+								checkUserNameResult.innerHTML = "用户名包含非法字符";
+								obj.focus();
+								
+							}else if (password.trim().length == 0) {
 								checkUserNameResult.innerHTML = "";
 								checkPasswordResult.innerHTML = "密码不能为空";
 								obj.focus();

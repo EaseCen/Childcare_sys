@@ -60,9 +60,7 @@
 	display: flex;
 	/*实现垂直居中*/
 	align-items: center;
-	
-	font-size:20px
-	/*实现水平居中
+	font-size: 20px /*实现水平居中
 	justify-content: center;*/
 }
 </style>
@@ -91,16 +89,15 @@
 					<div class="modal-body">
 						<div class="form-group  form-group-lg">
 							<label for="firstname" class="col-sm-3 control-label">所属帖子:</label>
-							<div class="flex col-sm-5" >
-							<c:out value="${reposts.name }"></c:out>
+							<div class="flex col-sm-5">
+								<c:out value="${reposts.name }"></c:out>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="lastname" class="col-sm-3 control-label">回复内容:</label>
 							<div class="col-sm-5">
-								<input type="text" style="height: 200px;"
-									class="form-control input-lg" id="text" name="text"
-									value="${reposts.text }" required autofocus>
+								<textarea rows="10" style="min-width: 90%" id="text" name="text"
+									wrap="hard">${reposts.text }</textarea>
 							</div>
 						</div>
 						<div class="form-group">
@@ -113,7 +110,7 @@
 						<div class="form-group">
 							<label for="lastname" class="col-sm-3 control-label">回复人:</label>
 							<div class="flex col-sm-5">
-							<c:out value="${reposts.repost_user }"></c:out>
+								<c:out value="${reposts.repost_user }"></c:out>
 							</div>
 						</div>
 					</div>

@@ -133,5 +133,6 @@ public class UserController {
 	public String Baby_diet(){
 		return "user/Baby_diet";
 	}
+
 	
 }

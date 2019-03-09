@@ -58,27 +58,52 @@ th {
 </head>
 
 <body>
-	<nav class="navbar navbar-inverse" role="navigation">
+
+	<nav class="navbar navbar1 navbar-inverse navbar-static-top"
+		role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#" style="height: 92px;"> <img
-					src="<%=path%>/images/a.jpg" height="100%" />
-				</a>
+				<a class="navbar-brand"
+					href="${pageContext.request.contextPath }/posts/showIndex.action">首页</a>
 			</div>
-			<div class="collapse navbar-collapse" id="example-navbar-collapse">
-				<ul class="nav navbar-nav navbar" style="margin: 1% 0 1% 34%;">
-					<li class="active"><a class="icon-bar" href="#"
-						style="background-color: #087b71"> <font
-							style="font-size: 31px; font-weight: bold; font-style: italic;">欢迎记录您孩子的成长</font></a></li>
+			<div>
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown">发育评估<b class="caret"></b>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a
+								href="${pageContext.request.contextPath }/user/Fetal_development.action">胎儿发育评估</a></li>
+							<li><a
+								href="${pageContext.request.contextPath }/user/Infant_development.action">婴儿发育评估</a></li>
+						</ul></li>
+					<li><a
+						href="${pageContext.request.contextPath }/user/Baby_diet.action">饮食推荐</a></li>
+					<li><a
+						href="${pageContext.request.contextPath }/posts/findSameCityAndAge.action?author=${user1.username}">发现专区</a></li>
+					<c:if test="${user1.per==2}">
+						<li><a
+							href="${pageContext.request.contextPath }/posts/toAddPosts.action">发表帖子</a></li>
+					</c:if>
+					<li><a
+						href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">养育记录</a></li>
 				</ul>
-				<ul class="nav navbar-nav navbar-right" style="margin: 1% 0 1% 0%;">
-					<li><h4 style="color: red;">
-							欢迎您:&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> <strong>${user1.username }</strong>
-							<small> <a
-								href="${pageContext.request.contextPath }/user/LogOut.action">注销</a></small>
-						</h4></li>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown">欢迎您:&nbsp;&nbsp;<span
+							class="glyphicon glyphicon-user"><strong>${user1.username }</strong></span>
+					</a>
+						<ul class="dropdown-menu">
+							<c:if test="${user1.per==1}">
+								<li><a class="dropdown-item" data-toggle="modal"
+									data-target="#myModal">申请为会员</a></li>
+							</c:if>
+							<li><a class="dropdown-item"
+								href="${pageContext.request.contextPath }/user/LogOut.action">&nbsp;&nbsp;&nbsp;&nbsp;注销</a></li>
+						</ul></li>
 				</ul>
 			</div>
+
 		</div>
 	</nav>
 

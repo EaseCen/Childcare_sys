@@ -103,7 +103,6 @@
 					<li><a
 						href="${pageContext.request.contextPath }/Baby_diet.jsp">饮食推荐</a></li>
 					<li><a data-toggle="modal" data-target="#myModal">发现专区</a></li>
-					<li><a href="${pageContext.request.contextPath }/UserLogin.jsp">登录后更多功能..</a></li>
 				</ul>
 			</div>
 			<p class=" navbar-right">
@@ -127,27 +126,63 @@
 	<div class="banner-1"></div>
 	<!--banner-end-->
 	<!--single-page-->
-		<div class="single">
-			<div class="container">
-				<h2>孩子不听话 可能是缺乏安全感</h2>
-				<div class="single-page-artical">
-					<div class="artical-content">
-						<p>　　常听身边的宝妈抱怨：宝宝不听话、爱捣蛋。其中一个原因是宝宝缺乏安全感哦。安全感是孩子的基本需求，会影响到孩子身心的健康成长。孩子要是缺乏安全感，容易变得胆小、怯懦，和周围的小朋友格格不入。相反，安全感充足的孩子大方自信。</p><p><strong>　　</strong>给孩子充足安全感，和爸妈平常的行为习惯是分不开的。但是不少爸妈却经常在不经意中伤害了孩子的安全感。</p><p><strong>　　1）对孩子撒谎</strong></p><p>　　爸妈都会教育孩子不要撒谎骗人，要是孩子对爸妈撒谎免不了一顿骂。</p><p>　　爸妈可曾想过自己也会对孩子撒谎，为了安抚孩子的情绪，经常说些甜蜜的谎言搪塞孩子。虽然是善意的谎言，但是有时候给孩子内心造成不小的伤害，对爸妈产生不信任，同时孩子也会学爸妈撒谎。</p><p>　　虽说是为了哄孩子，但哄里若带着&ldquo;骗&rdquo;的成分，那爸妈就要注意了。</p><p>　　相信大部分爸妈都说过：&ldquo;妈妈（爸爸）要出门了，宝宝乖乖在家等，回来给你带好吃的。&rdquo;然而其实回来时双手空空；或者孩子一哭闹，爸妈就会说：&ldquo;警察和乞丐最爱抓爱哭的小朋友。&rdquo;。</p><p>　　孩子经受&ldquo;欺骗&rdquo;后，几次之后也会有戒备心，很难再相信爸妈类似的话。这些看似无伤大雅的谎话能不用最好不用。或者爸妈可以尝试换种方式哄孩子：详细告诉孩子原因，安抚孩子的情绪，鼓励孩子。</p><p><strong>　　2）说&ldquo;不要孩子&rdquo;之类的话</strong></p><p>　　当孩子调皮捣蛋惹爸妈生气的时候，爸妈会说：&ldquo;你再这样，我就不要你了。&rdquo;&ldquo;你再这样，警察叔叔来抓你了。&rdquo;......类似这样吓唬孩子，相信每个人都听过。</p><p>　　有些爸妈就有疑问：我也是这样长大的，不也没长歪吗？虽说如此，但每个孩子性格、心理承受能力不同，不排除这样的话会对孩子造成伤害的可能性。虽然这些话有震慑孩子的作用，没在孩子心里留下阴影最好，但真的就万一有影响了呢？</p><p>　　孩子长大后确实懂得爸妈小时候是在骗人，但是这种话真的非说不可吗？孩子听完这些话，可能信以为真，爸爸妈妈真的不要我吗？说不定会对爸妈的爱产生怀疑。</p><p>　　有的孩子经常问&ldquo;我从哪来的呢&rdquo;，许多家长都不会正面回答，会说类似&ldquo;你是垃圾桶（车站）里捡来的&rdquo;&ldquo;冲话费送的&rdquo;的话。这个问题除了是性教育的缺失，也是对孩子安全感的伤害，会让孩子质疑自己是否真的与爸妈没有任何关系，爸妈是否会突然抛弃ta。</p><p>　　那么<span style="color:#008000;"><strong>呵护孩子的安全感，为人父母该做些什么呢？</strong></span></p><p><strong>　　1）学会聆听孩子心理的声音</strong></p><p>　　特别是内心比较敏感的孩子，常常会因为长辈的一句无心之言，而产生挫败感。作为爸妈，要学会在孩子突然不高兴或哭闹不止时，耐心了解ta的需求，而不是忽略或不耐烦地指责孩子，容易让孩子产生反逆心理。</p><p><strong>　　2）多给孩子爱的抱抱和鼓励</strong></p><p>　　拥抱是肢体语言里最有温暖的力量，在孩子受挫时、软弱时，给ta一个拥有爱的抱抱，胜过所有的语言。一个长期缺乏拥抱的孩子，势必是更容易缺乏安全感，更叛逆不听话。</p><p>　　内心的安宁才是安全感的来源，孩子的安全感需要爸爸妈妈细心的呵护，要是孩子有什么不好的行为，爸爸妈妈要正面引导孩子，帮其改正错误，而不是对孩子说气话，挑动孩子的情绪。</p>
-">
+	<div class="single">
+		<div class="container">
+			<h2>
+				涨知识！宝宝要吃的辅食好讲究
+			</h2>
+			<div class="single-page-artical">
+				<div class="artical-content"><p>　　欢迎来到快乐呱呱【轻听&middot;1000天】，从怀孕到宝宝2岁，为你专属定制孕育知识!宝宝的生长发育情况，怀孕和育儿阶段的各种困惑，高质量的陪伴方法，每天一篇轻知识，让孕育变得更轻松、有趣!</p><p>　　今天呱呱为你推荐的是宝宝5个月24天，有关于&ldquo;<strong>宝宝辅食添加</strong>&rdquo;的内容。</p><p>　　世界卫生组织建议，宝宝满6个月以后，为了满足TA越来越高的营养需求，在继续母乳喂养的同时，要给宝宝添加辅食。宝宝马上就要满6个月了，呱呱今天就来跟你聊聊辅食添加的那些事儿。</p><p>　　首先，<strong>宝宝的第一口辅食，可以从富含铁的婴儿米粉开始添加</strong>。之所以强调铁，是因为宝宝6个月以后，从娘胎和母乳中获得的铁，已经不能满足TA的需求了，这时需要从辅食中补充铁，避免造成缺铁和缺铁性贫血。而选择米粉，则是因为相对于肉泥、蛋黄而言，婴儿米粉的营养会比较均衡。</p><p>　　其次，第一次加辅食的时间，也很有讲究。呱呱建议你选择宝宝身体健康并且情绪比较好的时候来加。为了让宝宝更好地接受辅食，你可以先给TA喂一点奶，然后用小勺子喂辅食，最后又再喂一点奶。这样就可以避免宝宝在很饿的时候，由于不习惯辅食而发脾气。当宝宝顺利接受辅食以后，你就可以尝试在早、中或者晚餐的时间来喂辅食，因为添加辅食的目的，就是为了以后逐渐用辅食来代替这顿奶。</p><p>　　最后，呱呱还要提醒的是，给宝宝添加辅食，要遵循一定的原则。辅食的量，要<strong>由少量到多量</strong>，通常第一次只需要尝试1小勺就够了，之后再慢慢加量。<strong>辅食的性状，也要从泥糊状开始，逐渐过渡半固体和固体食物</strong>。另外要注意的是，<strong>每次只能添加一种新食物，并且要观察2-3天</strong>，看宝宝有没有食物过敏反应。如果宝宝适应良好，才可以增加另一种新食物。相反，如果宝宝出现腹泻、呕吐、皮疹等不良反应，就要立即停止添加的新食物，等宝宝症状消失以后，再从小量开始添加，如果还是出现同样的不良反应，要咨询医生，看看宝宝是不是食物过敏。</p><p>　　听完呱呱的讲解，又涨知识了!现在快点给宝宝选购好婴儿米粉吧，记住，要富含铁哦!</p><p>　　了解轻听&middot;1000天的更多内容，<strong>倾听专属定制的短音频</strong>，请下载&ldquo;<strong>快乐妈咪</strong>&rdquo;APP，或者打开微信扫一扫下图的&ldquo;<strong>快乐呱呱</strong>&rdquo;小程序码!</p><p>　　辅食营养在宝宝成长过程中是不可或缺的，奠定了宝宝健康生长发育的基础，如果不能科学有序地添加，很可能引起各种营养失衡、缺乏等情况。</p><h2 style="width:550px;font:normal 22px/21px 微软雅黑;text-align:left;border-bottom:1px solid #000000;color:#000000;padding-left:5px;padding-bottom:4px;margin-bottom:20px;">问：什么时候可以给宝宝添加辅食?</h2><p>　　刘长伟营养医师解答：</p><p>　　对于健康、发育良好的宝宝一般建议满六个月后开始添加辅食，但要看孩子具体发育的情况，对于特殊的情况例如早产的宝宝，要等到纠正月龄满六个月以后。母乳喂养的宝宝，如果妈妈四个月后母乳不多了，也可以考虑加点辅食，但一般情况下还是建议六个月以后再添加。 可以通过以下4个信号来判断能否给宝宝添加辅食： (1)抬舌反射是否消失了，4个月之前宝宝吃固体或半固体辅食舌头就会往外推，不会下咽，这是自我保护的一种机制，如果要吃辅食就意味着要等抬舌反应消失之后才可以。 (2)对辅食要感兴趣，如果宝宝不感兴趣而家长强行喂食，宝宝会产生厌恶感。 (3)有一定的动手能力，可以用手抓或把食物放嘴里。 (4)能坐稳或者相对能坐得起来。</p><h2 style="width:550px;font:normal 22px/21px 微软雅黑;text-align:left;border-bottom:1px solid #000000;color:#000000;padding-left:5px;padding-bottom:4px;margin-bottom:20px;">问：怎样的辅食是好辅食，怎样的辅食是糟糕的辅食?</h2><p>　　刘长伟营养医师解答：</p><p>　　辅食的好坏区别主要是在营养密度，指的就是我们所说的碳水化合物，脂肪和蛋白质的含量，还有微量营养素，B族维生素，维生素C和E，铁、锌等等。好的辅食营养密度更高一些，比如强化剂的谷类辅食比白稀饭营养密度要高一些，肉泥比骨头汤营养密度高，吃点西兰花比喝菜汁营养密度又高一些。给宝宝最初的辅食营养密度要高一些，而不能太多的汤汤水水，包括果汁，维生素膳食纤维含量低，糖分相对高一些，营养密度并不是很好，也相当于糟糕的辅食。 六个月以后的宝宝面临缺铁问题，尤其是母乳喂养的宝宝，母乳里铁含量低，如果长期给宝宝吃不含铁的辅食，容易给宝宝造成贫血，长期缺铁贫血的影响很多，比如免疫力，甚至影响到智力发育，而且不可逆的，影响后是无法恢复正常了。</p>
+</div>
+				<div class="artical-links">
+					<ul>
+						<li><i class="glyphicon glyphicon-calendar"
+							aria-hidden="true"></i><span>Mon Mar 04 14:15:21 CST 2019</span></li>
+						<li><a href="#"><i class="glyphicon glyphicon-user"
+								aria-hidden="true"></i><span>test</span></a></li>
+					</ul>
+				</div>
+				<div class="comment-grid-top">
+					<h3>回复</h3>
+					<div class="comments-top-top">
+						<div class="top-comment-left"></div>
+						
+							<div class="top-comment-right">
+								<ul>
+									<li><span class="left-at">test</span></li>
+									<li><span class="right-at">Thu Mar 07 00:00:00 CST 2019</span></li>
+									<li><a class="reply">回复</a></li>
+								</ul>
+								<p>
+									11111111111
+								</p>
+							</div>
+						
+						<div class="clearfix"></div>
 					</div>
-					<div class="artical-links">
-						<ul>
-							<li><i class="glyphicon glyphicon-calendar"
-								aria-hidden="true"></i><span>Thu Feb 14 00:00:00 CST 2019</span></li>
-							<li><a href="#"><i class="glyphicon glyphicon-user"
-									aria-hidden="true"></i><span>admin</span></a></li>
-						</ul>
+				</div>
+				<div class="artical-commentbox">
+					<h3>leave a comment</h3>
+					<div class="table-form">
+						<form
+							action="/Childcare_system/posts/addReposts.action"
+							method="post">
+							<input type="hidden" id="adduser" name="repost_user" value="test" />
+							
+							<input type="hidden" class="form-control input-lg" id="addtime" name="time"
+								value="2019-03-09"
+								required autofocus readonly="readonly">
+							<input type="hidden" id="addrepost_id" name="repost_id" value="10" />
+							
+							<textarea placeholder="Message" name="text"></textarea>
+							<input type="submit" value=发送">
+						</form>
 					</div>
-					
 				</div>
 			</div>
 		</div>
-<!--single-page-->
+	</div>
+	<!--single-page-->
 	<!--footer-starts-->
 	<div class="footer">
 		<div class="container">
@@ -187,6 +222,7 @@
 		</div>
 	</div>
 	<!--footer-end-->
+
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">

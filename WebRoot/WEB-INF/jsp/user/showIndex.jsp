@@ -3,14 +3,11 @@
 <%@ page language="java" import="java.util.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-
-
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
 			+ path + "/";
 %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +19,6 @@
 <script type="application/x-javascript">
 	
 	
-	
 	 addEventListener("load", 
 			function() {
 		 		setTimeout(hideURLbar, 0); 
@@ -32,8 +28,42 @@
 	 			} 
 
 
-
 </script>
+
+<style type="text/css">
+#content-sec3 {
+	position: relative;
+	max-width: 100%;
+	height: auto;
+	background-size: 100% auto;
+	text-align: center;
+}
+
+#content-sec3 .title {
+	margin-top: 5px;
+	font-family: 微软雅黑;
+	font-size: 20px;
+	color: #333333;
+}
+
+#content-sec3 .title-sub-line {
+	margin-top: 15px;
+	margin-bottom: 18px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+	color: #CCCCCC;
+	text-align: center;
+}
+
+#content-sec3 .title-more {
+	margin-bottom: 10px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+	color: #2E84E9;
+	text-align: center;
+	cursor: pointer;
+}
+</style>
 <link href="<%=basePath%>cpts_998_bmx/css/bootstrap.css"
 	rel='stylesheet' type='text/css' />
 <link href="<%=basePath%>cpts_998_bmx/css/style.css" rel='stylesheet'
@@ -105,15 +135,17 @@
 								href="${pageContext.request.contextPath }/user/Fetal_development.action">胎儿发育评估</a></li>
 							<li><a
 								href="${pageContext.request.contextPath }/user/Infant_development.action">婴儿发育评估</a></li>
-						</ul>
-					</li>
+						</ul></li>
 					<li><a
 						href="${pageContext.request.contextPath }/user/Baby_diet.action">饮食推荐</a></li>
-					<li><a href="${pageContext.request.contextPath }/posts/findSameCityAndAge.action?author=${user1.username}">发现专区</a></li>
+					<li><a
+						href="${pageContext.request.contextPath }/posts/findSameCityAndAge.action?author=${user1.username}">发现专区</a></li>
 					<c:if test="${user1.per==2}">
-					<li><a href="${pageContext.request.contextPath }/posts/toAddPosts.action">发表帖子</a></li>					
+						<li><a
+							href="${pageContext.request.contextPath }/posts/toAddPosts.action">发表帖子</a></li>
 					</c:if>
-					<li><a href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">养育记录</a></li>
+					<li><a
+						href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">养育记录</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown"><a class="dropdown-toggle"
@@ -121,10 +153,12 @@
 							class="glyphicon glyphicon-user"><strong>${user1.username }</strong></span>
 					</a>
 						<ul class="dropdown-menu">
-						<c:if test="${user1.per==1}">
-							<li><a class="dropdown-item" data-toggle="modal" data-target="#myModal">申请为会员</a></li>
-						</c:if>
-							<li><a class="dropdown-item" href="${pageContext.request.contextPath }/user/LogOut.action">&nbsp;&nbsp;&nbsp;&nbsp;注销</a></li>
+							<c:if test="${user1.per==1}">
+								<li><a class="dropdown-item" data-toggle="modal"
+									data-target="#myModal">申请为会员</a></li>
+							</c:if>
+							<li><a class="dropdown-item"
+								href="${pageContext.request.contextPath }/user/LogOut.action">&nbsp;&nbsp;&nbsp;&nbsp;注销</a></li>
 						</ul></li>
 				</ul>
 			</div>
@@ -146,25 +180,54 @@
 			<div class="flexslider">
 				<ul class="slides">
 					<c:forEach items="${pageInfo.list}" var="posts" end="2">
-					<li>
-						<div class="banner1">
-							<div class="container">
-								<div class="banner-text">
-									<a href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">
-									<h3>${posts.name}</h3>
+						<li>
+							<div class="banner1">
+								<div class="container">
+									<div class="banner-text">
+										<h3>
+											<a style="color:#6b0f24;" href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">
+												${posts.name}
+											</a>
+										</h3>
+
+									</div>
+								</div>
+							</div>							
+							<div class="banner2">
+								<div class="container">
+									<div class="banner-text">
+										<h3>
+											<a style="color:#6b0f24;" href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">
+												${posts.name}
+											</a>
+										</h3>
+
+									</div>
 								</div>
 							</div>
-						</div>
-					</li>
+							<div class="banner3">
+								<div class="container">
+									<div class="banner-text">
+										<h3>
+											<a style="color:#6b0f24;" href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">
+												${posts.name}
+											</a>
+										</h3>
+
+									</div>
+								</div>
+							</div>
+						</li>
 					</c:forEach>
 				</ul>
 			</div>
 		</section>
-
 	</div>
 	<!--banner-end-->
 	<!--FlexSlider-->
-	<link rel="stylesheet" href="<%=basePath%>cpts_998_bmx/css/flexslider.css" type="text/css" media="screen" />
+	<link rel="stylesheet"
+		href="<%=basePath%>cpts_998_bmx/css/flexslider.css" type="text/css"
+		media="screen" />
 	<script defer src="<%=basePath%>cpts_998_bmx/js/jquery.flexslider.js"></script>
 	<script type="text/javascript">
 		$(window).load(function() {
@@ -272,12 +335,14 @@
 				<c:forEach items="${pageInfo.list}" var="posts" end="2">
 					<div class="col-md-4 events-grid-left wow fadeInLeft animated"
 						data-wow-delay=".5s">
-						<a href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">
+						<a
+							href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">
 							<div class="events-grid-left-top">
 								<p>
 									<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><span>${posts.time }</span>
 								</p>
-							</div> <img src="<%=basePath%>cpts_998_bmx/images/${posts.id}.jpg" class="img-responsive">
+							</div> <img src="<%=basePath%>cpts_998_bmx/images/${posts.id}.jpg"
+							class="img-responsive">
 							<div class="events-pos">
 								<p>${posts.name }</p>
 							</div>
