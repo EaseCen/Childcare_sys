@@ -31,6 +31,15 @@
 </script>
 
 <style type="text/css">
+.banner3 {
+	background: url(<%=basePath%>images/3.jpg) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	min-height: 600px;
+}
 #content-sec3 {
 	position: relative;
 	max-width: 100%;
@@ -62,6 +71,15 @@
 	color: #2E84E9;
 	text-align: center;
 	cursor: pointer;
+}
+.banner3 {
+	background: url(<%=basePath%>images/18.jpg) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	min-height: 600px;
 }
 </style>
 <link href="<%=basePath%>cpts_998_bmx/css/bootstrap.css"
@@ -109,7 +127,7 @@
 					class="col-md-4 head-middle animated wow fadeInDown animated animated"
 					data-wow-duration="1200ms" data-wow-delay="500ms">
 					<h1>
-						<a href="index.html">Baby Care</a>
+						<a href="#">Baby Care</a>
 					</h1>
 				</div>
 				<div class="clearfix"></div>
@@ -132,12 +150,12 @@
 					</a>
 						<ul class="dropdown-menu">
 							<li><a
-								href="${pageContext.request.contextPath }/user/Fetal_development.action">胎儿发育评估</a></li>
+								href="Fetal_development.jsp">胎儿发育评估</a></li>
 							<li><a
-								href="${pageContext.request.contextPath }/user/Infant_development.action">婴儿发育评估</a></li>
+								href="Infant_development.jsp">婴儿发育评估</a></li>
 						</ul></li>
 					<li><a
-						href="${pageContext.request.contextPath }/user/Baby_diet.action">饮食推荐</a></li>
+						href="Baby_diet.jsp">饮食推荐</a></li>
 					<li><a data-toggle="modal" data-target="#myModal">发现专区</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -164,24 +182,52 @@
 	<!--banner-starts-->
 	<div class="banner">
 		<section class="slider">
-			<div class="flexslider">
-				<ul class="slides">
-					<c:forEach items="${pageInfo.list}" var="posts" end="2">
-						<li>
-							<div class="banner2">
-								<div class="container">
-									<div class="banner-text">
-										<h3>
-											<a href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">
-												${posts.name}
-											</a>
-										</h3>
-
-									</div>
-								</div>
+            <div class="flexslider">
+                <ul class="slides">
+					<li>
+					<div class="banner1">
+						<div class="container">
+							<div class="banner-text">
+								<h3>
+								新生宝宝长得更像爸爸 真的吗
+								</h3>
+								<p>
+										<a style="font-size: 20px;"
+											href="<%=basePath%>singlepage4.jsp"> 点击查看
+										</a>
+									</p>
 							</div>
-						</li>
-					</c:forEach>
+						</div>
+					</div>
+					</li>
+					<li>
+					<div class="banner2">
+						<div class="container">
+							<div class="banner-text">
+								<h3>
+								吓唬式教育 是管教还是伤害？
+								</h3>
+								<p><a style="font-size: 20px;"
+											href="<%=basePath%>singlepage5.jsp"> 点击查看
+										</a></p>
+							</div>
+						</div>
+					</div>
+					</li>
+					<li>
+					<div class="banner3">
+						<div class="container">
+							<div class="banner-text">
+								<h3>
+								宝宝换牙期问题多 家长把好关
+								</h3>
+								<p><a style="font-size: 20px;"
+											href="<%=basePath%>singlepage6.jsp"> 点击查看
+										</a></p>
+							</div>
+						</div>
+					</div>
+					</li>
 				</ul>
 			</div>
 		</section>
@@ -206,19 +252,79 @@
 	<!--welcome-->
 	<div class="welcome">
 		<div class="container">
-			<h2>育儿网络平台设计与开发</h2>
+			<h2>育儿网络平台</h2>
 			<div class="col-md-9 welcome-left wow fadeInLeft animated"
 				data-wow-delay=".5s">
-				<h5>在二胎开放的时代，从现代育儿需求出发，主要完成个人基本信息、今日育儿热点、宝宝饮食、发育评估、发现专区、喂养记录、个人中心等等。</h5>
+				<h5>在二胎开放的时代，从现代育儿需求出发，包涵今日热点、宝宝饮食、发育评估、发现专区、喂养记录等等功能。</h5>
 			</div>
 			<div class="clearfix"></div>
 		</div>
 	</div>
 	<!--welcome-->
 
-	<!--projects-->
+
+	<div class="events">
+		<div class="container">
+			<h3>最新发帖</h3>
+			<div class="events-grid">
+				
+					<div class="col-md-4 events-grid-left wow fadeInLeft animated"
+						data-wow-delay=".5s">
+						<a
+							href="<%=basePath%>singlepage1.jsp">
+							<div class="events-grid-left-top">
+								<p>
+									<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><span>Tue Mar 05 09:17:00 CST 2019</span>
+								</p>
+							</div> <img src="http://localhost:8080/Childcare_system/cpts_998_bmx/images/11.jpg"
+							class="img-responsive">
+							<div class="events-pos">
+								<p>春天到！宝贝适合春季入园吗？</p>
+							</div>
+						</a>
+					</div>
+				
+					<div class="col-md-4 events-grid-left wow fadeInLeft animated"
+						data-wow-delay=".5s">
+						<a
+							href="<%=basePath%>singlepage2.jsp">
+							<div class="events-grid-left-top">
+								<p>
+									<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><span>Mon Mar 04 14:15:21 CST 2019</span>
+								</p>
+							</div> <img src="http://localhost:8080/Childcare_system/cpts_998_bmx/images/10.jpg"
+							class="img-responsive">
+							<div class="events-pos">
+								<p>涨知识！宝宝要吃的辅食好讲究</p>
+							</div>
+						</a>
+					</div>
+				
+					<div class="col-md-4 events-grid-left wow fadeInLeft animated"
+						data-wow-delay=".5s">
+						<a
+							href="<%=basePath%>singlepage3.jsp">
+							<div class="events-grid-left-top">
+								<p>
+									<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><span>Sat Mar 02 17:16:40 CST 2019</span>
+								</p>
+							</div> <img src="http://localhost:8080/Childcare_system/cpts_998_bmx/images/7.jpg"
+							class="img-responsive">
+							<div class="events-pos">
+								<p>526法则轻松避免辅食添加误区</p>
+							</div>
+						</a>
+					</div>
+				
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!--projects-->			
+			
 	<div class="project animated wow fadeInDown animated animated"
 		data-wow-duration="1200ms" data-wow-delay="500ms">
+		<div><h3 style="color:lightblue">晒娃栏</h3></div>
 		<div class="container"></div>
 		<div class="gallery-cursual">
 			<!--requried jsfiles for owl-->
@@ -291,31 +397,6 @@
 		</div>
 	</div>
 	<!--projects-->
-	<div class="events">
-		<div class="container">
-			<h3>今日热点</h3>
-			<div class="events-grid">
-				<c:forEach items="${pageInfo.list}" var="posts" end="2">
-					<div class="col-md-4 events-grid-left wow fadeInLeft animated"
-						data-wow-delay=".5s">
-						<a
-							href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">
-							<div class="events-grid-left-top">
-								<p>
-									<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><span>${posts.time }</span>
-								</p>
-							</div> <img src="<%=basePath%>cpts_998_bmx/images/${posts.id}.jpg"
-							class="img-responsive">
-							<div class="events-pos">
-								<p>${posts.name }</p>
-							</div>
-						</a>
-					</div>
-				</c:forEach>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-	</div>
 	<!--footer-starts-->
 	<div class="footer">
 		<div class="container">

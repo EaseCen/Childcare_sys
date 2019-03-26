@@ -127,33 +127,33 @@
 		<div class="page-container">
 			<div class="container">
 				<div class="row">
+					<div class="span2"></div>
+					<div class="row span10">
 						<!-- start of page content -->
 						<div class="span9 main-listing">
-						<article class="format-standard type-post hentry clearfix">
-						<c:forEach items="${pageInfo.list}" var="posts" end="4">
-							<header class="clearfix">
-							<h3 class="post-title">
-								<a href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">${posts.name }</a>
-							</h3>
-							<div class="post-meta clearfix">
-								<span class="date">${posts.time }</span> 
-								<span>By:${posts.author }</span>
-							</div>
-								<!-- end of post meta -->
-							</header>
-							<c:if test="${fn:length(posts.text) > 150 }">
+							<article class="format-standard type-post hentry clearfix">
+							<c:forEach items="${pageInfo.list}" var="posts" end="4">
+								<header class="clearfix">
+								<h3 class="post-title">
+									<a
+										href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">${posts.name }</a>
+								</h3>
+								<div class="post-meta clearfix">
+									<span class="date">${posts.time }</span> <span>By:${posts.author }</span>
+								</div>
+								<!-- end of post meta --> </header>
+								<c:if test="${fn:length(posts.text) > 150 }">
 							${fn:substring(posts.text,0,150)}...
 							</c:if>
-							<c:if test="${fn:length(posts.text)  <= 150 }">
+								<c:if test="${fn:length(posts.text)  <= 150 }">
 							${posts.text}
 							</c:if>
-							<br>
-						</c:forEach> 
-						</article>
+								<br><br><br>
+							</c:forEach> </article>
 						</div>
-					<!-- end of page content -->
+						<!-- end of page content -->
+					</div>
 				</div>
-			</div>
 		</div>
 	</div>
 	<!-- End of Page Container -->

@@ -110,7 +110,7 @@ th {
 			<div class="col-sm-10">
 				<ol class="breadcrumb">
 					<li class="active">菜单</li>
-					<li class="active">回复管理</li>
+					<li class="active">会员申请管理</li>
 					<li class="active"></li>
 				</ol>
 				<div class="panel panel-default">

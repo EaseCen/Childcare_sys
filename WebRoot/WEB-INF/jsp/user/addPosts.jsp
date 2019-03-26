@@ -150,7 +150,8 @@
 			<div class="single-page-artical">
 				<div class="artical-content">
 				
-					<textarea rows="25" style="min-width: 90%" name="text" wrap="virtual">${posts.text }</textarea>
+					<textarea rows="25" style="min-width: 90%" id="text1" name="text1" wrap="virtual">${posts.text }</textarea>
+					<input type="hidden" name ="text" id="text" value="">
 				</div>
 				<div class="artical-links">
 					<ul>
@@ -170,13 +171,14 @@
 						</li>
 					</ul>
 				</div>
+				
 			</div>
 			
 			<div class="modal-footer">
 				<button type="submit" class="btn btn-primary" id="save">提交</button>
 			</div>
 		</div>
-			</form>
+	</form>
 	</div>
 	<!--single-page-->
 	<!--footer-starts-->
@@ -217,6 +219,19 @@
 			</div>
 		</div>
 	</div>
+	
+
 	<!--footer-end-->
 </body>
 </html>
+<script>
+document.getElementById("save").onclick = function() {
+		var strContent = document.getElementById("text1").value;
+		strContent = strContent.replace(/\r\n/g, '<br/>'); //IE9、FF、chrome
+		strContent = strContent.replace(/\n/g, '<br/>'); //IE7-8
+		strContent = strContent.replace(/\s/g, '?'); //空格处理
+		document.getElementById("text").value = strContent;
+
+	};
+
+</script>

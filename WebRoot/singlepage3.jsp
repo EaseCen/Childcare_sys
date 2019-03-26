@@ -150,24 +150,6 @@
 						<div class="clearfix"></div>
 					</div>
 				</div>
-				<div class="artical-commentbox">
-					<h3>leave a comment</h3>
-					<div class="table-form">
-						<form
-							action="/Childcare_system/posts/addReposts.action"
-							method="post">
-							<input type="hidden" id="adduser" name="repost_user" value="test" />
-							
-							<input type="hidden" class="form-control input-lg" id="addtime" name="time"
-								value="2019-03-09"
-								required autofocus readonly="readonly">
-							<input type="hidden" id="addrepost_id" name="repost_id" value="7" />
-							
-							<textarea placeholder="Message" name="text"></textarea>
-							<input type="submit" value=发送">
-						</form>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>

@@ -34,6 +34,12 @@ public class MemberBizImpl  implements MemberBiz {
 	}
 
 	@Override
+	public void updUserState(Member member) {
+		// TODO Auto-generated method stub
+		memberDaoMapper.updUserState(member);
+	}
+	
+	@Override
 	public void updPass(Member member) {
 		// TODO Auto-generated method stub
 		memberDaoMapper.updPass(member);
@@ -44,5 +50,6 @@ public class MemberBizImpl  implements MemberBiz {
 		// TODO Auto-generated method stub
 		memberDaoMapper.updReject(member);
 	}
+
 
 }

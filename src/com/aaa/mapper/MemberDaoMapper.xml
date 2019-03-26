@@ -28,6 +28,16 @@
 		insert into member
 		values(default,#{username},#{reason},6)
 	</insert>
+	
+	<update id="updUserState" parameterType="member">
+		UPDATE
+			user
+		SET
+			per = "3"
+		WHERE
+			username = #{username}
+	
+	</update>
 
 	<!-- 批准-->
 	<update id="updPass" parameterType="member">

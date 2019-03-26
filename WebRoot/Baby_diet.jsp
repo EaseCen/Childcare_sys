@@ -15,7 +15,7 @@
 <head>
 <base href="<%=basePath%>">
 <meta charset="UTF-8">
-<title>宝宝饮食</title>
+<title>胎儿发育评估</title>
 <link rel="shortcut icon" href="images/favicon.png" />
 
 
@@ -38,7 +38,73 @@
 <link rel='stylesheet' id='custom-css-css'
 	href='mstp_35_knowledge/css/custom5152.html?ver=1.0' type='text/css'
 	media='all' />
+<script type="application/x-javascript">
+	
+	
+	 addEventListener("load", 
+			function() {
+		 		setTimeout(hideURLbar, 0); 
+		 		}, false); 
+	 		function hideURLbar(){ 
+	 			window.scrollTo(0,1); 
+	 			} 
 
+
+</script>
+
+<style type="text/css">
+#content-sec3 {
+	position: relative;
+	max-width: 100%;
+	height: auto;
+	background-size: 100% auto;
+	text-align: center;
+}
+
+#content-sec3 .title {
+	margin-top: 5px;
+	font-family: 微软雅黑;
+	font-size: 20px;
+	color: #333333;
+}
+
+#content-sec3 .title-sub-line {
+	margin-top: 15px;
+	margin-bottom: 18px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+	color: #CCCCCC;
+	text-align: center;
+}
+
+#content-sec3 .title-more {
+	margin-bottom: 10px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+	color: #2E84E9;
+	text-align: center;
+	cursor: pointer;
+}
+</style>
+<link href="<%=basePath%>cpts_998_bmx/css/bootstrap.css"
+	rel='stylesheet' type='text/css' />
+<link href="<%=basePath%>cpts_998_bmx/css/style.css" rel='stylesheet'
+	type='text/css' />
+<link href="<%=basePath%>cpts_998_bmx/css/owl.carousel.css"
+	rel="stylesheet">
+<script src="<%=basePath%>cpts_998_bmx/js/jquery.min.js"></script>
+<!--JS for animate-->
+<link href="<%=basePath%>cpts_998_bmx/css/animate.css" rel="stylesheet"
+	type="text/css" media="all">
+<script src="<%=basePath%>cpts_998_bmx/js/wow.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script
+	src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+	new WOW().init();
+</script>
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -68,34 +134,75 @@
 	top: 5px;
 	right: 0;
 }
+
+.navbar1 {
+	background-color: #0d192f;
+	border-color: #0d192f;
+	font-size: 16px;
+}
+
+.navbar {
+	margin-bottom: 0;
+	line-height: 0;
+}
+
+.navbar .nav {
+    margin: 6px 10px 0 0;
+}
 </style>
 <body>
-	<div class="header-wrapper">
-		<header>
+	<!--header-top-->
+	<div class="header-top">
 		<div class="container">
-			<!-- Start of Main Navigation -->
-			<nav class="main-nav">
-			<div class="menu-top-menu-container">
-				<ul id="menu-top-menu" class="clearfix">
-					<li><a href="${pageContext.request.contextPath }/Index.jsp">首页</a></li>
-					<li><a>发育评估</a>
-						<ul class="sub-menu">
+			<div class="head-main">
+				<div class="col-md-4 head-right wow fadeInLeft animated"></div>
+				<div
+					class="col-md-4 head-middle animated wow fadeInDown animated animated"
+					data-wow-duration="1200ms" data-wow-delay="500ms">
+					<h1>
+						<a href="index.html">Baby Care</a>
+					</h1>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!--header-top-->
+	<!--navigation-starts-->
+	<nav class="navbar navbar1 navbar-inverse navbar-static-top"
+		role="navigation" style="height: 50px;">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand"
+					href="#">首页</a>
+			</div>
+			<div>
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown">发育评估<b class="caret"></b>
+					</a>
+						<ul class="dropdown-menu">
 							<li><a
-								href="${pageContext.request.contextPath }/Fetal_development.jsp">胎儿发育评估</a></li>
+								href="Fetal_development.jsp">胎儿发育评估</a></li>
 							<li><a
-								href="${pageContext.request.contextPath }/Infant_development.jsp">婴儿发育评估</a></li>
+								href="Infant_development.jsp">婴儿发育评估</a></li>
 						</ul></li>
 					<li><a
-						href="${pageContext.request.contextPath }/Baby_diet.jsp">饮食推荐</a></li>
-					<li><a data-toggle="modal" data-target="#myModal">发现专区</a></li>
+						href="Baby_diet.jsp">饮食推荐</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+								<p class=" navbar-right">
+				<a class="nav-link navbar-text"
+					href="${pageContext.request.contextPath }/UserLogin.jsp"> <span
+					class="glyphicon glyphicon-log-in"></span>会员注册/登录
+				</a>
+			</p>
 				</ul>
 			</div>
-			</nav>
+
 		</div>
-		</header>
-	</div>
-
-
+	</nav>
+	<!--navigation-end-->
 
 
 

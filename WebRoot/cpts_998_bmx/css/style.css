@@ -214,15 +214,7 @@ ul.navig {
 	-ms-background-size: cover;
 	min-height: 600px;
 }
-.banner1 {
-	background: url(../images/18.jpg) no-repeat;
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-ms-background-size: cover;
-	min-height: 600px;
-}
+
 .banner-text p{
 	font-size:25px;
 	color:#182B45;
@@ -1127,6 +1119,9 @@ table.table.table-striped,.table-bordered,.bs-docs-example {
 .banner-text {
     margin: 12em auto 0;
 }
+.banner3 {
+    min-height: 515px;
+}
 .banner2 {
     min-height: 515px;
 }
@@ -1230,6 +1225,10 @@ h3.title {
 .banner2 {
     min-height: 400px;
 }
+.banner3 {
+    min-height: 400px;
+}
+
 .welcome-left {
     padding: 0 1em;
 }
@@ -1447,6 +1446,9 @@ ul.navig li a {
 .banner2 {
     min-height: 350px;
 }
+.banner3 {
+    min-height: 350px;
+}
 .services-grid h4 {
     font-size: 1.1em;
 }
@@ -1511,6 +1513,9 @@ ul.navig li a {
     min-height: 290px;
 }
 .banner2 {
+    min-height: 290px;
+}
+.banner3 {
     min-height: 290px;
 }
 .banner-text h3 {
@@ -1683,6 +1688,9 @@ h3.title {
 }
 .banner-text p {
     font-size: 18px;
+}
+.banner3 {
+    min-height: 235px;
 }
 .banner2 {
     min-height: 235px;

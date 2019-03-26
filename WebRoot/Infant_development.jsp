@@ -15,7 +15,7 @@
 <head>
 <base href="<%=basePath%>">
 <meta charset="UTF-8">
-<title>宝宝饮食</title>
+<title>胎儿发育评估</title>
 <link rel="shortcut icon" href="images/favicon.png" />
 
 
@@ -170,11 +170,11 @@
 	<!--header-top-->
 	<!--navigation-starts-->
 	<nav class="navbar navbar1 navbar-inverse navbar-static-top"
-		role="navigation">
+		role="navigation" style="height: 50px;">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand"
-					href="${pageContext.request.contextPath }/posts/showIndex.action">首页</a>
+					href="#">首页</a>
 			</div>
 			<div>
 				<ul class="nav navbar-nav">
@@ -183,41 +183,26 @@
 					</a>
 						<ul class="dropdown-menu">
 							<li><a
-								href="${pageContext.request.contextPath }/user/Fetal_development.action">胎儿发育评估</a></li>
+								href="Fetal_development.jsp">胎儿发育评估</a></li>
 							<li><a
-								href="${pageContext.request.contextPath }/user/Infant_development.action">婴儿发育评估</a></li>
+								href="Infant_development.jsp">婴儿发育评估</a></li>
 						</ul></li>
 					<li><a
-						href="${pageContext.request.contextPath }/user/Baby_diet.action">饮食推荐</a></li>
-					<li><a
-						href="${pageContext.request.contextPath }/posts/findSameCityAndAge.action?author=${user1.username}">发现专区</a></li>
-					<c:if test="${user1.per==2}">
-						<li><a
-							href="${pageContext.request.contextPath }/posts/toAddPosts.action">发表帖子</a></li>
-					</c:if>
-					<li><a
-						href="${pageContext.request.contextPath }/parenting/getParentingByAuthor.action?author=${user1.username}">养育记录</a></li>
+						href="Baby_diet.jsp">饮食推荐</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown">欢迎您:&nbsp;&nbsp;<span
-							class="glyphicon glyphicon-user"><strong>${user1.username }</strong></span>
-					</a>
-						<ul class="dropdown-menu">
-							<c:if test="${user1.per==1}">
-								<li><a class="dropdown-item" data-toggle="modal"
-									data-target="#myModal">申请为会员</a></li>
-							</c:if>
-							<li><a class="dropdown-item"
-								href="${pageContext.request.contextPath }/user/LogOut.action">&nbsp;&nbsp;&nbsp;&nbsp;注销</a></li>
-						</ul></li>
+								<p class=" navbar-right">
+				<a class="nav-link navbar-text"
+					href="${pageContext.request.contextPath }/UserLogin.jsp"> <span
+					class="glyphicon glyphicon-log-in"></span>会员注册/登录
+				</a>
+			</p>
 				</ul>
 			</div>
 
 		</div>
 	</nav>
 	<!--navigation-end-->
-
 
 
 

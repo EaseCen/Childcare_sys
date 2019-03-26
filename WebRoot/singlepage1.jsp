@@ -87,7 +87,8 @@
 		role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#">首页</a>
+				<a class="navbar-brand"
+					href="#">首页</a>
 			</div>
 			<div>
 				<ul class="nav navbar-nav">
@@ -96,21 +97,24 @@
 					</a>
 						<ul class="dropdown-menu">
 							<li><a
-								href="${pageContext.request.contextPath }/Fetal_development.jsp">胎儿发育评估</a></li>
+								href="${pageContext.request.contextPath }/user/Fetal_development.action">胎儿发育评估</a></li>
 							<li><a
-								href="${pageContext.request.contextPath }/Infant_development.jsp">婴儿发育评估</a></li>
+								href="${pageContext.request.contextPath }/user/Infant_development.action">婴儿发育评估</a></li>
 						</ul></li>
 					<li><a
-						href="${pageContext.request.contextPath }/Baby_diet.jsp">饮食推荐</a></li>
+						href="${pageContext.request.contextPath }/user/Baby_diet.action">饮食推荐</a></li>
 					<li><a data-toggle="modal" data-target="#myModal">发现专区</a></li>
 				</ul>
-			</div>
-			<p class=" navbar-right">
+				<ul class="nav navbar-nav navbar-right">
+								<p class=" navbar-right">
 				<a class="nav-link navbar-text"
 					href="${pageContext.request.contextPath }/UserLogin.jsp"> <span
 					class="glyphicon glyphicon-log-in"></span>会员注册/登录
 				</a>
 			</p>
+				</ul>
+			</div>
+
 		</div>
 	</nav>
 	<!--navigation-end-->
@@ -148,24 +152,6 @@
 						<div class="top-comment-left"></div>
 						
 						<div class="clearfix"></div>
-					</div>
-				</div>
-				<div class="artical-commentbox">
-					<h3>leave a comment</h3>
-					<div class="table-form">
-						<form
-							action="/Childcare_system/posts/addReposts.action"
-							method="post">
-							<input type="hidden" id="adduser" name="repost_user" value="test" />
-							
-							<input type="hidden" class="form-control input-lg" id="addtime" name="time"
-								value="2019-03-09"
-								required autofocus readonly="readonly">
-							<input type="hidden" id="addrepost_id" name="repost_id" value="11" />
-							
-							<textarea placeholder="Message" name="text"></textarea>
-							<input type="submit" value=发送">
-						</form>
 					</div>
 				</div>
 			</div>

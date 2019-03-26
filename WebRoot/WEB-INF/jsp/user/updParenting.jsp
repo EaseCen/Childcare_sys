@@ -90,9 +90,8 @@
 						<div class="form-group">
 							<label for="lastname" class="col-sm-3 control-label">记录内容:</label>
 							<div class="col-sm-7 ">
-								<textarea class="form-control input-lg" id="updtext" name="text"
-									rows="10" cols="10"  required autofocus>
-								</textarea>
+							<textarea class="form-control" style="width:90%;margin-left:5%;margin-top:3%;resize:none;"id="updtext" name="text"
+									rows="10" cols="10" placeholder="${parenting.text}"></textarea>
 							</div>
 						</div>
 					</div>

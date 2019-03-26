@@ -19,6 +19,7 @@
 <script type="application/x-javascript">
 	
 	
+	
 	 addEventListener("load", 
 			function() {
 		 		setTimeout(hideURLbar, 0); 
@@ -26,6 +27,7 @@
 	 		function hideURLbar(){ 
 	 			window.scrollTo(0,1); 
 	 			} 
+
 
 
 </script>
@@ -62,6 +64,15 @@
 	color: #2E84E9;
 	text-align: center;
 	cursor: pointer;
+}
+.banner3 {
+	background: url(<%=basePath%>images/3.jpg) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	min-height: 600px;
 }
 </style>
 <link href="<%=basePath%>cpts_998_bmx/css/bootstrap.css"
@@ -177,48 +188,47 @@
 	<!--banner-starts-->
 	<div class="banner">
 		<section class="slider">
-			<div class="flexslider">
-				<ul class="slides">
-					<c:forEach items="${pageInfo.list}" var="posts" end="2">
-						<li>
-							<div class="banner1">
-								<div class="container">
-									<div class="banner-text">
-										<h3>
-											<a style="color:#6b0f24;" href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">
-												${posts.name}
-											</a>
-										</h3>
-
-									</div>
-								</div>
-							</div>							
-							<div class="banner2">
-								<div class="container">
-									<div class="banner-text">
-										<h3>
-											<a style="color:#6b0f24;" href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">
-												${posts.name}
-											</a>
-										</h3>
-
-									</div>
-								</div>
+            <div class="flexslider">
+                <ul class="slides">
+					<li>
+					<div class="banner1">
+						<div class="container">
+							<div class="banner-text">
+								<h3>
+								新生宝宝长得更像爸爸 真的吗
+								</h3>
+								<p><a style="font-size: 20px;"  href="${pageContext.request.contextPath }/posts/getPostsById.action?id=1">点击查看								</a>
+								</p>
 							</div>
-							<div class="banner3">
-								<div class="container">
-									<div class="banner-text">
-										<h3>
-											<a style="color:#6b0f24;" href="${pageContext.request.contextPath }/posts/getPostsById.action?id=${posts.id}">
-												${posts.name}
-											</a>
-										</h3>
-
-									</div>
-								</div>
+						</div>
+					</div>
+					</li>
+					<li>
+					<div class="banner2">
+						<div class="container">
+							<div class="banner-text">
+								<h3>
+								吓唬式教育 是管教还是伤害？
+								</h3>
+								<p><a style="font-size: 20px;"  href="${pageContext.request.contextPath }/posts/getPostsById.action?id=2">点击查看								</a>
+								</p>
 							</div>
-						</li>
-					</c:forEach>
+						</div>
+					</div>
+					</li>
+					<li>
+					<div class="banner3">
+						<div class="container">
+							<div class="banner-text">
+								<h3>
+								宝宝换牙期问题多 家长把好关
+								</h3>
+								<p><a style="font-size: 20px;" href="${pageContext.request.contextPath }/posts/getPostsById.action?id=3">点击查看								</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					</li>
 				</ul>
 			</div>
 		</section>
@@ -243,10 +253,10 @@
 	<!--welcome-->
 	<div class="welcome">
 		<div class="container">
-			<h2>育儿网络平台设计与开发</h2>
+			<h2>育儿网络平台</h2>
 			<div class="col-md-9 welcome-left wow fadeInLeft animated"
 				data-wow-delay=".5s">
-				<h5>在二胎开放的时代，从现代育儿需求出发，主要完成个人基本信息、今日育儿热点、宝宝饮食、发育评估、发现专区、喂养记录、个人中心等等。</h5>
+				<h5>在二胎开放的时代，从现代育儿需求出发，包涵今日热点、宝宝饮食、发育评估、发现专区、喂养记录等等功能。</h5>
 			</div>
 			<div class="clearfix"></div>
 		</div>
@@ -330,7 +340,7 @@
 	<!--projects-->
 	<div class="events">
 		<div class="container">
-			<h3>今日热点</h3>
+			<h3>最新发帖</h3>
 			<div class="events-grid">
 				<c:forEach items="${pageInfo.list}" var="posts" end="2">
 					<div class="col-md-4 events-grid-left wow fadeInLeft animated"
@@ -414,12 +424,10 @@
 						<div class="form-group">
 							<label for="lastname" class="col-sm-3 control-label">申请原因:</label>
 							<div class="col-sm-5">
-								<input type="hidden" id="addusername" name="username"
+								<input type="hidden" id="username" name="username"
 									value="${user1.username}" />
-								<textarea class="form-control input-lg" id="addreason"
-									name="reason" style="width: 426px; height: 214px;" required
-									autofocus>
-								</textarea>
+								<textarea class="form-control" style="width:90%;margin-left:5%;margin-top:3%;resize:none;"id="reason" name="reason"
+									rows="10" placeholder="请输入你的申请原因，越详细越容易通过"></textarea>
 							</div>
 						</div>
 					</div>

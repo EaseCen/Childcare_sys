@@ -139,12 +139,13 @@ th {
 								<td><fmt:formatDate value="${parenting.time}"
 										pattern="yyyy-MM-dd" /></td>
 								<!-- 删除操作-带id参数 -->
-								<td><a
-									href="${pageContext.request.contextPath }/parenting/del.action?id=${parenting.id}"><button
-											type="button" class="btn btn-success btn-lg"
-											onclick="return confirm('确定要删除帖子吗？') ">
-											<span class="glyphicon glyphicon-trash"></span> 删除
-										</button></a></td>
+								<td>
+								<a href="${pageContext.request.contextPath }/parenting/del.action?id=${parenting.id}">
+								<button type="button" class="btn btn-success btn-lg" onclick="return confirm('确定要删除帖子吗？') ">
+								<span class="glyphicon glyphicon-trash"></span> 删除
+								</button>
+								</a>
+								</td>
 								<!-- 修改操作 -->
 								<td><a
 									href="${pageContext.request.contextPath }/parenting/findOne.action?id=${parenting.id}"><button

@@ -49,19 +49,18 @@
 				<h3 class="form-title">管理员登录</h3>
 				<div class="col-md-9">
 					<div class="form-group">
-						<i class="fa fa-user fa-lg"></i> <input
-							class="form-control required" type="text" placeholder="请输入用户名..."
+						<i class="fa fa-user fa-lg"></i> 
+						<input class="form-control required" type="text" placeholder="请输入用户名..."
 							id="username" name="username" value="admin" autofocus="autofocus"
-							maxlength="20" /> <span id="checkUserNameResult"
-							style="color: red"></span>
+							maxlength="20" /> 
+							<span id="checkUserNameResult" style="color: red"></span><%--若有错则在文本框下方以红色字体显示--%>
 					</div>
 					<div class="form-group">
-						<i class="fa fa-lock fa-lg"></i> <input
-							class="form-control required" type="password"
+						<i class="fa fa-lock fa-lg"></i> 
+						<input class="form-control required" type="password"
 							placeholder="请输入密码..." id="password" name="password"
-							maxlength="8" value="admin" /> <span id="checkPasswordResult"
-							style="color: red"></span> <label class="control-label"
-							for="inputSuccess1" style="color: red;" id="message"></label>
+							maxlength="8" value="admin" /> 
+							<span id="checkPasswordResult" style="color: red"></span> <%--若有错则在文本框下方以红色字体显示--%>
 					</div>
 					<div class="form-group col-md-offset-9">
 						<button type="submit" class="btn btn-success pull-left"

@@ -12,6 +12,8 @@ public interface MemberBiz {
 	
 	public void add(Member member);
 	
+	public void updUserState(Member member);
+	
 	public void updPass(Member member);
 	
 	public void updReject(Member member);

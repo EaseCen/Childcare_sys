@@ -36,6 +36,8 @@ public class MemberController {
 	
 	@RequestMapping("/addMember")
 	public String add(Member member) {
+		System.out.println("+++++++++++++++++++++++"+member+"++++++++++++++++++++++++");
+		memberBiz.updUserState(member);
 		memberBiz.add(member);
 		return "user/successApply";
 	}
