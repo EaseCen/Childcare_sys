@@ -65,13 +65,13 @@ th {
 	<nav class="navbar navbar-inverse" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#" style="height: 92px;"> <img
+				<a class="navbar-brand" style="height: 92px;"> <img
 					src="<%=path%>/images/a.jpg" height="100%" />
 				</a>
 			</div>
 			<div class="collapse navbar-collapse" id="example-navbar-collapse">
 				<ul class="nav navbar-nav navbar" style="margin: 1% 0 1% 34%;">
-					<li class="active"><a class="icon-bar" href="#"
+					<li class="active"><a class="icon-bar"
 						style="background-color: #087b71"> <font
 							style="font-size: 31px; font-weight: bold; font-style: italic;">欢迎来到管理系统</font></a></li>
 				</ul>
@@ -89,7 +89,7 @@ th {
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-2">
-				<a href="#" class="list-group-item active"><span
+				<a class="list-group-item active"><span
 					class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;菜单 </a> <a
 					href="${pageContext.request.contextPath}/posts/queryPosts.action"
 					class="list-group-item"> <span
@@ -113,22 +113,7 @@ th {
 					<li class="active">会员申请管理</li>
 					<li class="active"></li>
 				</ol>
-				<div class="panel panel-default">
-					<div class="panel-heading">搜索</div>
-					<div class="panel-body">
-						<form role="form" class="form-inline">
-							<div class="form-group">
-								<label for="name">名称</label> <input type="text"
-									class="form-control" id="name" placeholder="请输入用户名">
-							</div>
-							&nbsp;&nbsp;&nbsp;&nbsp;
-							<div class="form-group">
-								<button type="submit" class="btn btn-default">开始搜索</button>
-							</div>
-						</form>
-						<!-- 按钮-->
-					</div>
-				</div>
+
 				<!-- 列表展示 -->
 				<div class="table-responsive content">
 					<table class="table table-striped">
@@ -150,7 +135,7 @@ th {
 										</button></a></td>
 								<td><a
 									href="${pageContext.request.contextPath }/member/updReject.action?id=${member.id}"><button
-											type="button" class="btn btn-success btn-lg">
+											type="button" class="btn btn-danger btn-lg">
 											<span class="glyphicon glyphicon-trash"></span> 拒绝
 										</button></a></td>
 							</tr>

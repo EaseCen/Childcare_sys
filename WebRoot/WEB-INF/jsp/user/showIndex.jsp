@@ -426,8 +426,7 @@
 							<div class="col-sm-5">
 								<input type="hidden" id="username" name="username"
 									value="${user1.username}" />
-								<textarea class="form-control" style="width:90%;margin-left:5%;margin-top:3%;resize:none;"id="reason" name="reason"
-									rows="10" placeholder="请输入你的申请原因，越详细越容易通过"></textarea>
+								<textarea class="form-control" style="width:90%;margin-left:5%;margin-top:3%;resize:none;"id="reason" name="reason" rows="10" placeholder="请输入你的申请原因，越详细越容易通过" required></textarea>
 							</div>
 						</div>
 					</div>

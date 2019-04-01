@@ -88,6 +88,12 @@
 	margin-bottom: 0;
 	line-height: 0;
 }
+
+#testDiv1{  width: 100%;  
+    height: auto;  
+    word-wrap:break-word;  
+    word-break:break-all;  
+    overflow: hidden;  }
 </style>
 
 
@@ -180,27 +186,32 @@
 					<ul>
 						<li><i class="glyphicon glyphicon-calendar"
 							aria-hidden="true"></i><span><c:out value="${posts.time}"></c:out></span></li>
-						<li><a href="#"><i class="glyphicon glyphicon-user"
+						<li><a><i class="glyphicon glyphicon-user"
 								aria-hidden="true"></i><span><c:out
 										value="${posts.author}"></c:out></span></a></li>
 					</ul>
 				</div>
 				<div class="comment-grid-top">
 					<h3>回复</h3>
-					<div class="comments-top-top">
+					<div class="comments-top-top row">
 						<div class="top-comment-left"></div>
 						<c:forEach items="${posts1}" var="posts1">
 							<div class="top-comment-right">
 								<ul>
-									<li><span class="left-at"><c:out
-												value="${posts1.repost_user}"></c:out></span></li>
+									<li>
+										<span class="left-at">
+											<c:out value="${posts1.repost_user}"></c:out>
+										</span>
+									</li>
 									<li><span class="right-at"><c:out
 												value="${posts1.time}"></c:out></span></li>
 									<li><a class="reply">回复</a></li>
 								</ul>
-								<p>
+								
+								<div id="testDiv1">
 									<c:out value="${posts1.text}"></c:out>
-								</p>
+								</div>
+<br>
 							</div>
 						</c:forEach>
 						<div class="clearfix"></div>
@@ -219,8 +230,8 @@
 								required autofocus readonly="readonly">
 							<input type="hidden" id="addrepost_id" name="repost_id" value="${posts.id }" />
 							
-							<textarea placeholder="Message" name="text"></textarea>
-							<input type="submit" value=发送">
+							<textarea placeholder="Message" name="text" id="textarea" required></textarea>
+							<input type="submit" value="发送">
 						</form>
 					</div>
 				</div>
@@ -269,3 +280,4 @@
 	<!--footer-end-->
 </body>
 </html>
+  

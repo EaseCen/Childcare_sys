@@ -265,18 +265,18 @@
 
 	<div class="events">
 		<div class="container">
-			<h3>最新发帖</h3>
+			<h3>育儿推荐</h3>
 			<div class="events-grid">
 				
 					<div class="col-md-4 events-grid-left wow fadeInLeft animated"
 						data-wow-delay=".5s">
 						<a
-							href="<%=basePath%>singlepage1.jsp">
+							href="/Childcare_system/posts/getPostsById.action?id=11">
 							<div class="events-grid-left-top">
 								<p>
 									<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><span>Tue Mar 05 09:17:00 CST 2019</span>
 								</p>
-							</div> <img src="http://localhost:8080/Childcare_system/cpts_998_bmx/images/11.jpg"
+							</div> <img src="http://localhost:8088/Childcare_system/cpts_998_bmx/images/11.jpg"
 							class="img-responsive">
 							<div class="events-pos">
 								<p>春天到！宝贝适合春季入园吗？</p>
@@ -287,12 +287,12 @@
 					<div class="col-md-4 events-grid-left wow fadeInLeft animated"
 						data-wow-delay=".5s">
 						<a
-							href="<%=basePath%>singlepage2.jsp">
+							href="/Childcare_system/posts/getPostsById.action?id=10">
 							<div class="events-grid-left-top">
 								<p>
 									<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><span>Mon Mar 04 14:15:21 CST 2019</span>
 								</p>
-							</div> <img src="http://localhost:8080/Childcare_system/cpts_998_bmx/images/10.jpg"
+							</div> <img src="http://localhost:8088/Childcare_system/cpts_998_bmx/images/10.jpg"
 							class="img-responsive">
 							<div class="events-pos">
 								<p>涨知识！宝宝要吃的辅食好讲究</p>
@@ -303,12 +303,12 @@
 					<div class="col-md-4 events-grid-left wow fadeInLeft animated"
 						data-wow-delay=".5s">
 						<a
-							href="<%=basePath%>singlepage3.jsp">
+							href="/Childcare_system/posts/getPostsById.action?id=7">
 							<div class="events-grid-left-top">
 								<p>
 									<i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><span>Sat Mar 02 17:16:40 CST 2019</span>
 								</p>
-							</div> <img src="http://localhost:8080/Childcare_system/cpts_998_bmx/images/7.jpg"
+							</div> <img src="http://localhost:8088/Childcare_system/cpts_998_bmx/images/7.jpg"
 							class="img-responsive">
 							<div class="events-pos">
 								<p>526法则轻松避免辅食添加误区</p>
@@ -404,10 +404,7 @@
 				<div class="col-md-6 footer-right wow fadeInLeft animated"
 					data-wow-delay=".5s">
 					<form action="#" method="post">
-						<input type="text" value="Your Email" name="email"
-							onfocus="this.value = '';"
-							onblur="if (this.value == '') {this.value = 'Your Email';}">
-						<input type="submit" value="Subscribe">
+
 					</form>
 					<p>
 						<a href="${pageContext.request.contextPath }/Login.jsp">管理员登录</a>
@@ -423,7 +420,7 @@
 					<div class="a-2">
 						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
 						<p>
-							<a href="mailto:example@email.com">contact@example.com</a>
+							<a>contact@example.com</a>
 						</p>
 					</div>
 				</div>

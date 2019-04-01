@@ -21,6 +21,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
   	<h1>${msg }</h1>
-  	<a href="${pageContext.request.contextPath }/Login.jsp">去登录</a>  
+  	<a href="${pageContext.request.contextPath }/UserLogin.jsp">去登录</a>  
   </body>
 </html>

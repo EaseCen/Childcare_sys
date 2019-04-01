@@ -43,6 +43,7 @@
 	
 	
 	
+	
 	 addEventListener("load", 
 			function() {
 		 		setTimeout(hideURLbar, 0); 
@@ -50,6 +51,7 @@
 	 		function hideURLbar(){ 
 	 			window.scrollTo(0,1); 
 	 			} 
+
 
 
 
@@ -154,7 +156,7 @@
 }
 
 body {
-    color: #3a3a3a;
+	color: #3a3a3a;
 }
 </style>
 <body>
@@ -237,7 +239,8 @@ body {
 				autocomplete="off">
 				<input class="search-term required" type="text" id="s_name"
 					name="name" placeholder="输入内容进行搜索"
-					title="* Please enter a search term!" style="height: 49px;" /> <input
+					title="* Please enter a search term!" style="height: 49px;"
+					onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" /> <input
 					class="search-btn" type="submit" value="搜索" />
 				<div id="search-error-container"></div>
 			</form>
@@ -278,13 +281,12 @@ body {
 							${fn:substring(posts.text,0,150)}...
 							</c:if>
 							<c:if test="${fn:length(posts.text)  <= 150 }">
-							<a style="color: #777">${posts.text}</a>
+								<a style="color: #777">${posts.text}</a>
 							</c:if>
 							<br>
 							<br>
 							<br>
-						</c:forEach>
-						 </article>
+						</c:forEach> </article>
 					</div>
 					<!-- end of page content -->
 				</div>

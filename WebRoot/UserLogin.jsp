@@ -97,6 +97,9 @@
 							<div class="col-sm-6">
 								<input type="text" class="form-control" id="r_username"
 									name="username" placeholder="请输入用户名" required autofocus>
+									<span id="checkUserNameResult" style="color: red"></span>									
+									
+									
 							</div>
 						</div>
 						<div class="form-group">
@@ -109,7 +112,8 @@
 						<div class="form-group">
 							<label for="inputAddress" class="col-sm-3 control-label ">地&nbsp;&nbsp;&nbsp;区:</label>
 							<div class="col-sm-6">
-								<select id="testOne" onchange="changeTest(this)">
+								<select id="testOne" onchange="changeTest(this)" required
+									autofocus>
 									<option value="">请选择</option>
 									<option value="hn">华南</option>
 									<option value="hb">华北</option>
@@ -118,17 +122,17 @@
 									<option value="xn">西南</option>
 									<option value="hz">华中</option>
 									<option value="db">东北</option>
-								</select> 
-								<select id="testTwo" name="address">
+								</select> <select id="testTwo" name="address" required autofocus>
 									<option value="">请选择</option>
 								</select>
 							</div>
 						</div>
+
 						<div class="form-group">
 							<label for="inputState" class="col-sm-3 control-label">状态:</label>
 							<div class="col-sm-6">
-								<select class="selectpicker" id="r_state" name="state"
-									onchange="gradeChange()">
+								<select id="r_state" name="state" onchange="gradeChange()"
+									required autofocus>
 									<option value="">请选择</option>
 									<option value="1">备孕</option>
 									<option value="2">孕期</option>
@@ -138,7 +142,8 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-primary" name="sava" id="save">注册</button>
+						<button type="submit" class="btn btn-primary" name="sava"
+							id="save">注册</button>
 						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
 					</div>
 				</form>
@@ -148,7 +153,26 @@
 
 	<script type="text/javascript">
 		/* 以json的格式提交登录传参 */
-		$("#login") .click(
+		$("#sava").click(
+				function() {
+					var username = document.getElementById("r_username").value;
+					var reg = /['";{}()+\-*\/!%#]/;
+
+					var checkUserNameResult = document
+							.getElementById("checkUserNameResult"); //提示语句
+							
+					if (reg.test(username)) {
+						checkUserNameResult.innerHTML = "用户名包含非法字符";
+						obj.focus();
+					}
+				});
+	</script>
+
+
+	<script type="text/javascript">
+		/* 以json的格式提交登录传参 */
+		$("#login")
+				.click(
 						function() {
 							var username = document.getElementById("username").value;
 							var password = document.getElementById("password").value;
@@ -161,17 +185,18 @@
 							if (username.trim().length == 0) {
 								checkUserNameResult.innerHTML = "用户名不能为空";
 								obj.focus();
-							}else if(reg.test(username)){
+							} else if (reg.test(username)) {
 								checkUserNameResult.innerHTML = "用户名包含非法字符";
 								obj.focus();
-								
-							}else if (password.trim().length == 0) {
+
+							} else if (password.trim().length == 0) {
 								checkUserNameResult.innerHTML = "";
 								checkPasswordResult.innerHTML = "密码不能为空";
 								obj.focus();
-							}else {
+							} else {
 								checkPasswordResult.innerHTML = "";
-								$.ajax({
+								$
+										.ajax({
 											type : 'post',
 											//提交路径
 											url : '${pageContext.request.contextPath}/user/checkLogin1.action',
@@ -179,8 +204,10 @@
 											contentType : 'application/json;charset=utf-8',
 											//转为json格式
 											data : JSON.stringify({
-												"username" : $("#username").val(),
-												"password" : $("#password").val()
+												"username" : $("#username")
+														.val(),
+												"password" : $("#password")
+														.val()
 											}),
 											//点击登录以后拿到数据
 											success : function(data) {

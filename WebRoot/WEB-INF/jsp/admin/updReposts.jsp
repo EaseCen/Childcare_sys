@@ -96,8 +96,7 @@
 						<div class="form-group">
 							<label for="lastname" class="col-sm-3 control-label">回复内容:</label>
 							<div class="col-sm-5">
-								<textarea rows="10" style="min-width: 90%" id="text" name="text"
-									wrap="hard">${reposts.text }</textarea>
+								<textarea rows="10" style="min-width: 90%" id="text" name="text" wrap="hard" required onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">${reposts.text }</textarea>
 							</div>
 						</div>
 						<div class="form-group">

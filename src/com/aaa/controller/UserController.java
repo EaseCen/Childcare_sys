@@ -28,9 +28,10 @@ public class UserController {
 	@RequestMapping(value = "/checkLogin0", produces = { "application/json;charset=UTF-8" })
 	public @ResponseBody User checkLogin0(@RequestBody User user, Model model, HttpSession session) {
 		System.out.println("=============进入登录控制页面。===============");
-		User user1 = userBiz.CheckLoginAndPwd0(user.getUsername(), user.getPassword());//获取用户名密码并进行验证
-		// 登录以后添加到session中
+		User user1 = userBiz.CheckLoginAndPwd0(user.getUsername(), user.getPassword());
+		//获取用户名密码并进行验证
 		session.setAttribute("user1", user1);
+		// 登录以后添加到session中
 		return user1;
 	}
 	

@@ -152,6 +152,11 @@ th {
 											type="button" class="btn btn-success btn-lg">
 											<span class="glyphicon glyphicon-edit"></span> 修改
 										</button></a></td>
+								<td><a
+									href="${pageContext.request.contextPath }/posts/findOne.action?id=${posts.id}"><button
+											type="button" class="btn btn-success btn-lg">
+											 设为热门
+										</button></a></td>
 							</tr>
 						</c:forEach>
 					</table>

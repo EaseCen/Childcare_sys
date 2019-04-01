@@ -237,7 +237,7 @@ th {
 						<div class="form-group">
 							<label for="inputState" class="col-sm-3 control-label">状态:</label>
 							<div class="col-sm-6">
-								<select class="selectpicker" id="state" name="state" onchange="gradeChange()">
+								<select class="selectpicker" id="state" name="state" onchange="gradeChange()" required autofocus>
 									<option value="">请选择</option>
 									<option value="4">就职</option>
 									<option value="5">离职</option>

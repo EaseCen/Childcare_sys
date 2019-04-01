@@ -47,77 +47,72 @@
 			<!-- ajax提交登录示例 -->
 			<div class="form-horizontal col-md-offset-2" id="login_form">
 				<h3 class="form-title">管理员登录</h3>
-				<div class="col-md-9">
-					<div class="form-group">
-						<i class="fa fa-user fa-lg"></i> 
-						<input class="form-control required" type="text" placeholder="请输入用户名..."
-							id="username" name="username" value="admin" autofocus="autofocus"
-							maxlength="20" /> 
-							<span id="checkUserNameResult" style="color: red"></span><%--若有错则在文本框下方以红色字体显示--%>
-					</div>
-					<div class="form-group">
-						<i class="fa fa-lock fa-lg"></i> 
-						<input class="form-control required" type="password"
-							placeholder="请输入密码..." id="password" name="password"
-							maxlength="8" value="admin" /> 
-							<span id="checkPasswordResult" style="color: red"></span> <%--若有错则在文本框下方以红色字体显示--%>
-					</div>
-					<div class="form-group col-md-offset-9">
-						<button type="submit" class="btn btn-success pull-left"
-							name="login" id="login">登录</button>
-					</div>
-				</div>
+<div class="col-md-9">
+	<div class="form-group">
+		<i class="fa fa-user fa-lg"></i> 
+		<input class="form-control required" type="text" placeholder="请输入用户名..." id="username" name="username" value="admin" autofocus="autofocus" maxlength="20" />						             <%--用户名输入框--%>
+		<span id="checkUserNameResult" style="color: red"></span><%--若有错则在文本框下方以红色字体显示--%>
+	</div>
+	<div class="form-group">
+		<i class="fa fa-lock fa-lg"></i> 
+		<input class="form-control required" type="password" placeholder="请输入密码..." id="password" name="password" maxlength="8" value="admin" />						  <%--密码输入框--%>
+		<span id="checkPasswordResult" style="color: red"></span> <%--若有错则在文本框下方以红色字体显示--%>
+	</div>
+	<div class="form-group col-md-offset-9">
+		<button type="submit" class="btn btn-success pull-left" name="login" id="login">登录</button>
+	</div>
+</div>
 			</div>
 		</div>
 	</div>
 
-	<script type="text/javascript">
-		/* 以json的格式提交登录传参 */
-		$("#login") .click(
-						function() {
-							var username = document.getElementById("username").value;
-							var password = document.getElementById("password").value;
-							var reg = /['";{}()+\-*\/!%#]/;
-							var checkUserNameResult = document
-									.getElementById("checkUserNameResult"); //提示语句
-							var checkPasswordResult = document
-									.getElementById("checkPasswordResult"); //提示语句
-							if (username.trim().length == 0) {
-								checkUserNameResult.innerHTML = "用户名不能为空";
-								obj.focus();
-							}else if (password.trim().length == 0) {
-								checkUserNameResult.innerHTML = "";
-								checkPasswordResult.innerHTML = "密码不能为空";
-								obj.focus();
-							}else if(reg.test(username)){
-								checkUserNameResult.innerHTML = "用户名包含非法字符";
-								obj.focus();
-							}else {
-								checkPasswordResult.innerHTML = "";
-								$.ajax({
-											type : 'post',
-											//提交路径
-											url : '${pageContext.request.contextPath}/user/checkLogin0.action',
-											//声明为json格式
-											contentType : 'application/json;charset=utf-8',
-											//转为json格式
-											data : JSON.stringify({
-												"username" : $("#username").val(),
-												"password" : $("#password").val()
-											}),
-											//点击登录以后拿到数据
-											success : function(data) {
-												//判断
-												if (data == "" || data == null) {
-													$("#message").html(
-															"用户名或密码错误！");
-												} else
-													window.location.href = "${pageContext.request.contextPath}/posts/queryPosts.action";
-												//正常跳转
-											}
-										});
-							}
-						});
-	</script>
+<script type="text/javascript">
+	/* 以json的格式提交登录传参 */
+	$("#login") .click(
+					function() {
+						var username = document.getElementById("username").value;
+						var password = document.getElementById("password").value;
+						var reg = /['";{}()+\-*\/!%#]/;
+						var checkUserNameResult = document
+								.getElementById("checkUserNameResult"); //提示语句
+						var checkPasswordResult = document
+								.getElementById("checkPasswordResult"); //提示语句
+						if (username.trim().length == 0) {
+							checkUserNameResult.innerHTML = "用户名不能为空";
+							obj.focus();
+						}else if (password.trim().length == 0) {
+							checkUserNameResult.innerHTML = "";
+							checkPasswordResult.innerHTML = "密码不能为空";
+							obj.focus();
+						}else if(reg.test(username)){
+							checkUserNameResult.innerHTML = "用户名包含非法字符";
+							obj.focus();
+						}else {
+							checkPasswordResult.innerHTML = "";
+							$.ajax({
+										type : 'post',
+										//提交路径
+										url : '${pageContext.request.contextPath}/user/checkLogin0.action',
+										//声明为json格式
+										contentType : 'application/json;charset=utf-8',
+										//转为json格式
+										data : JSON.stringify({
+											"username" : $("#username").val(),
+											"password" : $("#password").val()
+										}),
+										//点击登录以后拿到数据
+										success : function(data) {
+											//判断
+											if (data == "" || data == null) {
+												$("#message").html(
+														"用户名或密码错误！");
+											} else
+												window.location.href = "${pageContext.request.contextPath}/posts/queryPosts.action";
+											//正常跳转
+										}
+									});
+						}
+					});
+</script>
 </body>
 </html>

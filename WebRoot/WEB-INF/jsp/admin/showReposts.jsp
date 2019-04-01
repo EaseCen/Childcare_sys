@@ -2,6 +2,7 @@
     pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -128,7 +129,13 @@ th {
                                 	<c:forEach items="${pageInfo.list}" var="reposts">
 								<tr align="center">
 									<td>${reposts.name }</td>
-									<td>${reposts.text }</td>
+									<td>
+								<c:if test="${fn:length(reposts.text) > 50 }">
+								${fn:substring(reposts.text,0,50)}...
+								</c:if> <c:if test="${fn:length(reposts.text)  <= 50 }">
+								${reposts.text}
+								</c:if>
+									
 									<td>${reposts.repost_user }</td>
 									<td><fmt:formatDate value="${reposts.time}" pattern="yyyy-MM-dd" /></td>
 									<!-- 删除操作-带id参数 -->
@@ -161,31 +168,31 @@ th {
 			<div class="col-md-6">
 				<ul class="pagination pagination-lg">
 					<li><a
-						href="${pageContext.request.contextPath }/repost/queryReposts.action?pn=1">首页</a></li>
+						href="${pageContext.request.contextPath }/reposts/queryReposts.action?pn=1">首页</a></li>
 					<c:if test="${pageInfo.hasPreviousPage }">
 						<li><a
-							href="${pageContext.request.contextPath }/repost/queryReposts.action?pn=${pageInfo.pageNum-1}"
+							href="${pageContext.request.contextPath }/reposts/queryReposts.action?pn=${pageInfo.pageNum-1}"
 							aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
 						</a></li>
 					</c:if>
 					<c:forEach items="${pageInfo.navigatepageNums }" var="nav">
 						<c:if test="${nav==pageInfo.pageNum }">
 							<li class="active"><a
-								href="${pageContext.request.contextPath }/repost/queryReposts.action?pn=${nav}">${nav }</a></li>
+								href="${pageContext.request.contextPath }/reposts/queryReposts.action?pn=${nav}">${nav }</a></li>
 						</c:if>
 						<c:if test="${nav!=pageInfo.pageNum }">
 							<li><a
-								href="${pageContext.request.contextPath }/repost/queryReposts.action?pn=${nav}">${nav }</a></li>
+								href="${pageContext.request.contextPath }/reposts/queryReposts.action?pn=${nav}">${nav }</a></li>
 						</c:if>
 					</c:forEach>
 					<c:if test="${pageInfo.hasNextPage}">
 						<li><a
-							href="${pageContext.request.contextPath }/repost/queryReposts.action?pn=${pageInfo.pageNum+1}"
+							href="${pageContext.request.contextPath }/reposts/queryReposts.action?pn=${pageInfo.pageNum+1}"
 							aria-label="Previous"> <span aria-hidden="true">&raquo;</span>
 						</a></li>
 					</c:if>
 					<li><a
-						href="${pageContext.request.contextPath }/repost/queryReposts.action?pn=${pageInfo.pages}">末页</a></li>
+						href="${pageContext.request.contextPath }/reposts/queryReposts.action?pn=${pageInfo.pages}">末页</a></li>
 				</ul>
 			</div>
 		</div>

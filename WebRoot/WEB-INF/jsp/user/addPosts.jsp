@@ -116,8 +116,6 @@
 							class="glyphicon glyphicon-user"><strong>${user1.username }</strong></span>
 					</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" data-toggle="modal"
-								data-target="#myModal">申请为会员</a></li>
 							<li><a class="dropdown-item"
 								href="${pageContext.request.contextPath }/user/LogOut.action">&nbsp;&nbsp;&nbsp;&nbsp;注销</a></li>
 						</ul></li>
@@ -150,7 +148,7 @@
 			<div class="single-page-artical">
 				<div class="artical-content">
 				
-					<textarea rows="25" style="min-width: 90%" id="text1" name="text1" wrap="virtual">${posts.text }</textarea>
+					<textarea rows="25" style="min-width: 90%" id="text1" name="text1" wrap="virtual" required>${posts.text }</textarea>
 					<input type="hidden" name ="text" id="text" value="">
 				</div>
 				<div class="artical-links">
@@ -226,12 +224,16 @@
 </html>
 <script>
 document.getElementById("save").onclick = function() {
+		//监听页面中一个id为“save”的点击事件
 		var strContent = document.getElementById("text1").value;
-		strContent = strContent.replace(/\r\n/g, '<br/>'); //IE9、FF、chrome
-		strContent = strContent.replace(/\n/g, '<br/>'); //IE7-8
-		strContent = strContent.replace(/\s/g, '?'); //空格处理
+		//获取点击事件中一个id为“text1”的元素
+		strContent = strContent.replace(/\r\n/g, '<br/>'); 
+		//IE9、FF、chrome浏览器的符号转换
+		strContent = strContent.replace(/\n/g, '<br/>'); 
+		//IE7-8浏览器的符号转换
+		strContent = strContent.replace(/\s/g, '?');
+		//空格处理
 		document.getElementById("text").value = strContent;
-
+		//保存到点击事件中一个id为“text”的元素标签中
 	};
-
 </script>
